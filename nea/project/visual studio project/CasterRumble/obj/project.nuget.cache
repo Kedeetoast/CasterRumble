@@ -1,0 +1,75 @@
+{
+  "version": 2,
+  "dgSpecHash": "kpfZCRzB848=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\CasterRumble\\CasterRumble.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'MonoGame.Framework.DesktopGL (>= 3.8.0)' for 'net8.0'. PackageSourceMapping is enabled, the following source(s) were not considered: C:\\Program Files\\dotnet\\library-packs, Microsoft Visual Studio Offline Packages, nuget.org.",
+      "projectPath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\CasterRumble\\CasterRumble.csproj",
+      "filePath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\CasterRumble\\CasterRumble.csproj",
+      "libraryId": "MonoGame.Framework.DesktopGL",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'MonoGame.Content.Builder.Task (>= 3.8.0)' for 'net8.0'. PackageSourceMapping is enabled, the following source(s) were not considered: C:\\Program Files\\dotnet\\library-packs, Microsoft Visual Studio Offline Packages, nuget.org.",
+      "projectPath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\CasterRumble\\CasterRumble.csproj",
+      "filePath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\CasterRumble\\CasterRumble.csproj",
+      "libraryId": "MonoGame.Content.Builder.Task",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'Microsoft.WindowsDesktop.App.Ref (= 8.0.23)' for 'net8.0'. PackageSourceMapping is enabled, the following source(s) were not considered: C:\\Program Files\\dotnet\\library-packs, Microsoft Visual Studio Offline Packages, nuget.org.",
+      "projectPath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\CasterRumble\\CasterRumble.csproj",
+      "filePath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\CasterRumble\\CasterRumble.csproj",
+      "libraryId": "Microsoft.WindowsDesktop.App.Ref",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'Microsoft.NETCore.App.Ref (= 8.0.23)' for 'net8.0'. PackageSourceMapping is enabled, the following source(s) were not considered: C:\\Program Files\\dotnet\\library-packs, Microsoft Visual Studio Offline Packages, nuget.org.",
+      "projectPath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\CasterRumble\\CasterRumble.csproj",
+      "filePath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\CasterRumble\\CasterRumble.csproj",
+      "libraryId": "Microsoft.NETCore.App.Ref",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'Microsoft.AspNetCore.App.Ref (= 8.0.23)' for 'net8.0'. PackageSourceMapping is enabled, the following source(s) were not considered: C:\\Program Files\\dotnet\\library-packs, Microsoft Visual Studio Offline Packages, nuget.org.",
+      "projectPath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\CasterRumble\\CasterRumble.csproj",
+      "filePath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\CasterRumble\\CasterRumble.csproj",
+      "libraryId": "Microsoft.AspNetCore.App.Ref",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'Microsoft.NETCore.App.Host.win-x64 (= 8.0.23)' for 'net8.0'. PackageSourceMapping is enabled, the following source(s) were not considered: C:\\Program Files\\dotnet\\library-packs, Microsoft Visual Studio Offline Packages, nuget.org.",
+      "projectPath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\CasterRumble\\CasterRumble.csproj",
+      "filePath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\CasterRumble\\CasterRumble.csproj",
+      "libraryId": "Microsoft.NETCore.App.Host.win-x64",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

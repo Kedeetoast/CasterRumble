@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "dgSpecHash": "muwxbJJ9oqQ=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\Project3\\Project3.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'MonoGame.Framework.DesktopGL (>= 3.8.0)' for 'net9.0'. PackageSourceMapping is enabled, the following source(s) were not considered: C:\\Program Files\\dotnet\\library-packs, Microsoft Visual Studio Offline Packages, nuget.org.",
+      "projectPath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\Project3\\Project3.csproj",
+      "filePath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\Project3\\Project3.csproj",
+      "libraryId": "MonoGame.Framework.DesktopGL",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "Unable to resolve 'MonoGame.Content.Builder.Task (>= 3.8.0)' for 'net9.0'. PackageSourceMapping is enabled, the following source(s) were not considered: C:\\Program Files\\dotnet\\library-packs, Microsoft Visual Studio Offline Packages, nuget.org.",
+      "projectPath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\Project3\\Project3.csproj",
+      "filePath": "C:\\Users\\oscar\\Documents\\nea\\project\\visual studio project\\Project3\\Project3.csproj",
+      "libraryId": "MonoGame.Content.Builder.Task",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
+}
