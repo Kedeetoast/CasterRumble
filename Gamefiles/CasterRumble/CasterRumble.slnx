@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="CasterRumble/CasterRumble.csproj" />
+  <Project Path="MonoGameLibrary/MonoGameLibrary.csproj" Id="942f1114-ecd3-4f53-9b98-e5e618153cb8" />
 </Solution>
