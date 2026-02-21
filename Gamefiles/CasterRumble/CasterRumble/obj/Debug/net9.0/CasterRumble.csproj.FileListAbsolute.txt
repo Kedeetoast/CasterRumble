@@ -36,3 +36,7 @@ C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\MonoGameLibrary.pdb
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\logo.xnb
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\atlas.xnb
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\atlas-definition.xml
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Aether.Physics2D.Diagnostics.dll
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Aether.Physics2D.dll
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\LiteNetLib.dll

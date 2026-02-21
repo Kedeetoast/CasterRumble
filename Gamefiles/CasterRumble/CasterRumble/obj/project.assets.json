@@ -38,7 +38,7 @@
           }
         }
       },
-      "LiteNetLib/2.0.1": {
+      "LiteNetLib/2.0.2": {
         "type": "package",
         "compile": {
           "lib/net8.0/LiteNetLib.dll": {
@@ -183,6 +183,11 @@
       "MonoGameLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Aether.Physics2D.Diagnostics.MG": "2.2.0",
+          "Aether.Physics2D.MG": "2.2.0",
+          "LiteNetLib": "2.0.2"
+        },
         "compile": {
           "bin/placeholder/MonoGameLibrary.dll": {}
         },
@@ -225,10 +230,10 @@
         "lib/netstandard2.0/Aether.Physics2D.xml"
       ]
     },
-    "LiteNetLib/2.0.1": {
-      "sha512": "DsVmr01o1QpGiFzYBvSNKNfZqbqNyTDNS00GagB/nz90edliLG5/B0+DtFx/5S6VzyIezsiyt0is2ndVjjCZ/Q==",
+    "LiteNetLib/2.0.2": {
+      "sha512": "TOxT3aT1rnzICpdiPaFHqLf03aEaj79ouJwu6YLqsPGNuPKEfHC8PmfX4G9wsSvXXE+Hp66ijD9EKs6W/Cc8FA==",
       "type": "package",
-      "path": "litenetlib/2.0.1",
+      "path": "litenetlib/2.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -238,7 +243,7 @@
         "lib/net8.0/LiteNetLib.xml",
         "lib/netstandard2.1/LiteNetLib.dll",
         "lib/netstandard2.1/LiteNetLib.xml",
-        "litenetlib.2.0.1.nupkg.sha512",
+        "litenetlib.2.0.2.nupkg.sha512",
         "litenetlib.nuspec"
       ]
     },
@@ -405,7 +410,7 @@
     "net9.0": [
       "Aether.Physics2D.Diagnostics.MG >= 2.2.0",
       "Aether.Physics2D.MG >= 2.2.0",
-      "LiteNetLib >= 2.0.1",
+      "LiteNetLib >= 2.0.2",
       "MonoGame.Content.Builder.Task >= 3.8.*",
       "MonoGame.Framework.DesktopGL >= 3.8.*",
       "MonoGameLibrary >= 1.0.0"
@@ -476,7 +481,7 @@
           },
           "LiteNetLib": {
             "target": "Package",
-            "version": "[2.0.1, )"
+            "version": "[2.0.2, )"
           },
           "MonoGame.Content.Builder.Task": {
             "target": "Package",

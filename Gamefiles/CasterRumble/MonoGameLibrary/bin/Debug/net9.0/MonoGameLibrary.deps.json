@@ -8,10 +8,40 @@
     ".NETCoreApp,Version=v9.0": {
       "MonoGameLibrary/1.0.0": {
         "dependencies": {
+          "Aether.Physics2D.Diagnostics.MG": "2.2.0",
+          "Aether.Physics2D.MG": "2.2.0",
+          "LiteNetLib": "2.0.2",
           "MonoGame.Framework.DesktopGL": "3.8.4.1"
         },
         "runtime": {
           "MonoGameLibrary.dll": {}
+        }
+      },
+      "Aether.Physics2D.Diagnostics.MG/2.2.0": {
+        "dependencies": {
+          "Aether.Physics2D.MG": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Aether.Physics2D.Diagnostics.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        }
+      },
+      "Aether.Physics2D.MG/2.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/Aether.Physics2D.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        }
+      },
+      "LiteNetLib/2.0.2": {
+        "runtime": {
+          "lib/net8.0/LiteNetLib.dll": {
+            "assemblyVersion": "2.0.2.0",
+            "fileVersion": "2.0.2.0"
+          }
         }
       },
       "MonoGame.Framework.DesktopGL/3.8.4.1": {
@@ -120,6 +150,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Aether.Physics2D.Diagnostics.MG/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XIR38eVl6lulh+sdRDhPEbfc4b7mDE4OsHf8kAPgxXDgJrbsYD/1T+C0As+bidFshLE680raPoNwadn7qRD+Qg==",
+      "path": "aether.physics2d.diagnostics.mg/2.2.0",
+      "hashPath": "aether.physics2d.diagnostics.mg.2.2.0.nupkg.sha512"
+    },
+    "Aether.Physics2D.MG/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IkyyGF0gSlvLq3gysDW39Neuq0+1CiVvD1Nyj+W78fppwgnHnSMjn4FqQTnFwyh9PHgbHc2xXOYgbxe7I5J4Hg==",
+      "path": "aether.physics2d.mg/2.2.0",
+      "hashPath": "aether.physics2d.mg.2.2.0.nupkg.sha512"
+    },
+    "LiteNetLib/2.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TOxT3aT1rnzICpdiPaFHqLf03aEaj79ouJwu6YLqsPGNuPKEfHC8PmfX4G9wsSvXXE+Hp66ijD9EKs6W/Cc8FA==",
+      "path": "litenetlib/2.0.2",
+      "hashPath": "litenetlib.2.0.2.nupkg.sha512"
     },
     "MonoGame.Framework.DesktopGL/3.8.4.1": {
       "type": "package",
