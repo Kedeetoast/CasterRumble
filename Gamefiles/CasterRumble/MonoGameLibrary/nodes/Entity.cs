@@ -1,51 +1,110 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
+using MonoGameLibrary.Graphics;
+using nkast.Aether.Physics2D.Collision.Shapes;
+using nkast.Aether.Physics2D.Dynamics;
+using nkast.Aether.Physics2D.Common;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 using System.Xml.Linq;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
+using System;
 
 namespace MonoGameLibrary.nodes
 {
     public class Entity
+
     {
-        /*
-        public Entity(Entity ParentNode, ) 
+        public string ID { get; set; }
+        public Vector2 Position => body.Position;
+
+
+
+        public float Rotation => body.Rotation;
+
+
+
+        public float Mass { get; set; }
+
+
+
+        public Vector2 velocity => body.LinearVelocity;
+
+
+
+        public Body body;
+
+
+
+        public Sprite sprite;
+
+
+
+
+
+
+        public Entity(World _world, EntityList entityList,string _ID, Vector2 _position, float _rotation = 0)
         {
-           parent = ParentNode;
+            ID = _ID;
+
+            var Attributes = entityList.entityList[ID];
+
+            var X = BodyType.Static;
+
+            if (Attributes.BodyType == "Kinematic")
+            {
+                X = BodyType.Kinematic;
+            }
+            else if (Attributes.BodyType == "Dynamic")
+            {
+                X = BodyType.Dynamic;
+            }
+            else if (Attributes.BodyType == "Static")
+            {
+                X = BodyType.Static;
+            }
+
+
+                body = _world.CreateBody(_position, _rotation, X );
+
+
+
+            string shape = Attributes.HitboxShape;
+
+            //TextureAtlas atlas = TextureAtlas.FromFile(base.Content, "images/atlas_definition/atlas-definition.xml")
+
+            //sprite = TextureAtlas.CreateSprite(entityList.entityList[ID].Sprite);
+
+
+
+            Fixture fixture = HitboxShape(body, Attributes, shape);
+        } 
+
+
+        public Fixture HitboxShape(Body body, EntityData Attributes, string shape)
+        {
+            if (shape == "Rectangle")
+            {
+                Console.WriteLine("Rectangle");
+                return body.CreateRectangle(Attributes.Hitbox["x"], Attributes.Hitbox["y"], 1, new Vector2(Attributes.Hitbox["xOffset"], Attributes.Hitbox["yOffset"]));
+            }
+            else if (shape == "Circle")
+            {
+                Console.WriteLine("Circle");
+                return body.CreateCircle(Attributes.Hitbox["Radius"], 1, new Vector2(Attributes.Hitbox["xOffset"], Attributes.Hitbox["yOffset"]));
+            }
+            else if (shape == "Circle")
+            {
+                Console.WriteLine("CreateEllipse");
+                return body.CreateEllipse(Attributes.Hitbox["x"], Attributes.Hitbox["y"], 20,1);
+            }
+            else
+            {
+                Console.WriteLine("Default");
+                return body.CreateRectangle(1, 1, 1, new Vector2(0, 0));
+            }
         }
-        */
 
-        /// <summary>
-        /// specifies the postion of a given entity relative to orgin (0,0).
-        /// </summary>
-        public Entity parent;
-
-        /// <summary>
-        /// specifies the postion of a given entity relative to orgin (0,0).
-        /// </summary>
-        public Point globalPosition;
-
-
-        /// <summary>
-        /// specifies the postion of a given entity relative to parents orgin.
-        /// </summary>
-        private Point position;
-
-        /// <summary>
-        /// rotation of object with prarents rotation considered .
-        /// </summary>
-        public float globalRotation;
-
-        /// <summary>
-        /// rotation relative to parent.
-        /// </summary>
-        public float rotation;
-
-        /// <summary>
-        /// Gets the height, in pixels, of this texture region.
-        /// </summary>
-        public Vector2 scale;
     }
 }

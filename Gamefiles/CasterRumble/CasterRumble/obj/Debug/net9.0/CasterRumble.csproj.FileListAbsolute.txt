@@ -40,3 +40,7 @@ C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Aether.Physics2D.Diagnostics.dll
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Aether.Physics2D.dll
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\LiteNetLib.dll
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\player_spritesheet.xnb
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\atlas_definition\atlas-definition.xml
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\atlas_definition\PlayerSprite-definition.xml
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\Entity_List\EntityList.json

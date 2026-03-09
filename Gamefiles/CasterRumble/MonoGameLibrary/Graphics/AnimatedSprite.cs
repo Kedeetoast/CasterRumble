@@ -1,5 +1,6 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
+using System;
+using System.Collections.Generic;
 
 namespace MonoGameLibrary.Graphics;
 
@@ -24,6 +25,11 @@ public class AnimatedSprite : Sprite
             Region = _animation.Frames[0];
         }
     }
+    /// <summary>
+    /// refers to the accesable animations this animated sprite is able to use
+    /// </summary>
+    public Dictionary<string, Animation> AvaiableAnimations { get; set; }
+
 
     // VVV constructors VVV
 

@@ -1,5 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MonoGameLibrary.Graphics;
 
@@ -8,9 +11,14 @@ public class Sprite
     // VVV atributes VVV
 
     /// <summary>
-    /// Gets or Sets the source texture region represented by this sprite.
+    /// Gets or Sets the active source texture region represented by this sprite.
     /// </summary>
     public TextureRegion Region { get; set; }
+
+    /// <summary>
+    /// refers to the accesable source texture regions this sprite is able to use
+    /// </summary>
+    public Dictionary<string,TextureRegion> AvaiableRegions { get; set; }
 
     /// <summary>
     /// Gets or Sets the color mask to apply when rendering this sprite.
@@ -75,29 +83,69 @@ public class Sprite
     /// Height is calculated by multiplying the height of the source texture region by the y-axis scale factor.
     /// </remarks>
     public float Height => Region.Height * Scale.Y;
-    /// <summary>
-    /// Creates a new sprite.
-    /// </summary>
-    /// 
 
     // VVV constuctors VVV
 
+    /// <summary>
+    /// Creates a new sprite.
+    /// </summary>
     public Sprite() { }
 
     /// <summary>
-    /// Creates a new sprite using the specified source texture region.
+    /// Creates a new sprite using the specified source texture region and no dictionary of avaiable regions.
     /// </summary>
     /// <param name="region">The texture region to use as the source texture region for this sprite.</param>
     public Sprite(TextureRegion region)
     {
         Region = region;
+        AvaiableRegions.Add("default", Region );
     }
+
+
+    /// <summary>
+    /// Creates a new sprite using the specified active source texture region and a dictionary of avaiable regions.
+    /// </summary>
+    /// <param name="region">The texture region to use as the source texture region for this sprite.</param>
+    public Sprite(string _Active, Dictionary<string, TextureRegion> _AvaiableRegions)
+    {
+        AvaiableRegions = _AvaiableRegions;
+        if (AvaiableRegions.ContainsKey(_Active))
+        {
+            Region = AvaiableRegions[_Active];
+        }
+        else if (AvaiableRegions.Count > 0)
+        {
+            Region = AvaiableRegions.ElementAt(1).Value;
+        }
+        else
+        {
+            Region = null;
+            Console.WriteLine("Error: No avaiable regions for this sprite");
+        }
+
+    }
+
+    public Sprite(Dictionary<string, TextureRegion> _AvaiableRegions)
+    {
+        AvaiableRegions = _AvaiableRegions;
+        if (AvaiableRegions.Count > 0)
+        {
+            Region = AvaiableRegions.ElementAt(1).Value;
+        }
+        else
+        {
+            Region = null;
+            Console.WriteLine("Error: No avaiable regions for this sprite");
+        }
+
+    }
+
+    //VVV methods VVV
+
+
     /// <summary>
     /// Sets the origin of this sprite to the center.
     /// </summary>
-    /// 
-
-    //VVV methods VVV
     public void CenterOrigin()
     {
         Origin = new Vector2(Region.Width, Region.Height) * 0.5f;
@@ -113,4 +161,15 @@ public class Sprite
         Region.Draw(spriteBatch, position, Color, Rotation, Origin, Scale, Effects, LayerDepth);
     }
 
+    public void ChangeActiveRegion(string _Active)
+    {
+        if (AvaiableRegions.ContainsKey(_Active))
+        {
+            Region = AvaiableRegions[_Active];
+        }
+        else
+        {
+            Console.WriteLine($"Error: No region with the name {_Active} found in the avaiable regions for this sprite");
+        }
+    }
 }

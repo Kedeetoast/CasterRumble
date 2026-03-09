@@ -13,8 +13,14 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin images/atlas-definition.xml
-/copy:images/atlas-definition.xml
+#begin Entity_List/EntityList.json
+/copy:Entity_List/EntityList.json
+
+#begin images/atlas_definition/atlas-definition.xml
+/copy:images/atlas_definition/atlas-definition.xml
+
+#begin images/atlas_definition/PlayerSprite-definition.xml
+/copy:images/atlas_definition/PlayerSprite-definition.xml
 
 #begin images/atlas.png
 /importer:TextureImporter
@@ -39,4 +45,16 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:images/logo.png
+
+#begin images/player_spritesheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/player_spritesheet.png
 

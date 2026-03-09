@@ -11,7 +11,7 @@ namespace CasterRumble
     public class Game1 : Core
     {
 
-        private World _world;
+        public World _world;
 
         // Defines the slime animated sprite.
         private AnimatedSprite _slime;
@@ -34,10 +34,11 @@ namespace CasterRumble
         protected override void LoadContent()
         {
             // Create the texture atlas from the XML configuration file
-            TextureAtlas atlas = TextureAtlas.FromFile(Content, "images/atlas-definition.xml");
+            TextureAtlas atlas = TextureAtlas.FromFile(Content, "images/atlas_definition/atlas-definition.xml");
+            TextureAtlas atlas_p = TextureAtlas.FromFile(Content, "images/atlas_definition/PlayerSprite-definition.xml");
 
             // Create the slime animated sprite from the atlas.
-            _slime = atlas.CreateAnimatedSprite("slime-animation");
+            _slime = atlas_p.CreateAnimatedSprite("playerRunning-animation");
             _slime.Scale = new Vector2(4.0f, 4.0f);
 
             // Create the bat animated sprite from the atlas.
