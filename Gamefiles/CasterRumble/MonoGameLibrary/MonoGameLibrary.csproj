@@ -3,14 +3,14 @@
     <TargetFramework>net9.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Content Remove="C:\Users\oscar\.nuget\packages\aether.physics2d.diagnostics.mg\2.2.0\contentFiles\any\netstandard2.0\Content\DiagnosticsFont.xnb" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Aether.Physics2D.Diagnostics.MG" Version="2.2.0" />
     <PackageReference Include="Aether.Physics2D.MG" Version="2.2.0" />
     <PackageReference Include="LiteNetLib" Version="2.0.2" />
     <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.*">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="common\" />
   </ItemGroup>
 </Project>

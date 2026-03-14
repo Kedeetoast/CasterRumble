@@ -35,6 +35,7 @@ namespace MonoGameLibrary.nodes
 
         public Body body;
 
+        public World world;
 
 
         public Sprite sprite;
@@ -44,7 +45,7 @@ namespace MonoGameLibrary.nodes
 
 
 
-        public Entity(World _world, EntityList entityList,string _ID, Vector2 _position, float _rotation = 0)
+        public Entity(ref World _world, EntityList entityList, string _ID, Vector2 _position, float _rotation = 0)
         {
             ID = _ID;
 
@@ -65,8 +66,9 @@ namespace MonoGameLibrary.nodes
                 X = BodyType.Static;
             }
 
+            world = _world;
 
-                body = _world.CreateBody(_position, _rotation, X );
+            body = _world.CreateBody(_position, _rotation, X );
 
 
 
