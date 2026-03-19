@@ -13,4 +13,7 @@
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="common\" />
+  </ItemGroup>
 </Project>

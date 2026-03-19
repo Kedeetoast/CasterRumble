@@ -6,19 +6,20 @@ using System.Xml.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGameLibrary.nodes;
+using nkast.Aether.Physics2D.Dynamics;
 
 namespace MonoGameLibrary.Graphics;
 
+
+/// <summary>
+/// Represents a rectangular region within a texture.
+/// </summary>
 public class TextureAtlas
 {
     // attributes VVV
 
-    private Dictionary<string, TextureRegion> _regions;
-
-    /// <summary>
-    /// Gets or Sets the source texture represented by this texture atlas.
-    /// </summary>
-    /// 
+    private Dictionary<string, TextureRegion> _regions; 
 
   
 
@@ -208,6 +209,13 @@ public class TextureAtlas
     /// <param name="regionName">The name of the region to create the sprite with.</param>
     /// <returns>A new Sprite using the texture region with the specified name.</returns>
     public Sprite CreateSprite(string regionName)
+    {
+        TextureRegion region = GetRegion(regionName);
+        return new Sprite(region);
+    }
+
+
+    public Sprite CreateSprite(string regionName,Entity entity)
     {
         TextureRegion region = GetRegion(regionName);
         return new Sprite(region);

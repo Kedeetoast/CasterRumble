@@ -4,13 +4,13 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/images/atlas.png</File>
-    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/images/logo.png</File>
-    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/images/player_spritesheet.png</File>
+    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Graphics/logo.png</File>
+    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Spritesheet/Spritesheets/atlas.png</File>
+    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Spritesheet/Spritesheets/player_spritesheet.png</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
+    <File>Images/Graphics/logo</File>
+    <File>Images/Spritesheet/Spritesheets/atlas</File>
+    <File>Images/Spritesheet/Spritesheets/player_spritesheet</File>
   </DestFiles>
 </SourceFileCollection>

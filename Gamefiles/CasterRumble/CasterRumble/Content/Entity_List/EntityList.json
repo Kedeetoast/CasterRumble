@@ -1,7 +1,9 @@
 {
+  "SpriteAtlasPath":"",
   "Entities": [
     {
       "Id": "player",
+      "SpriteAtlas": "PlayerSprite-definition.xml",
       "Sprite": "player",
       "BodyType": "bodytype.Kinematic",
       "Scale": 1,
@@ -12,7 +14,7 @@
         "x": 32,
         "y": 48,
         "radius": 0
-       }
+      }
     }
   ]
 }

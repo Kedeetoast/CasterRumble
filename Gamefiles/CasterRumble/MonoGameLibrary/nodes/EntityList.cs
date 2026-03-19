@@ -47,19 +47,23 @@ namespace MonoGameLibrary.nodes
     /// </summary>
     public class EntityData
     {
-        public EntityData(string _id, string _sprite, string _bodyType, string _hitboxShape, Dictionary<string, float> _hitbox)
+        public EntityData(string _id, string _SpriteAtlas, string _sprite, string _bodyType, string _hitboxShape,float _DespawnTime, Dictionary<string, float> _hitbox)
         {
             Id = _id;
+            SpriteAtlas = _SpriteAtlas;
             Sprite = _sprite;
             BodyType = _bodyType;
             HitboxShape = _hitboxShape;
             Hitbox = _hitbox;
+            DespawnTime = _DespawnTime;
         }
 
         public readonly string Id;
+        public readonly string SpriteAtlas;
         public readonly string Sprite;
         public readonly string BodyType;
         public readonly string HitboxShape;
+        public readonly float DespawnTime;
         public readonly Dictionary<string, float> Hitbox;
 
      

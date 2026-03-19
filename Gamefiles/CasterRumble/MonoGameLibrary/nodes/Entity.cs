@@ -40,7 +40,7 @@ namespace MonoGameLibrary.nodes
 
         public Sprite sprite;
 
-
+        public EntityData Attributes;
 
 
 
@@ -49,7 +49,7 @@ namespace MonoGameLibrary.nodes
         {
             ID = _ID;
 
-            var Attributes = entityList.entityList[ID];
+            Attributes = entityList.entityList[ID];
 
             var X = BodyType.Static;
 

@@ -1,15 +1,18 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using MonoGameLibrary;
+using MonoGameLibrary.General;
 using MonoGameLibrary.Graphics;
 using nkast.Aether.Physics2D.Dynamics;
+using System;
 
 namespace CasterRumble
 
 {
     public class Game1 : Core
     {
+        public event EventHandler EventName;
+
 
         public World _world;
 
@@ -34,8 +37,8 @@ namespace CasterRumble
         protected override void LoadContent()
         {
             // Create the texture atlas from the XML configuration file
-            TextureAtlas atlas = TextureAtlas.FromFile(Content, "images/atlas_definition/atlas-definition.xml");
-            TextureAtlas atlas_p = TextureAtlas.FromFile(Content, "images/atlas_definition/PlayerSprite-definition.xml");
+            TextureAtlas atlas = TextureAtlas.FromFile(Content, "images/Spritesheet/Atlas_definition/atlas-definition.xml");
+            TextureAtlas atlas_p = TextureAtlas.FromFile(Content, "images/Spritesheet/Atlas_definition/Player_spritesheet-definition.xml");
 
             // Create the slime animated sprite from the atlas.
             _slime = atlas_p.CreateAnimatedSprite("playerRunning-animation");

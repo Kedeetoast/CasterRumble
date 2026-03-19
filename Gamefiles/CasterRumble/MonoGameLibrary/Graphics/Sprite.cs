@@ -1,5 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using MonoGameLibrary.General.Managers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,6 +45,15 @@ public class Sprite
     /// Default value is Vector2.One
     /// </remarks>
     public Vector2 Scale { get; set; } = Vector2.One;
+
+
+    /// <summary>
+    /// Gets or Sets the scale factor to apply to the x- and y-axes when rendering this sprite.
+    /// </summary>
+    /// <remarks>
+    /// Default value is Vector2.One
+    /// </remarks>
+    public Vector2 Position { get; set; } = Vector2.Zero;
 
     /// <summary>
     /// Gets or Sets the xy-coordinate origin point, relative to the top-left corner, of this sprite.
@@ -171,5 +182,23 @@ public class Sprite
         {
             Console.WriteLine($"Error: No region with the name {_Active} found in the avaiable regions for this sprite");
         }
+    }
+
+    public void Subscribe(GraphicsManager graphicsManager)
+    {
+        graphicsManager.DrawEvent += DrawCall; // attach the listener
+        Console.WriteLine($"[Logger] Now listening to 'graphicsManager.DrawEvent'.");
+    }
+
+    public void Unsubscribe(GraphicsManager graphicsManager)
+    {
+        graphicsManager.DrawEvent -= DrawCall; // detach cleanly
+    }
+
+    // This function runs when the event fires
+    private void DrawCall(object sender, DrawEventArgs e)
+    {
+        Console.WriteLine("[Logger] Event received! clicked at {e._ClickedAt:HH:mm:ss}");
+        Draw(e._spriteBatch, Vector2.Zero);
     }
 }

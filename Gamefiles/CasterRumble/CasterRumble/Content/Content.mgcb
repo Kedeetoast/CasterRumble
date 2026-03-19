@@ -16,13 +16,7 @@
 #begin Entity_List/EntityList.json
 /copy:Entity_List/EntityList.json
 
-#begin images/atlas_definition/atlas-definition.xml
-/copy:images/atlas_definition/atlas-definition.xml
-
-#begin images/atlas_definition/PlayerSprite-definition.xml
-/copy:images/atlas_definition/PlayerSprite-definition.xml
-
-#begin images/atlas.png
+#begin Images/Graphics/logo.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -32,9 +26,15 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:images/atlas.png
+/build:Images/Graphics/logo.png;Images/Graphics/logo
 
-#begin images/logo.png
+#begin Images/Spritesheet/Atlas_definition/atlas-definition.xml
+/copy:Images/Spritesheet/Atlas_definition/atlas-definition.xml;Images/Spritesheet/Atlas_definition/atlas-definition
+
+#begin Images/Spritesheet/Atlas_definition/player_spritesheet-definition.xml
+/copy:Images/Spritesheet/Atlas_definition/player_spritesheet-definition.xml;Images/Spritesheet/Atlas_definition/player_spritesheet-definition
+
+#begin Images/Spritesheet/Spritesheets/atlas.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -44,9 +44,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:images/logo.png
+/build:Images/Spritesheet/Spritesheets/atlas.png;Images/Spritesheet/Spritesheets/atlas
 
-#begin images/player_spritesheet.png
+#begin Images/Spritesheet/Spritesheets/player_spritesheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -56,5 +56,5 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:images/player_spritesheet.png
+/build:Images/Spritesheet/Spritesheets/player_spritesheet.png;Images/Spritesheet/Spritesheets/player_spritesheet
 
