@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CasterRumble")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+625e0e9ab6206db53bc980815677dc73e740d902")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8053288483c1482c62fadbd0319d3ceb6b9ab4dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("CasterRumble")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CasterRumble")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

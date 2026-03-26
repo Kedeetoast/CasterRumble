@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
+using MonoGameLibrary.Graphics.SpriteClass;
 
 namespace MonoGameLibrary.nodes
 {
@@ -50,7 +51,7 @@ namespace MonoGameLibrary.nodes
         public EntityData(string _id, string _SpriteAtlas, string _sprite, string _bodyType, string _hitboxShape,float _DespawnTime, Dictionary<string, float> _hitbox)
         {
             Id = _id;
-            SpriteAtlas = _SpriteAtlas;
+            SpriteAtlasPath = _SpriteAtlas;
             Sprite = _sprite;
             BodyType = _bodyType;
             HitboxShape = _hitboxShape;
@@ -59,7 +60,7 @@ namespace MonoGameLibrary.nodes
         }
 
         public readonly string Id;
-        public readonly string SpriteAtlas;
+        public readonly string SpriteAtlasPath;
         public readonly string Sprite;
         public readonly string BodyType;
         public readonly string HitboxShape;

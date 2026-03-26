@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MonoGameLibrary.Graphics;
+namespace MonoGameLibrary.Graphics.SpriteClass;
 
 public class AnimatedSprite : Sprite
 {

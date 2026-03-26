@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using MonoGameLibrary.Graphics;
 using nkast.Aether.Physics2D.Collision.Shapes;
 using nkast.Aether.Physics2D.Dynamics;
 using nkast.Aether.Physics2D.Common;
@@ -10,6 +9,7 @@ using System.IO;
 using System.Xml;
 using System.Xml.Linq;
 using System;
+using MonoGameLibrary.Graphics.SpriteClass;
 
 namespace MonoGameLibrary.nodes
 {
@@ -29,7 +29,7 @@ namespace MonoGameLibrary.nodes
 
 
 
-        public Vector2 velocity => body.LinearVelocity;
+        public Vector2 Velocity => body.LinearVelocity;
 
 
 

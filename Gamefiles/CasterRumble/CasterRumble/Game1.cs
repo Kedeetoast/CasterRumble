@@ -2,7 +2,9 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonoGameLibrary.General;
+using MonoGameLibrary.General.Managers;
 using MonoGameLibrary.Graphics;
+using MonoGameLibrary.Graphics.SpriteClass;
 using nkast.Aether.Physics2D.Dynamics;
 using System;
 
@@ -17,10 +19,10 @@ namespace CasterRumble
         public World _world;
 
         // Defines the slime animated sprite.
-        private AnimatedSprite _slime;
+        private Sprite _slime;
 
         // Defines the bat animated sprite.
-        private AnimatedSprite _bat;
+        private Sprite _bat;
 
         public Game1() : base("Dungeon Slime", 1280, 720, false)
         {
@@ -37,15 +39,14 @@ namespace CasterRumble
         protected override void LoadContent()
         {
             // Create the texture atlas from the XML configuration file
-            TextureAtlas atlas = TextureAtlas.FromFile(Content, "images/Spritesheet/Atlas_definition/atlas-definition.xml");
-            TextureAtlas atlas_p = TextureAtlas.FromFile(Content, "images/Spritesheet/Atlas_definition/Player_spritesheet-definition.xml");
+            TextureAtlas atlas = TextureAtlas.FromFile(Content, "images/Spritesheet/Atlas_definition/defSpr_atlas.xml");
 
             // Create the slime animated sprite from the atlas.
-            _slime = atlas_p.CreateAnimatedSprite("playerRunning-animation");
+            _slime = atlas.CreateSprite("slime-1");
             _slime.Scale = new Vector2(4.0f, 4.0f);
 
             // Create the bat animated sprite from the atlas.
-            _bat = atlas.CreateAnimatedSprite("bat-animation");
+            _bat = atlas.CreateAnimatedSprite("bat-1");
             _bat.Scale = new Vector2(4.0f, 4.0f);
         }
 
@@ -55,10 +56,10 @@ namespace CasterRumble
                 Exit();
 
             // Update the slime animated sprite.
-            _slime.Update(gameTime);
+            //_slime.Update(gameTime);
 
             // Update the bat animated sprite.
-            _bat.Update(gameTime);
+            //_bat.Update(gameTime);
 
             // TODO: Add your update logic here
 
@@ -67,17 +68,20 @@ namespace CasterRumble
 
         protected override void Draw(GameTime gameTime)
         {
+           
             // Clear the back buffer.
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // Begin the sprite batch to prepare for rendering.
             SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
+            GraphicsManager.Instance.DrawEventCall(SpriteBatch);
+
             // Draw the slime sprite.
-            _slime.Draw(SpriteBatch, Vector2.Zero);
+            //_slime.Draw(SpriteBatch, Vector2.Zero);
 
             // Draw the bat sprite 10px to the right of the slime.
-            _bat.Draw(SpriteBatch, new Vector2(_slime.Width + 10, 0));
+            //_bat.Draw(SpriteBatch, new Vector2(_slime.Width + 10, 0));
             // Always end the sprite batch when finished.
             SpriteBatch.End();
 

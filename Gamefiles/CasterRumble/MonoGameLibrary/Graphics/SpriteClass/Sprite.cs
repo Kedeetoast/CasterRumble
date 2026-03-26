@@ -2,11 +2,12 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonoGameLibrary.General.Managers;
+using MonoGameLibrary.nodes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MonoGameLibrary.Graphics;
+namespace MonoGameLibrary.Graphics.SpriteClass;
 
 public class Sprite
 {
@@ -21,6 +22,8 @@ public class Sprite
     /// refers to the accesable source texture regions this sprite is able to use
     /// </summary>
     public Dictionary<string,TextureRegion> AvaiableRegions { get; set; }
+
+    public SpriteSet SpriteSet { get; set; }
 
     /// <summary>
     /// Gets or Sets the color mask to apply when rendering this sprite.
@@ -50,6 +53,8 @@ public class Sprite
     /// <summary>
     /// Gets or Sets the scale factor to apply to the x- and y-axes when rendering this sprite.
     /// </summary>
+
+
     /// <remarks>
     /// Default value is Vector2.One
     /// </remarks>
@@ -100,7 +105,10 @@ public class Sprite
     /// <summary>
     /// Creates a new sprite.
     /// </summary>
-    public Sprite() { }
+    public Sprite() 
+    { 
+        Subscribe(GraphicsManager.Instance); 
+    }
 
     /// <summary>
     /// Creates a new sprite using the specified source texture region and no dictionary of avaiable regions.
@@ -110,6 +118,14 @@ public class Sprite
     {
         Region = region;
         AvaiableRegions.Add("default", Region );
+        Subscribe(GraphicsManager.Instance);
+    }
+
+    public Sprite(TextureRegion region, Entity _entity)
+    {
+        Region = region;
+        AvaiableRegions.Add("default", Region);
+        Subscribe(GraphicsManager.Instance);
     }
 
 
@@ -117,39 +133,14 @@ public class Sprite
     /// Creates a new sprite using the specified active source texture region and a dictionary of avaiable regions.
     /// </summary>
     /// <param name="region">The texture region to use as the source texture region for this sprite.</param>
-    public Sprite(string _Active, Dictionary<string, TextureRegion> _AvaiableRegions)
+    public Sprite(SpriteSet _SpriteSet)
     {
-        AvaiableRegions = _AvaiableRegions;
-        if (AvaiableRegions.ContainsKey(_Active))
-        {
-            Region = AvaiableRegions[_Active];
-        }
-        else if (AvaiableRegions.Count > 0)
-        {
-            Region = AvaiableRegions.ElementAt(1).Value;
-        }
-        else
-        {
-            Region = null;
-            Console.WriteLine("Error: No avaiable regions for this sprite");
-        }
+        SpriteSet = _SpriteSet;
 
+
+        Subscribe(GraphicsManager.Instance);
     }
 
-    public Sprite(Dictionary<string, TextureRegion> _AvaiableRegions)
-    {
-        AvaiableRegions = _AvaiableRegions;
-        if (AvaiableRegions.Count > 0)
-        {
-            Region = AvaiableRegions.ElementAt(1).Value;
-        }
-        else
-        {
-            Region = null;
-            Console.WriteLine("Error: No avaiable regions for this sprite");
-        }
-
-    }
 
     //VVV methods VVV
 
@@ -174,14 +165,7 @@ public class Sprite
 
     public void ChangeActiveRegion(string _Active)
     {
-        if (AvaiableRegions.ContainsKey(_Active))
-        {
-            Region = AvaiableRegions[_Active];
-        }
-        else
-        {
-            Console.WriteLine($"Error: No region with the name {_Active} found in the avaiable regions for this sprite");
-        }
+        SpriteSet.ChangeActive(_Active);
     }
 
     public void Subscribe(GraphicsManager graphicsManager)

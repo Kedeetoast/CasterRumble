@@ -16,7 +16,7 @@
 #begin Entity_List/EntityList.json
 /copy:Entity_List/EntityList.json
 
-#begin Images/Graphics/logo.png
+#begin Images/Graphics/imj_Monologo.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -26,15 +26,15 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/Graphics/logo.png;Images/Graphics/logo
+/build:Images/Graphics/imj_Monologo.png;Images/Graphics/imj_Monologo
 
-#begin Images/Spritesheet/Atlas_definition/atlas-definition.xml
-/copy:Images/Spritesheet/Atlas_definition/atlas-definition.xml;Images/Spritesheet/Atlas_definition/atlas-definition
+#begin Images/Spritesheet/Atlas_definition/defSpr_atlas.xml
+/copy:Images/Spritesheet/Atlas_definition/defSpr_atlas.xml;Images/Spritesheet/Atlas_definition/defSpr_atlas
 
-#begin Images/Spritesheet/Atlas_definition/player_spritesheet-definition.xml
-/copy:Images/Spritesheet/Atlas_definition/player_spritesheet-definition.xml;Images/Spritesheet/Atlas_definition/player_spritesheet-definition
+#begin Images/Spritesheet/Atlas_definition/defSpr_player.xml
+/copy:Images/Spritesheet/Atlas_definition/defSpr_player.xml;Images/Spritesheet/Atlas_definition/defSpr_player
 
-#begin Images/Spritesheet/Spritesheets/atlas.png
+#begin Images/Spritesheet/Spritesheets/Spr_atlas.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -44,9 +44,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/Spritesheet/Spritesheets/atlas.png;Images/Spritesheet/Spritesheets/atlas
+/build:Images/Spritesheet/Spritesheets/Spr_atlas.png;Images/Spritesheet/Spritesheets/Spr_atlas
 
-#begin Images/Spritesheet/Spritesheets/player_spritesheet.png
+#begin Images/Spritesheet/Spritesheets/Spr_player.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -56,5 +56,5 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/Spritesheet/Spritesheets/player_spritesheet.png;Images/Spritesheet/Spritesheets/player_spritesheet
+/build:Images/Spritesheet/Spritesheets/Spr_player.png;Images/Spritesheet/Spritesheets/Spr_player
 

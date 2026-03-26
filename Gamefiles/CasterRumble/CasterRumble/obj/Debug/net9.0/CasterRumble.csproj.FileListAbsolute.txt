@@ -44,3 +44,8 @@ C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\spritesheet\atlas_definition\atlas-definition
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\spritesheet\atlas_definition\PlayerSprite-definition
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\spritesheet\atlas_definition\player_spritesheet-definition
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\graphics\imj_Monologo.xnb
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\spritesheet\atlas_definition\defSpr_atlas
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\spritesheet\atlas_definition\defSpr_player
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\spritesheet\Spritesheets\Spr_atlas.xnb
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\spritesheet\Spritesheets\Spr_player.xnb

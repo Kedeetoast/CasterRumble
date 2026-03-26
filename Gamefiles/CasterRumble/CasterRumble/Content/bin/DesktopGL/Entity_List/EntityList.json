@@ -3,7 +3,7 @@
   "Entities": [
     {
       "Id": "player",
-      "SpriteAtlas": "PlayerSprite-definition.xml",
+      "SpriteAtlasPath": "PlayerSprite-definition.xml",
       "Sprite": "player",
       "BodyType": "bodytype.Kinematic",
       "Scale": 1,

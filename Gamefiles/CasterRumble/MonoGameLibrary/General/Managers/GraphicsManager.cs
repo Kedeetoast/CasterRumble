@@ -11,11 +11,10 @@ namespace MonoGameLibrary.General.Managers
     public class GraphicsManager : Singleton<GraphicsManager>
     {
 
-        public readonly SpriteBatch spriteBatch;
 
         public event EventHandler<DrawEventArgs> DrawEvent;
 
-        public void DrawEventCall()
+        public void DrawEventCall(SpriteBatch spriteBatch)
         {
             Console.WriteLine($"DrawEvent Occured.");
 
@@ -23,7 +22,6 @@ namespace MonoGameLibrary.General.Managers
             OnDraw(new DrawEventArgs
             {
                 _spriteBatch = spriteBatch,
-                _ClickedAt = DateTime.Now
             });
         }
 
@@ -36,7 +34,6 @@ namespace MonoGameLibrary.General.Managers
     public class DrawEventArgs : EventArgs
     {
         public SpriteBatch _spriteBatch { get; set; }
-        public DateTime _ClickedAt { get; set; }
     }
 
 }

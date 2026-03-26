@@ -6,6 +6,7 @@ using System.Xml.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGameLibrary.Graphics.SpriteClass;
 using MonoGameLibrary.nodes;
 using nkast.Aether.Physics2D.Dynamics;
 
@@ -13,7 +14,7 @@ namespace MonoGameLibrary.Graphics;
 
 
 /// <summary>
-/// Represents a rectangular region within a texture.
+/// list the texture reigons and animations in a given texture, provind methood to creates sprites from them
 /// </summary>
 public class TextureAtlas
 {
@@ -210,10 +211,18 @@ public class TextureAtlas
     /// <returns>A new Sprite using the texture region with the specified name.</returns>
     public Sprite CreateSprite(string regionName)
     {
+
         TextureRegion region = GetRegion(regionName);
-        return new Sprite(region);
+        var x = new SpriteSet(region);
+        return new Sprite(x);
     }
 
+    public Sprite CreateSprite_spriteset(string regionName)
+    {
+        TextureRegion region = GetRegion(regionName);
+        var x = new SpriteSet(_regions);
+        return new Sprite(x);
+    }
 
     public Sprite CreateSprite(string regionName,Entity entity)
     {
