@@ -39,14 +39,15 @@ namespace CasterRumble
         protected override void LoadContent()
         {
             // Create the texture atlas from the XML configuration file
-            TextureAtlas atlas = TextureAtlas.FromFile(Content, "images/Spritesheet/Atlas_definition/defSpr_atlas.xml");
+            TextureAtlas atlas = TextureAtlas.FromFile(Content, "Images/Spritesheet/Atlas_definition/defSpr_atlas");
 
             // Create the slime animated sprite from the atlas.
             _slime = atlas.CreateSprite("slime-1");
             _slime.Scale = new Vector2(4.0f, 4.0f);
 
             // Create the bat animated sprite from the atlas.
-            _bat = atlas.CreateAnimatedSprite("bat-1");
+            _bat = atlas.CreateSprite("bat-1");
+            _bat.Position = new Vector2(_slime.Width + 10, 0); // Position the bat 10px to the right of the slime.
             _bat.Scale = new Vector2(4.0f, 4.0f);
         }
 
@@ -62,6 +63,7 @@ namespace CasterRumble
             //_bat.Update(gameTime);
 
             // TODO: Add your update logic here
+            GraphicsManager.Instance.UpdateEventCall(gameTime);
 
             base.Update(gameTime);
         }

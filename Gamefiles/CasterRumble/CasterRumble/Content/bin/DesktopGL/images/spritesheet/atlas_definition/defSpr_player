@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas>
-	<Texture>images/Spritesheet/Spritesheets/Spr_player</Texture>
+	<Texture>Images/Spritesheet/Spritesheets/Spr_player</Texture>
 	<Regions>
 		<Region name="playerIdle-0" x="0" y="0" width="64" height="64" />
 		<Region name="playerIdle-1" x="64" y="0" width="64" height="64" />

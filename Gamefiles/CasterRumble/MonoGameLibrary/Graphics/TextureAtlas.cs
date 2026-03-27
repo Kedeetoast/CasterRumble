@@ -224,11 +224,11 @@ public class TextureAtlas
         return new Sprite(x);
     }
 
-    public Sprite CreateSprite(string regionName,Entity entity)
-    {
-        TextureRegion region = GetRegion(regionName);
-        return new Sprite(region);
-    }
+    //public Sprite CreateSprite(string regionName,Entity entity)
+    //{
+    //    TextureRegion region = GetRegion(regionName);
+    //    return new Sprite(region);
+    //}
 
     /// <summary>
     /// Adds the given animation to this texture atlas with the specified name.
@@ -268,8 +268,17 @@ public class TextureAtlas
     public AnimatedSprite CreateAnimatedSprite(string animationName)
     {
         Animation animation = GetAnimation(animationName);
-        return new AnimatedSprite(animation);
+        var x = new AnimatedSpriteSet(animation);
+        return new AnimatedSprite(x);
+
     }
 
 
+
+    public Sprite CreateAnimatedSprite_spriteset(string animationName)
+    {
+        Animation animation = GetAnimation(animationName);
+        var x = new AnimatedSpriteSet(_animations);
+        return new AnimatedSprite(x);
+    }
 }

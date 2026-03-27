@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using MonoGameLibrary.General.Utility;
 using System;
 using System.Collections.Generic;
@@ -14,14 +15,16 @@ namespace MonoGameLibrary.General.Managers
 
         public event EventHandler<DrawEventArgs> DrawEvent;
 
-        public void DrawEventCall(SpriteBatch spriteBatch)
+        public event EventHandler<UpdateEventArgs> UpdateEvent;
+
+        public void DrawEventCall(SpriteBatch _spriteBatch)
         {
             Console.WriteLine($"DrawEvent Occured.");
 
             // Fire the event — notify all listeners
             OnDraw(new DrawEventArgs
             {
-                _spriteBatch = spriteBatch,
+                spriteBatch = _spriteBatch,
             });
         }
 
@@ -29,11 +32,32 @@ namespace MonoGameLibrary.General.Managers
         {
             DrawEvent?.Invoke(this, args); // '?.' safely handles zero listeners
         }
+
+        public void UpdateEventCall(GameTime _gameTime)
+        {
+            Console.WriteLine($"DrawEvent Occured.");
+
+            // Fire the event — notify all listeners
+            OnUpdate(new UpdateEventArgs
+            {
+                gameTime = _gameTime,
+            });
+        }
+
+        protected virtual void OnUpdate(UpdateEventArgs args)
+        {
+            UpdateEvent?.Invoke(this, args); // '?.' safely handles zero listeners
+        }
     }
 
     public class DrawEventArgs : EventArgs
     {
-        public SpriteBatch _spriteBatch { get; set; }
+        public SpriteBatch spriteBatch { get; set; }
+    }
+
+    public class UpdateEventArgs : EventArgs
+    {
+        public GameTime gameTime { get; set; }
     }
 
 }

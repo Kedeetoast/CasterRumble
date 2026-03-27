@@ -34,16 +34,10 @@ C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\obj\Debug\net9.0\ref\CasterRumble.dll
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\MonoGameLibrary.dll
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\MonoGameLibrary.pdb
-C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\atlas-definition.xml
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Aether.Physics2D.Diagnostics.dll
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Aether.Physics2D.dll
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\LiteNetLib.dll
-C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\atlas_definition\atlas-definition.xml
-C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\atlas_definition\PlayerSprite-definition.xml
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\Entity_List\EntityList.json
-C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\spritesheet\atlas_definition\atlas-definition
-C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\spritesheet\atlas_definition\PlayerSprite-definition
-C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\spritesheet\atlas_definition\player_spritesheet-definition
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\graphics\imj_Monologo.xnb
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\spritesheet\atlas_definition\defSpr_atlas
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\spritesheet\atlas_definition\defSpr_player

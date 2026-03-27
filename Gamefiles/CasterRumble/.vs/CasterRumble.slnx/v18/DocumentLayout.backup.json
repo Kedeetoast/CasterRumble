@@ -3,48 +3,67 @@
   "WorkspaceRootPath": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\casterrumble\\content\\bin\\desktopgl\\content\\images\\atlas-definition.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|solutionrelative:casterrumble\\content\\bin\\desktopgl\\content\\images\\atlas-definition.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\graphics\\spriteclass\\animatedspriteset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\graphics\\spriteclass\\animatedspriteset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\casterrumble\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|solutionrelative:casterrumble\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\graphics\\spriteclass\\spriteset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\graphics\\spriteclass\\spriteset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\graphics\\textureatlas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\graphics\\textureatlas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\casterrumble\\content\\images\\spritesheet\\atlas_definition\\defspr_atlas.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|solutionrelative:casterrumble\\content\\images\\spritesheet\\atlas_definition\\defspr_atlas.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\casterrumble\\content\\images\\spritesheet\\atlas_definition\\defspr_player.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|solutionrelative:casterrumble\\content\\images\\spritesheet\\atlas_definition\\defspr_player.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\casterrumble\\content\\images\\spritesheet\\spritesheets\\spr_atlas.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|solutionrelative:casterrumble\\content\\images\\spritesheet\\spritesheets\\spr_atlas.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\general\\managers\\graphicsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\general\\managers\\graphicsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\general\\managers\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\general\\managers\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\general\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\general\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\graphics\\spriteclass\\animatedsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\graphics\\spriteclass\\animatedsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\graphics\\spriteclass\\sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\graphics\\spriteclass\\sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\casterrumble\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|solutionrelative:casterrumble\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\general\\managers\\graphicsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\general\\managers\\graphicsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\nodes\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\nodes\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\oscar\\AppData\\Local\\SourceServer\\6b3acc51c52aba5c8ad68758aee23ec2e47ef0533a73cf0f44d2c1c5fd1f4b65\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\Sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\casterrumble\\content\\bin\\desktopgl\\content\\images\\spritesheet\\atlas_definition\\defspr_atlas||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|solutionrelative:casterrumble\\content\\bin\\desktopgl\\content\\images\\spritesheet\\atlas_definition\\defspr_atlas||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\general\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\general\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\casterrumble\\casterrumble.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|solutionrelative:casterrumble\\casterrumble.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\casterrumble\\content\\images\\spritesheet\\spritesheets\\spr_atlas.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|solutionrelative:casterrumble\\content\\images\\spritesheet\\spritesheets\\spr_atlas.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\casterrumble\\content\\images\\spritesheet\\atlas_definition\\defspr_player.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|solutionrelative:casterrumble\\content\\images\\spritesheet\\atlas_definition\\defspr_player.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\casterrumble\\content\\images\\spritesheet\\atlas_definition\\defspr_atlas.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|solutionrelative:casterrumble\\content\\images\\spritesheet\\atlas_definition\\defspr_atlas.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\general\\managers\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\general\\managers\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\nodes\\entitylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,18 +76,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\general\\utility\\singleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\general\\utility\\singleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\graphics\\spriteclass\\spriteset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\graphics\\spriteclass\\spriteset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\graphics\\spriteclass\\animatedsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\graphics\\spriteclass\\animatedsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\graphics\\spriteclass\\animatedspriteset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\graphics\\spriteclass\\animatedspriteset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\graphics\\textureregion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -102,28 +109,8 @@
       "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\general\\managers\\netmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\casterrumble\\content\\bin\\desktopgl\\content\\images\\atlas_definition\\atlas-definition.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|solutionrelative:casterrumble\\content\\bin\\desktopgl\\content\\images\\atlas_definition\\atlas-definition.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\monogamelibrary\\general\\core.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{942F1114-ECD3-4F53-9B98-E5E618153CB8}|MonoGameLibrary\\MonoGameLibrary.csproj|solutionrelative:monogamelibrary\\general\\core.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\casterrumble\\content\\bin\\desktopgl\\content\\images\\spritesheet\\atlas_definition\\playersprite-definition||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|solutionrelative:casterrumble\\content\\bin\\desktopgl\\content\\images\\spritesheet\\atlas_definition\\playersprite-definition||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\casterrumble\\content\\bin\\desktopgl\\content\\images\\spritesheet\\atlas_definition\\atlas-definition||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|solutionrelative:casterrumble\\content\\bin\\desktopgl\\content\\images\\spritesheet\\atlas_definition\\atlas-definition||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\casterrumble\\content\\bin\\desktopgl\\content\\entity_list\\entitylist.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|solutionrelative:casterrumble\\content\\bin\\desktopgl\\content\\entity_list\\entitylist.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\casterrumble\\casterrumble.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|solutionrelative:casterrumble\\casterrumble.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F7AF80CD-ACB3-DC0C-3F5E-19394E72DB34}|CasterRumble\\CasterRumble.csproj|c:\\users\\oscar\\documents\\github\\casterrumble\\gamefiles\\casterrumble\\casterrumble\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -141,46 +128,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "atlas-definition.xml",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\bin\\DesktopGL\\Content\\images\\atlas-definition.xml",
-              "RelativeDocumentMoniker": "CasterRumble\\Content\\bin\\DesktopGL\\Content\\images\\atlas-definition.xml",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\bin\\DesktopGL\\Content\\images\\atlas-definition.xml",
-              "RelativeToolTip": "CasterRumble\\Content\\bin\\DesktopGL\\Content\\images\\atlas-definition.xml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2026-03-22T20:05:28.59Z",
+              "DocumentIndex": 7,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\nodes\\Item.cs",
+              "RelativeDocumentMoniker": "MonoGameLibrary\\nodes\\Item.cs",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\nodes\\Item.cs",
+              "RelativeToolTip": "MonoGameLibrary\\nodes\\Item.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADcAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T16:32:00.58Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
+              "Title": "Game1.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Game1.cs",
+              "RelativeDocumentMoniker": "CasterRumble\\Game1.cs",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Game1.cs*",
+              "RelativeToolTip": "CasterRumble\\Game1.cs*",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T21:33:04.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AnimatedSprite.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\AnimatedSprite.cs",
+              "RelativeDocumentMoniker": "MonoGameLibrary\\Graphics\\SpriteClass\\AnimatedSprite.cs",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\AnimatedSprite.cs*",
+              "RelativeToolTip": "MonoGameLibrary\\Graphics\\SpriteClass\\AnimatedSprite.cs*",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwC8AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T15:35:05.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Sprite.cs",
               "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\Sprite.cs",
               "RelativeDocumentMoniker": "MonoGameLibrary\\Graphics\\SpriteClass\\Sprite.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\Sprite.cs",
-              "RelativeToolTip": "MonoGameLibrary\\Graphics\\SpriteClass\\Sprite.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAswGwAAAAEAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\Sprite.cs*",
+              "RelativeToolTip": "MonoGameLibrary\\Graphics\\SpriteClass\\Sprite.cs*",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAqwLwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-07T15:35:16.757Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Game1.cs",
-              "RelativeDocumentMoniker": "CasterRumble\\Game1.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Game1.cs",
-              "RelativeToolTip": "CasterRumble\\Game1.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAswCkAAAB1AAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "TextureAtlas.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\TextureAtlas.cs",
+              "RelativeDocumentMoniker": "MonoGameLibrary\\Graphics\\TextureAtlas.cs",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\TextureAtlas.cs*",
+              "RelativeToolTip": "MonoGameLibrary\\Graphics\\TextureAtlas.cs*",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAswBABAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T21:33:04.785Z",
+              "WhenOpened": "2026-03-07T13:55:36.372Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SpriteSet.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\SpriteSet.cs",
+              "RelativeDocumentMoniker": "MonoGameLibrary\\Graphics\\SpriteClass\\SpriteSet.cs",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\SpriteSet.cs",
+              "RelativeToolTip": "MonoGameLibrary\\Graphics\\SpriteClass\\SpriteSet.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T14:23:27.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AnimatedSpriteSet.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\AnimatedSpriteSet.cs",
+              "RelativeDocumentMoniker": "MonoGameLibrary\\Graphics\\SpriteClass\\AnimatedSpriteSet.cs",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\AnimatedSpriteSet.cs*",
+              "RelativeToolTip": "MonoGameLibrary\\Graphics\\SpriteClass\\AnimatedSpriteSet.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T14:24:14.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "defSpr_player.xml",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_player.xml",
+              "RelativeDocumentMoniker": "CasterRumble\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_player.xml",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_player.xml",
+              "RelativeToolTip": "CasterRumble\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_player.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-03-07T17:08:47.927Z"
             },
             {
               "$type": "Document",
@@ -188,16 +239,78 @@
               "Title": "GraphicsManager.cs",
               "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\General\\Managers\\GraphicsManager.cs",
               "RelativeDocumentMoniker": "MonoGameLibrary\\General\\Managers\\GraphicsManager.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\General\\Managers\\GraphicsManager.cs",
-              "RelativeToolTip": "MonoGameLibrary\\General\\Managers\\GraphicsManager.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\General\\Managers\\GraphicsManager.cs*",
+              "RelativeToolTip": "MonoGameLibrary\\General\\Managers\\GraphicsManager.cs*",
+              "ViewState": "AgIAABsAAAAAAAAAAAAuwDcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-18T17:27:55.676Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CasterRumble.csproj",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\CasterRumble.csproj",
+              "RelativeDocumentMoniker": "CasterRumble\\CasterRumble.csproj",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\CasterRumble.csproj",
+              "RelativeToolTip": "CasterRumble\\CasterRumble.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-07T17:50:56.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "Sprite.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\AppData\\Local\\SourceServer\\6b3acc51c52aba5c8ad68758aee23ec2e47ef0533a73cf0f44d2c1c5fd1f4b65\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\Sprite.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\AppData\\Local\\SourceServer\\6b3acc51c52aba5c8ad68758aee23ec2e47ef0533a73cf0f44d2c1c5fd1f4b65\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\Sprite.cs",
+              "ToolTip": "C:\\Users\\oscar\\AppData\\Local\\SourceServer\\6b3acc51c52aba5c8ad68758aee23ec2e47ef0533a73cf0f44d2c1c5fd1f4b65\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\Sprite.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\AppData\\Local\\SourceServer\\6b3acc51c52aba5c8ad68758aee23ec2e47ef0533a73cf0f44d2c1c5fd1f4b65\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\Sprite.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAmwEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T23:19:31.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Spr_atlas.png",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\Images\\Spritesheet\\Spritesheets\\Spr_atlas.png",
+              "RelativeDocumentMoniker": "CasterRumble\\Content\\Images\\Spritesheet\\Spritesheets\\Spr_atlas.png",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\Images\\Spritesheet\\Spritesheets\\Spr_atlas.png",
+              "RelativeToolTip": "CasterRumble\\Content\\Images\\Spritesheet\\Spritesheets\\Spr_atlas.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-03-07T13:16:44.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "defSpr_atlas.xml",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_atlas.xml",
+              "RelativeDocumentMoniker": "CasterRumble\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_atlas.xml",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_atlas.xml",
+              "RelativeToolTip": "CasterRumble\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_atlas.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-03-07T17:05:58.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AudioManager.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\General\\Managers\\AudioManager.cs",
+              "RelativeDocumentMoniker": "MonoGameLibrary\\General\\Managers\\AudioManager.cs",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\General\\Managers\\AudioManager.cs",
+              "RelativeToolTip": "MonoGameLibrary\\General\\Managers\\AudioManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T21:26:12.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\General\\Managers\\GameManager.cs",
               "RelativeDocumentMoniker": "MonoGameLibrary\\General\\Managers\\GameManager.cs",
@@ -210,84 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AudioManager.cs",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\General\\Managers\\AudioManager.cs",
-              "RelativeDocumentMoniker": "MonoGameLibrary\\General\\Managers\\AudioManager.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\General\\Managers\\AudioManager.cs",
-              "RelativeToolTip": "MonoGameLibrary\\General\\Managers\\AudioManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T21:26:12.602Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TextureAtlas.cs",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\TextureAtlas.cs",
-              "RelativeDocumentMoniker": "MonoGameLibrary\\Graphics\\TextureAtlas.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\TextureAtlas.cs",
-              "RelativeToolTip": "MonoGameLibrary\\Graphics\\TextureAtlas.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAmwHUAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T13:55:36.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "defSpr_atlas.xml",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_atlas.xml",
-              "RelativeDocumentMoniker": "CasterRumble\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_atlas.xml",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_atlas.xml",
-              "RelativeToolTip": "CasterRumble\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_atlas.xml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2026-03-07T17:05:58.769Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Spr_atlas.png",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\Images\\Spritesheet\\Spritesheets\\Spr_atlas.png",
-              "RelativeDocumentMoniker": "CasterRumble\\Content\\Images\\Spritesheet\\Spritesheets\\Spr_atlas.png",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\Images\\Spritesheet\\Spritesheets\\Spr_atlas.png",
-              "RelativeToolTip": "CasterRumble\\Content\\Images\\Spritesheet\\Spritesheets\\Spr_atlas.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2026-03-07T13:16:44.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "defSpr_player.xml",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_player.xml",
-              "RelativeDocumentMoniker": "CasterRumble\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_player.xml",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_player.xml",
-              "RelativeToolTip": "CasterRumble\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_player.xml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2026-03-07T17:08:47.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Item.cs",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\nodes\\Item.cs",
-              "RelativeDocumentMoniker": "MonoGameLibrary\\nodes\\Item.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\nodes\\Item.cs",
-              "RelativeToolTip": "MonoGameLibrary\\nodes\\Item.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAIwDcAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T16:32:00.58Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "EntityList.cs",
               "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\nodes\\EntityList.cs",
               "RelativeDocumentMoniker": "MonoGameLibrary\\nodes\\EntityList.cs",
@@ -295,12 +331,24 @@
               "RelativeToolTip": "MonoGameLibrary\\nodes\\EntityList.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAAABMAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T01:36:53.141Z",
+              "WhenOpened": "2026-03-09T01:36:53.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "defSpr_atlas",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\bin\\DesktopGL\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_atlas",
+              "RelativeDocumentMoniker": "CasterRumble\\Content\\bin\\DesktopGL\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_atlas",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\bin\\DesktopGL\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_atlas",
+              "RelativeToolTip": "CasterRumble\\Content\\bin\\DesktopGL\\Content\\Images\\Spritesheet\\Atlas_definition\\defSpr_atlas",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-26T23:05:55.025Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "Entity.cs",
               "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\nodes\\Entity.cs",
               "RelativeDocumentMoniker": "MonoGameLibrary\\nodes\\Entity.cs",
@@ -308,12 +356,11 @@
               "RelativeToolTip": "MonoGameLibrary\\nodes\\Entity.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAywB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T09:27:54.71Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T09:27:54.71Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "Singleton.cs",
               "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\General\\Utility\\Singleton.cs",
               "RelativeDocumentMoniker": "MonoGameLibrary\\General\\Utility\\Singleton.cs",
@@ -321,51 +368,11 @@
               "RelativeToolTip": "MonoGameLibrary\\General\\Utility\\Singleton.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T20:56:50.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-10T20:56:50.69Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "SpriteSet.cs",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\SpriteSet.cs",
-              "RelativeDocumentMoniker": "MonoGameLibrary\\Graphics\\SpriteClass\\SpriteSet.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\SpriteSet.cs",
-              "RelativeToolTip": "MonoGameLibrary\\Graphics\\SpriteClass\\SpriteSet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T14:23:27.709Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AnimatedSprite.cs",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\AnimatedSprite.cs",
-              "RelativeDocumentMoniker": "MonoGameLibrary\\Graphics\\SpriteClass\\AnimatedSprite.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\AnimatedSprite.cs",
-              "RelativeToolTip": "MonoGameLibrary\\Graphics\\SpriteClass\\AnimatedSprite.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T15:35:05.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AnimatedSpriteSet.cs",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\AnimatedSpriteSet.cs",
-              "RelativeDocumentMoniker": "MonoGameLibrary\\Graphics\\SpriteClass\\AnimatedSpriteSet.cs",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\SpriteClass\\AnimatedSpriteSet.cs",
-              "RelativeToolTip": "MonoGameLibrary\\Graphics\\SpriteClass\\AnimatedSpriteSet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T14:24:14.98Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "TextureRegion.cs",
               "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\TextureRegion.cs",
               "RelativeDocumentMoniker": "MonoGameLibrary\\Graphics\\TextureRegion.cs",
@@ -373,12 +380,11 @@
               "RelativeToolTip": "MonoGameLibrary\\Graphics\\TextureRegion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T20:32:11.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-08T20:32:11.127Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Camera.cs",
               "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\Camera.cs",
               "RelativeDocumentMoniker": "MonoGameLibrary\\Graphics\\Camera.cs",
@@ -386,12 +392,11 @@
               "RelativeToolTip": "MonoGameLibrary\\Graphics\\Camera.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T17:57:58.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T17:57:58.595Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Animation.cs",
               "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\Graphics\\Animation.cs",
               "RelativeDocumentMoniker": "MonoGameLibrary\\Graphics\\Animation.cs",
@@ -399,12 +404,11 @@
               "RelativeToolTip": "MonoGameLibrary\\Graphics\\Animation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T17:01:07.237Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T17:01:07.237Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "EntityList.json",
               "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\Entity_List\\EntityList.json",
               "RelativeDocumentMoniker": "CasterRumble\\Content\\Entity_List\\EntityList.json",
@@ -412,12 +416,11 @@
               "RelativeToolTip": "CasterRumble\\Content\\Entity_List\\EntityList.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-08T15:24:22.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-08T15:24:22.77Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "MonoGame.Content.Builder.Task.targets",
               "DocumentMoniker": "C:\\Users\\oscar\\.nuget\\packages\\monogame.content.builder.task\\3.8.4.1\\build\\MonoGame.Content.Builder.Task.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\.nuget\\packages\\monogame.content.builder.task\\3.8.4.1\\build\\MonoGame.Content.Builder.Task.targets",
@@ -429,7 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "InputManager.cs",
               "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\General\\Managers\\InputManager.cs",
               "RelativeDocumentMoniker": "MonoGameLibrary\\General\\Managers\\InputManager.cs",
@@ -441,19 +444,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Spr_player.png",
               "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\Images\\Spritesheet\\Spritesheets\\Spr_player.png",
               "RelativeDocumentMoniker": "CasterRumble\\Content\\Images\\Spritesheet\\Spritesheets\\Spr_player.png",
               "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\Images\\Spritesheet\\Spritesheets\\Spr_player.png",
               "RelativeToolTip": "CasterRumble\\Content\\Images\\Spritesheet\\Spritesheets\\Spr_player.png",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2026-03-07T13:16:54.463Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T13:16:54.463Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 29,
               "Title": "SoundManager.cs",
               "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\General\\Managers\\SoundManager.cs",
               "RelativeDocumentMoniker": "MonoGameLibrary\\General\\Managers\\SoundManager.cs",
@@ -465,19 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "atlas-definition.xml",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\bin\\DesktopGL\\Content\\images\\atlas_definition\\atlas-definition.xml",
-              "RelativeDocumentMoniker": "CasterRumble\\Content\\bin\\DesktopGL\\Content\\images\\atlas_definition\\atlas-definition.xml",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\bin\\DesktopGL\\Content\\images\\atlas_definition\\atlas-definition.xml",
-              "RelativeToolTip": "CasterRumble\\Content\\bin\\DesktopGL\\Content\\images\\atlas_definition\\atlas-definition.xml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2026-03-18T18:48:04.091Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "NetManager.cs",
               "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\General\\Managers\\NetManager.cs",
               "RelativeDocumentMoniker": "MonoGameLibrary\\General\\Managers\\NetManager.cs",
@@ -489,7 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "Core.cs",
               "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\MonoGameLibrary\\General\\Core.cs",
               "RelativeDocumentMoniker": "MonoGameLibrary\\General\\Core.cs",
@@ -501,56 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "PlayerSprite-definition",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\bin\\DesktopGL\\Content\\images\\spritesheet\\atlas_definition\\PlayerSprite-definition",
-              "RelativeDocumentMoniker": "CasterRumble\\Content\\bin\\DesktopGL\\Content\\images\\spritesheet\\atlas_definition\\PlayerSprite-definition",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\bin\\DesktopGL\\Content\\images\\spritesheet\\atlas_definition\\PlayerSprite-definition",
-              "RelativeToolTip": "CasterRumble\\Content\\bin\\DesktopGL\\Content\\images\\spritesheet\\atlas_definition\\PlayerSprite-definition",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAABMAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-18T01:22:28.403Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 28,
-              "Title": "atlas-definition",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\bin\\DesktopGL\\Content\\images\\spritesheet\\atlas_definition\\atlas-definition",
-              "RelativeDocumentMoniker": "CasterRumble\\Content\\bin\\DesktopGL\\Content\\images\\spritesheet\\atlas_definition\\atlas-definition",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\bin\\DesktopGL\\Content\\images\\spritesheet\\atlas_definition\\atlas-definition",
-              "RelativeToolTip": "CasterRumble\\Content\\bin\\DesktopGL\\Content\\images\\spritesheet\\atlas_definition\\atlas-definition",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-18T01:22:26.462Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "EntityList.json",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\bin\\DesktopGL\\Content\\Entity_List\\EntityList.json",
-              "RelativeDocumentMoniker": "CasterRumble\\Content\\bin\\DesktopGL\\Content\\Entity_List\\EntityList.json",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Content\\bin\\DesktopGL\\Content\\Entity_List\\EntityList.json",
-              "RelativeToolTip": "CasterRumble\\Content\\bin\\DesktopGL\\Content\\Entity_List\\EntityList.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-18T01:22:06.032Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "CasterRumble.csproj",
-              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\CasterRumble.csproj",
-              "RelativeDocumentMoniker": "CasterRumble\\CasterRumble.csproj",
-              "ToolTip": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\CasterRumble.csproj",
-              "RelativeToolTip": "CasterRumble\\CasterRumble.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-07T17:50:56.168Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\oscar\\Documents\\GitHub\\CasterRumble\\Gamefiles\\CasterRumble\\CasterRumble\\Program.cs",
               "RelativeDocumentMoniker": "CasterRumble\\Program.cs",

@@ -9,7 +9,7 @@ namespace MonoGameLibrary.Graphics.SpriteClass
 {
     public class SpriteSet
     {
-        public TextureRegion ActiveSprite;
+        public TextureRegion ActiveSprite { get; set; }
 
         public Dictionary<string,TextureRegion> AvailableSprites;
 
@@ -34,6 +34,7 @@ namespace MonoGameLibrary.Graphics.SpriteClass
 
         public SpriteSet(TextureRegion Reigon)
         {
+            AvailableSprites = new Dictionary<string, TextureRegion>();
             AvailableSprites.Add("default", Reigon);
 
             Default = AvailableSprites.ElementAt(0).Value;

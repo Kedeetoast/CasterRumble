@@ -12,15 +12,20 @@ namespace MonoGameLibrary.Graphics.SpriteClass
     {
 
         /// <summary>
+        /// current Frame of the current animation playing
+        /// </summary>
+        public TextureRegion ActiveFrame { get; set; }
+
+        /// <summary>
         /// current animation playing
         /// </summary>
-        public Animation ActiveSprite;
+        public Animation ActiveAnimation;
 
 
         /// <summary>
         /// all animations able to be used by the sprite
         /// </summary>
-        public Dictionary<string, Animation> AvailableSprites;
+        public Dictionary<string, Animation> AvailableAnimations;
 
         /// <summary>
         /// fallback animation incase wanted sprite is unavailable
@@ -29,27 +34,35 @@ namespace MonoGameLibrary.Graphics.SpriteClass
 
         public AnimatedSpriteSet(Dictionary<string, Animation> Sprites)
         {
-            AvailableSprites = Sprites;
+            AvailableAnimations = Sprites;
 
-            Default = AvailableSprites.ElementAt(0).Value;
-            ActiveSprite = Default;
+            Default = AvailableAnimations.ElementAt(0).Value;
+            ActiveAnimation = Default;
         }
 
         public AnimatedSpriteSet(Dictionary<string, Animation> Sprites, String Active)
         {
-            AvailableSprites = Sprites;
+            AvailableAnimations = Sprites;
 
-            Default = AvailableSprites.ElementAt(0).Value;
-            ActiveSprite = Default;
+            Default = AvailableAnimations.ElementAt(0).Value;
+            ActiveAnimation = Default;
             ChangeActive(Active);
         }
 
+        public AnimatedSpriteSet(Animation animation)
+        {
+            AvailableAnimations = new Dictionary<string, Animation>();
+            AvailableAnimations.Add("default", animation);
+
+            Default = AvailableAnimations.ElementAt(0).Value;
+            ActiveAnimation = Default;
+        }
 
         public void ChangeActive(string Newsprite)
         {
-            if (AvailableSprites.TryGetValue(Newsprite, out Animation? value))
+            if (AvailableAnimations.TryGetValue(Newsprite, out Animation? value))
             {
-                ActiveSprite = value;
+                ActiveAnimation = value;
             }
             else
             {

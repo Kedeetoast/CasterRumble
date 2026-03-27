@@ -16,7 +16,7 @@ public class Sprite
     /// <summary>
     /// Gets or Sets the active source texture region represented by this sprite.
     /// </summary>
-    public TextureRegion Region { get; set; }
+    public TextureRegion Region => SpriteSet.ActiveSprite;
 
     /// <summary>
     /// refers to the accesable source texture regions this sprite is able to use
@@ -114,19 +114,19 @@ public class Sprite
     /// Creates a new sprite using the specified source texture region and no dictionary of avaiable regions.
     /// </summary>
     /// <param name="region">The texture region to use as the source texture region for this sprite.</param>
-    public Sprite(TextureRegion region)
-    {
-        Region = region;
-        AvaiableRegions.Add("default", Region );
-        Subscribe(GraphicsManager.Instance);
-    }
+    //public Sprite(TextureRegion region)
+    //{
+    //    Region = region;
+    //    AvaiableRegions.Add("default", Region );
+    //    Subscribe(GraphicsManager.Instance);
+    //}
 
-    public Sprite(TextureRegion region, Entity _entity)
-    {
-        Region = region;
-        AvaiableRegions.Add("default", Region);
-        Subscribe(GraphicsManager.Instance);
-    }
+    //public Sprite(TextureRegion region, Entity _entity)
+    //{
+    //    Region = region;
+    //    AvaiableRegions.Add("default", Region);
+    //    Subscribe(GraphicsManager.Instance);
+    //}
 
 
     /// <summary>
@@ -158,9 +158,9 @@ public class Sprite
     /// </summary>
     /// <param name="spriteBatch">The SpriteBatch instance used for batching draw calls.</param>
     /// <param name="position">The xy-coordinate position to render this sprite at.</param>
-    public void Draw(SpriteBatch spriteBatch, Vector2 position)
+    public void Draw(SpriteBatch spriteBatch)
     {
-        Region.Draw(spriteBatch, position, Color, Rotation, Origin, Scale, Effects, LayerDepth);
+        Region.Draw(spriteBatch, Position, Color, Rotation, Origin, Scale, Effects, LayerDepth);
     }
 
     public void ChangeActiveRegion(string _Active)
@@ -168,13 +168,13 @@ public class Sprite
         SpriteSet.ChangeActive(_Active);
     }
 
-    public void Subscribe(GraphicsManager graphicsManager)
+    private void Subscribe(GraphicsManager graphicsManager)
     {
         graphicsManager.DrawEvent += DrawCall; // attach the listener
         Console.WriteLine($"[Logger] Now listening to 'graphicsManager.DrawEvent'.");
     }
 
-    public void Unsubscribe(GraphicsManager graphicsManager)
+    private void Unsubscribe(GraphicsManager graphicsManager)
     {
         graphicsManager.DrawEvent -= DrawCall; // detach cleanly
     }
@@ -183,6 +183,6 @@ public class Sprite
     private void DrawCall(object sender, DrawEventArgs e)
     {
         Console.WriteLine("[Logger] Event received! clicked at {e._ClickedAt:HH:mm:ss}");
-        Draw(e._spriteBatch, Vector2.Zero);
+        Draw(e.spriteBatch);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using MonoGameLibrary.General.Managers;
 using System;
 using System.Collections.Generic;
 
@@ -13,6 +14,9 @@ public class AnimatedSprite : Sprite
     private TimeSpan _elapsed;
     private Animation _animation;
 
+    public AnimatedSpriteSet animatedSpriteSet;
+
+
     /// <summary>
     /// Gets or Sets the animation for this animated sprite.
     /// </summary>
@@ -22,7 +26,7 @@ public class AnimatedSprite : Sprite
         set
         {
             _animation = value;
-            Region = _animation.Frames[0];
+            animatedSpriteSet.ActiveFrame = _animation.Frames[0];
         }
     }
     /// <summary>
@@ -42,9 +46,9 @@ public class AnimatedSprite : Sprite
     /// Creates a new animated sprite with the specified frames and delay.
     /// </summary>
     /// <param name="animation">The animation for this animated sprite.</param>
-    public AnimatedSprite(Animation animation)
+    public AnimatedSprite(AnimatedSpriteSet _animatedSpriteSet)
     {
-        Animation = animation;
+        Animation = _animatedSpriteSet.ActiveAnimation;
     }
 
 
@@ -68,9 +72,26 @@ public class AnimatedSprite : Sprite
                 _currentFrame = 0;
             }
 
-            Region = _animation.Frames[_currentFrame];
+            animatedSpriteSet.ActiveFrame = _animation.Frames[_currentFrame];
         }
     }
 
-}
+    private void Subscribe_Update(GraphicsManager graphicsManager)
+    {
+        graphicsManager.UpdateEvent += UpdateCall; // attach the listener
+        Console.WriteLine($"[Logger] Now listening to 'graphicsManager.DrawEvent'.");
+    }
 
+    public void Unsubscribe_Update(GraphicsManager graphicsManager)
+    {
+        graphicsManager.UpdateEvent -= UpdateCall; // detach cleanly
+    }
+
+    // This function runs when the event fires
+    private void UpdateCall(object sender, UpdateEventArgs e)
+    {
+        Console.WriteLine("[Logger] Event received! clicked at {e._ClickedAt:HH:mm:ss}");
+        Update(e.gameTime);
+
+    }
+}
