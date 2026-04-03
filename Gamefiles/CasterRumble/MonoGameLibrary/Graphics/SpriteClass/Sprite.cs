@@ -5,7 +5,7 @@ using MonoGameLibrary.General.Managers;
 using MonoGameLibrary.nodes;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+
 
 namespace MonoGameLibrary.Graphics.SpriteClass;
 
@@ -16,7 +16,7 @@ public class Sprite
     /// <summary>
     /// Gets or Sets the active source texture region represented by this sprite.
     /// </summary>
-    public TextureRegion Region => SpriteSet.ActiveSprite;
+    public TextureRegion Region => SpriteSet.ActiveRegion;
 
     /// <summary>
     /// refers to the accesable source texture regions this sprite is able to use
@@ -168,13 +168,13 @@ public class Sprite
         SpriteSet.ChangeActive(_Active);
     }
 
-    private void Subscribe(GraphicsManager graphicsManager)
+    protected void Subscribe(GraphicsManager graphicsManager)
     {
         graphicsManager.DrawEvent += DrawCall; // attach the listener
         Console.WriteLine($"[Logger] Now listening to 'graphicsManager.DrawEvent'.");
     }
 
-    private void Unsubscribe(GraphicsManager graphicsManager)
+    protected void Unsubscribe(GraphicsManager graphicsManager)
     {
         graphicsManager.DrawEvent -= DrawCall; // detach cleanly
     }
@@ -183,6 +183,16 @@ public class Sprite
     private void DrawCall(object sender, DrawEventArgs e)
     {
         Console.WriteLine("[Logger] Event received! clicked at {e._ClickedAt:HH:mm:ss}");
-        Draw(e.spriteBatch);
+        Draw(e.SpriteBatch);
     }
+
+    
+}
+
+public enum SpriteType
+{
+    Animated,
+    Static,
+    Animated_SpriteSet,
+    Static_SpriteSet,
 }

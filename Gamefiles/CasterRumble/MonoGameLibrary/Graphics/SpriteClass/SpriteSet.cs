@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using MonoGameLibrary.Graphics;
@@ -9,44 +9,46 @@ namespace MonoGameLibrary.Graphics.SpriteClass
 {
     public class SpriteSet
     {
-        public TextureRegion ActiveSprite { get; set; }
+        public TextureRegion ActiveRegion { get; set; }
 
-        public Dictionary<string,TextureRegion> AvailableSprites;
+        public Dictionary<string,TextureRegion> AvailableRegions;
 
         public TextureRegion Default;
 
         public SpriteSet(Dictionary<string, TextureRegion> Sprites)
         {
-            AvailableSprites = Sprites;
+            AvailableRegions = Sprites;
 
-            Default = AvailableSprites.ElementAt(0).Value;
-            ActiveSprite = Default;
+            Default = AvailableRegions.ElementAt(0).Value;
+            ActiveRegion = Default;
         }
 
         public SpriteSet(Dictionary<string, TextureRegion> Sprites, String Active)
         {
-            AvailableSprites = Sprites;
+            AvailableRegions = Sprites;
 
-            Default = AvailableSprites.ElementAt(0).Value;
-            ActiveSprite = Default;
+            Default = AvailableRegions.ElementAt(0).Value;
+            ActiveRegion = Default;
             ChangeActive(Active);
         }
 
         public SpriteSet(TextureRegion Reigon)
         {
-            AvailableSprites = new Dictionary<string, TextureRegion>();
-            AvailableSprites.Add("default", Reigon);
+            AvailableRegions = new Dictionary<string, TextureRegion>();
+            AvailableRegions.Add("default", Reigon);
 
-            Default = AvailableSprites.ElementAt(0).Value;
-            ActiveSprite = Default;
+            Default = AvailableRegions.ElementAt(0).Value;
+            ActiveRegion = Default;
         }
 
+        public SpriteSet() { }
 
-        public void ChangeActive(string Newsprite)
+
+        public virtual void ChangeActive(string Newsprite)
         {
-            if (AvailableSprites.TryGetValue(Newsprite, out TextureRegion? value))
+            if (AvailableRegions.TryGetValue(Newsprite, out TextureRegion? value))
             {
-                ActiveSprite = value;
+                ActiveRegion = value;
             }
             else
             {

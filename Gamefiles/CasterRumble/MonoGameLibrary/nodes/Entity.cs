@@ -1,15 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGameLibrary.General.Managers;
+using MonoGameLibrary.Graphics;
+using MonoGameLibrary.Graphics.SpriteClass;
 using nkast.Aether.Physics2D.Collision.Shapes;
-using nkast.Aether.Physics2D.Dynamics;
 using nkast.Aether.Physics2D.Common;
+using nkast.Aether.Physics2D.Dynamics;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 using System.Xml.Linq;
-using System;
-using MonoGameLibrary.Graphics.SpriteClass;
 
 namespace MonoGameLibrary.nodes
 {
@@ -45,7 +47,7 @@ namespace MonoGameLibrary.nodes
 
 
 
-        public Entity(ref World _world, EntityList entityList, string _ID, Vector2 _position, float _rotation = 0)
+        public Entity(ref World _world, EntityList entityList, string _ID, Vector2 _position, float _rotation = 0, SpriteType _spriteType = SpriteType.Static)
         {
             ID = _ID;
 
@@ -68,8 +70,8 @@ namespace MonoGameLibrary.nodes
 
             world = _world;
 
-            body = _world.CreateBody(_position, _rotation, X );
-
+            body = _world.CreateBody(_position, _rotation, X);
+            LoadSprite(_spriteType);
 
 
             string shape = Attributes.HitboxShape;
@@ -81,10 +83,10 @@ namespace MonoGameLibrary.nodes
 
 
             Fixture fixture = HitboxShape(body, Attributes, shape);
-        } 
+        }
 
 
-        public Fixture HitboxShape(Body body, EntityData Attributes, string shape)
+        private Fixture HitboxShape(Body body, EntityData Attributes, string shape)
         {
             if (shape == "Rectangle")
             {
@@ -99,7 +101,7 @@ namespace MonoGameLibrary.nodes
             else if (shape == "Circle")
             {
                 Console.WriteLine("CreateEllipse");
-                return body.CreateEllipse(Attributes.Hitbox["x"], Attributes.Hitbox["y"], 20,1);
+                return body.CreateEllipse(Attributes.Hitbox["x"], Attributes.Hitbox["y"], 20, 1);
             }
             else
             {
@@ -108,5 +110,26 @@ namespace MonoGameLibrary.nodes
             }
         }
 
+        private void LoadSprite(SpriteType _spriteType = SpriteType.Static)
+        {
+            
+            TextureAtlas atlas = TextureAtlas.FromFile(GameManager.Instance.Content, GameManager.Instance.EntityList.entityList[ID].SpriteAtlasPath);
+            switch (_spriteType)
+            {
+                case SpriteType.Animated:
+                    sprite = atlas.CreateAnimatedSprite(GameManager.Instance.EntityList.entityList[ID].SpriteAtlasPath);
+                    break;
+                case SpriteType.Static:
+                    sprite = atlas.CreateSprite(GameManager.Instance.EntityList.entityList[ID].SpriteAtlasPath);
+                    break;
+                case SpriteType.Animated_SpriteSet:
+                    sprite = atlas.CreateAnimatedSprite_spriteset(GameManager.Instance.EntityList.entityList[ID].SpriteAtlasPath);
+                    break;
+                case SpriteType.Static_SpriteSet:
+                    sprite = atlas.CreateSprite_spriteset(GameManager.Instance.EntityList.entityList[ID].SpriteAtlasPath);
+                    break;
+            }
+
+        }
     }
 }

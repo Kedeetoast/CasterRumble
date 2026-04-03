@@ -24,7 +24,7 @@ namespace MonoGameLibrary.General.Managers
             // Fire the event — notify all listeners
             OnDraw(new DrawEventArgs
             {
-                spriteBatch = _spriteBatch,
+                SpriteBatch = _spriteBatch,
             });
         }
 
@@ -40,7 +40,7 @@ namespace MonoGameLibrary.General.Managers
             // Fire the event — notify all listeners
             OnUpdate(new UpdateEventArgs
             {
-                gameTime = _gameTime,
+                GameTime = _gameTime,
             });
         }
 
@@ -52,12 +52,12 @@ namespace MonoGameLibrary.General.Managers
 
     public class DrawEventArgs : EventArgs
     {
-        public SpriteBatch spriteBatch { get; set; }
+        public SpriteBatch SpriteBatch { get; set; }
     }
 
     public class UpdateEventArgs : EventArgs
     {
-        public GameTime gameTime { get; set; }
+        public GameTime GameTime { get; set; }
     }
 
 }

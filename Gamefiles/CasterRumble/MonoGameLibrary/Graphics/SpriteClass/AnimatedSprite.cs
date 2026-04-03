@@ -14,9 +14,7 @@ public class AnimatedSprite : Sprite
     private TimeSpan _elapsed;
     private Animation _animation;
 
-    public AnimatedSpriteSet animatedSpriteSet;
-
-
+ 
     /// <summary>
     /// Gets or Sets the animation for this animated sprite.
     /// </summary>
@@ -26,7 +24,7 @@ public class AnimatedSprite : Sprite
         set
         {
             _animation = value;
-            animatedSpriteSet.ActiveFrame = _animation.Frames[0];
+            SpriteSet.ActiveRegion = _animation.Frames[0];
         }
     }
     /// <summary>
@@ -40,7 +38,7 @@ public class AnimatedSprite : Sprite
     /// <summary>
     /// Creates a new animated sprite.
     /// </summary>
-    public AnimatedSprite() { }
+    public AnimatedSprite() { Subscribe_Update(GraphicsManager.Instance); }
 
     /// <summary>
     /// Creates a new animated sprite with the specified frames and delay.
@@ -48,7 +46,9 @@ public class AnimatedSprite : Sprite
     /// <param name="animation">The animation for this animated sprite.</param>
     public AnimatedSprite(AnimatedSpriteSet _animatedSpriteSet)
     {
+        SpriteSet = _animatedSpriteSet;
         Animation = _animatedSpriteSet.ActiveAnimation;
+        Subscribe_Update(GraphicsManager.Instance);
     }
 
 
@@ -72,18 +72,20 @@ public class AnimatedSprite : Sprite
                 _currentFrame = 0;
             }
 
-            animatedSpriteSet.ActiveFrame = _animation.Frames[_currentFrame];
+            SpriteSet.ActiveRegion = _animation.Frames[_currentFrame];
         }
     }
 
     private void Subscribe_Update(GraphicsManager graphicsManager)
     {
+        Subscribe(graphicsManager);
         graphicsManager.UpdateEvent += UpdateCall; // attach the listener
         Console.WriteLine($"[Logger] Now listening to 'graphicsManager.DrawEvent'.");
     }
 
     public void Unsubscribe_Update(GraphicsManager graphicsManager)
     {
+        Unsubscribe(graphicsManager);
         graphicsManager.UpdateEvent -= UpdateCall; // detach cleanly
     }
 
@@ -91,7 +93,7 @@ public class AnimatedSprite : Sprite
     private void UpdateCall(object sender, UpdateEventArgs e)
     {
         Console.WriteLine("[Logger] Event received! clicked at {e._ClickedAt:HH:mm:ss}");
-        Update(e.gameTime);
+        Update(e.GameTime);
 
     }
 }

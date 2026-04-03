@@ -219,7 +219,6 @@ public class TextureAtlas
 
     public Sprite CreateSprite_spriteset(string regionName)
     {
-        TextureRegion region = GetRegion(regionName);
         var x = new SpriteSet(_regions);
         return new Sprite(x);
     }
@@ -277,7 +276,6 @@ public class TextureAtlas
 
     public Sprite CreateAnimatedSprite_spriteset(string animationName)
     {
-        Animation animation = GetAnimation(animationName);
         var x = new AnimatedSpriteSet(_animations);
         return new AnimatedSprite(x);
     }

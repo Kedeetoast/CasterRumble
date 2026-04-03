@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MonoGameLibrary.Graphics.SpriteClass
 {
-    public class AnimatedSpriteSet
+    public class AnimatedSpriteSet : SpriteSet
     {
 
         /// <summary>
@@ -30,35 +30,35 @@ namespace MonoGameLibrary.Graphics.SpriteClass
         /// <summary>
         /// fallback animation incase wanted sprite is unavailable
         /// </summary>
-        public Animation Default;
+        public Animation DefaultAnimation;
 
         public AnimatedSpriteSet(Dictionary<string, Animation> Sprites)
         {
             AvailableAnimations = Sprites;
 
-            Default = AvailableAnimations.ElementAt(0).Value;
-            ActiveAnimation = Default;
+            DefaultAnimation = AvailableAnimations.ElementAt(0).Value;
+            ActiveAnimation = DefaultAnimation;
         }
 
         public AnimatedSpriteSet(Dictionary<string, Animation> Sprites, String Active)
         {
             AvailableAnimations = Sprites;
 
-            Default = AvailableAnimations.ElementAt(0).Value;
-            ActiveAnimation = Default;
+            DefaultAnimation = AvailableAnimations.ElementAt(0).Value;
+            ActiveAnimation = DefaultAnimation;
             ChangeActive(Active);
         }
 
         public AnimatedSpriteSet(Animation animation)
         {
             AvailableAnimations = new Dictionary<string, Animation>();
-            AvailableAnimations.Add("default", animation);
+            AvailableAnimations.Add("DefaultAnimation", animation);
 
-            Default = AvailableAnimations.ElementAt(0).Value;
-            ActiveAnimation = Default;
+            DefaultAnimation = AvailableAnimations.ElementAt(0).Value;
+            ActiveAnimation = DefaultAnimation;
         }
 
-        public void ChangeActive(string Newsprite)
+        public override void ChangeActive(string Newsprite)
         {
             if (AvailableAnimations.TryGetValue(Newsprite, out Animation? value))
             {
