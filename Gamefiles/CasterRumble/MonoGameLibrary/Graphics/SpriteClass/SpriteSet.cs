@@ -46,7 +46,7 @@ namespace MonoGameLibrary.Graphics.SpriteClass
 
         public virtual void ChangeActive(string Newsprite)
         {
-            if (AvailableRegions.TryGetValue(Newsprite, out TextureRegion? value))
+            if (AvailableRegions.TryGetValue(Newsprite, out TextureRegion value))
             {
                 ActiveRegion = value;
             }

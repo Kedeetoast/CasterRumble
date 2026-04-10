@@ -1,7 +1,10 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using MonoGameLibrary.General.Managers;
+using MonoGameLibrary.General.Scenes;
+using System;
 
 namespace MonoGameLibrary.General;
 
@@ -13,6 +16,12 @@ public class Core : Game
     /// Gets a reference to the Core instance.
     /// </summary>
     public static Core Instance => s_instance;
+
+    // The scene that is currently active.
+    public static Scene S_activeScene {private set; get; }
+
+    // The next scene to switch to, if there is one.
+    private static Scene S_nextScene;
 
     /// <summary>
     /// Gets the graphics device manager to control the presentation of graphics.
@@ -28,6 +37,8 @@ public class Core : Game
     /// Gets the sprite batch used for all 2D rendering.
     /// </summary>
     public static SpriteBatch SpriteBatch { get; private set; }
+
+    private BasicEffect _spriteBatchEffect;
 
     /// <summary>
     /// Gets the content manager used to load global assets.
@@ -87,5 +98,77 @@ public class Core : Game
 
         // Create the sprite batch instance.
         SpriteBatch = new SpriteBatch(GraphicsDevice);
+    }
+
+
+
+    protected override void Update(GameTime gameTime)
+    {
+        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            Exit();
+
+        base.Update(gameTime);
+
+        //if (S_nextScene != null)
+        //{
+        //    TransitionScene();
+        //}
+
+
+
+        //System.Diagnostics.Debug.WriteLine($"[Debug] Active Scene: {(S_activeScene != null ? S_activeScene.GetType().Name : "None")}");
+    }
+
+    protected override void Draw(GameTime gameTime)
+    {
+        // Clear the back buffer.
+        GraphicsDevice.Clear(Color.CornflowerBlue);
+
+        // Begin the sprite batch to prepare for rendering.
+        SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
+
+
+
+        base.Draw(gameTime);
+
+        // Always end the sprite batch when finished.
+        SpriteBatch.End();
+    }
+
+    public static void ChangeScene(Scene next)
+    {
+        // Only set the next scene value if it is not the same
+        // instance as the currently active scene.
+        if (S_activeScene != next)
+        {
+            S_nextScene = next;
+            TransitionScene();
+        }
+    }
+
+    private static void TransitionScene()
+    {
+        // If there is an active scene, dispose of it.
+        if (S_activeScene != null)
+        {
+            S_activeScene.Dispose();
+        }
+
+        // Force the garbage collector to collect to ensure memory is cleared.
+        GC.Collect();
+
+        // Change the currently active scene to the new scene.
+        S_activeScene = S_nextScene;
+
+        // Null out the next scene value so it does not trigger a change over and over.
+        S_nextScene = null;
+
+        // If the active scene now is not null, initialize it.
+        // Remember, just like with Game, the Initialize call also calls the
+        // Scene.LoadContent
+        if (S_activeScene != null)
+        {
+            S_activeScene.Initialize();
+        }
     }
 }

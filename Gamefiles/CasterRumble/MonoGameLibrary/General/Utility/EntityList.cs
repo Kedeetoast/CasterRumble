@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
+using MonoGameLibrary.Graphics.SpriteClass;
 using nkast.Aether.Physics2D.Dynamics;
 using System;
 using System.Collections.Generic;
@@ -7,9 +8,9 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
-using MonoGameLibrary.Graphics.SpriteClass;
+using System.Text.Json.Serialization;
 
-namespace MonoGameLibrary.nodes
+namespace MonoGameLibrary.General.Utility
 {
     /// <summary>
     /// holds a dictionary detailing the attributes for entities based of ID
@@ -30,8 +31,8 @@ namespace MonoGameLibrary.nodes
         public static Dictionary<string, EntityData> Jsonlookup(ContentManager content, string fileName)
         {
             string filePath = Path.Combine(content.RootDirectory, fileName);
-
             var json = File.ReadAllText(filePath);
+
             var data = JsonSerializer.Deserialize<EntityListData>(json);
 
             var entityList = data.Entities.ToDictionary(e => e.Id);
@@ -48,26 +49,33 @@ namespace MonoGameLibrary.nodes
     /// </summary>
     public class EntityData
     {
-        public EntityData(string _id, string _SpriteAtlas, string _sprite, string _bodyType, string _hitboxShape,float _DespawnTime, Dictionary<string, float> _hitbox)
-        {
-            Id = _id;
-            SpriteAtlasPath = _SpriteAtlas;
-            Sprite = _sprite;
-            BodyType = _bodyType;
-            HitboxShape = _hitboxShape;
-            Hitbox = _hitbox;
-            DespawnTime = _DespawnTime;
-        }
+        [JsonPropertyName("_Id")]
+        public string Id { get; init; } = string.Empty;
 
-        public readonly string Id;
-        public readonly string SpriteAtlasPath;
-        public readonly string Sprite;
-        public readonly string BodyType;
-        public readonly string HitboxShape;
-        public readonly float DespawnTime;
-        public readonly Dictionary<string, float> Hitbox;
+        [JsonPropertyName("_SpriteAtlasPath")]
+        public string SpriteAtlasPath { get; init; } = string.Empty;
 
-     
+        [JsonPropertyName("_Sprite")]
+        public string Sprite { get; init; } = string.Empty;
+
+        [JsonPropertyName("_BodyType")]
+        public string BodyType { get; init; } = string.Empty;
+
+        [JsonPropertyName("_HitboxShape")]
+        public string HitboxShape { get; init; } = string.Empty;
+
+        [JsonPropertyName("_Scale")]
+        public float Scale { get; init; } = 1f;
+
+        [JsonPropertyName("_DespawnTime")]
+        public float DespawnTime { get; init; }
+
+        [JsonPropertyName("_Hitbox")]
+        public Dictionary<string, float> Hitbox { get; init; } = new();
+
+        [JsonPropertyName("_SpriteList")]
+        public List<string> SpriteList { get; init; } = new();
+
 
     }
 

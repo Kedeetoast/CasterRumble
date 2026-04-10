@@ -13,8 +13,40 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Audio/bounce.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/bounce.wav
+
+#begin Audio/collect.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/collect.wav
+
+#begin Audio/theme.ogg
+/importer:OggImporter
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Audio/theme.ogg
+
 #begin Entity_List/EntityList.json
 /copy:Entity_List/EntityList.json
+
+#begin Fonts/04B_30_5x.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/04B_30_5x.spritefont
+
+#begin Fonts/04B_30.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/04B_30.spritefont
 
 #begin Images/Graphics/imj_Monologo.png
 /importer:TextureImporter
@@ -33,6 +65,9 @@
 
 #begin Images/Spritesheet/Atlas_definition/defSpr_player.xml
 /copy:Images/Spritesheet/Atlas_definition/defSpr_player.xml;Images/Spritesheet/Atlas_definition/defSpr_player
+
+#begin Images/Spritesheet/Atlas_definition/defSpr_player(old).xml
+/copy:Images/Spritesheet/Atlas_definition/defSpr_player(old).xml;Images/Spritesheet/Atlas_definition/defSpr_player(old)
 
 #begin Images/Spritesheet/Spritesheets/Spr_atlas.png
 /importer:TextureImporter
@@ -57,4 +92,16 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Images/Spritesheet/Spritesheets/Spr_player.png;Images/Spritesheet/Spritesheets/Spr_player
+
+#begin Images/Spritesheet/Spritesheets/Spr_player(old).png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/Spritesheet/Spritesheets/Spr_player(old).png;Images/Spritesheet/Spritesheets/Spr_player(old)
 

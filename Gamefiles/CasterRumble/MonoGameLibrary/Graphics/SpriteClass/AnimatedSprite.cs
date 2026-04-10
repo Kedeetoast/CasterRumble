@@ -38,7 +38,7 @@ public class AnimatedSprite : Sprite
     /// <summary>
     /// Creates a new animated sprite.
     /// </summary>
-    public AnimatedSprite() { Subscribe_Update(GraphicsManager.Instance); }
+    public AnimatedSprite() {  }
 
     /// <summary>
     /// Creates a new animated sprite with the specified frames and delay.
@@ -48,7 +48,7 @@ public class AnimatedSprite : Sprite
     {
         SpriteSet = _animatedSpriteSet;
         Animation = _animatedSpriteSet.ActiveAnimation;
-        Subscribe_Update(GraphicsManager.Instance);
+        //Duel_Subscribe(GraphicsManager.Instance, GameManager.Instance);
     }
 
 
@@ -58,7 +58,7 @@ public class AnimatedSprite : Sprite
     /// Updates this animated sprite.
     /// </summary>
     /// <param name="gameTime">A snapshot of the game timing values provided by the framework.</param>
-    public void Update(GameTime gameTime)
+    public override void Update(GameTime gameTime)
     {
         _elapsed += gameTime.ElapsedGameTime;
 
@@ -76,24 +76,6 @@ public class AnimatedSprite : Sprite
         }
     }
 
-    private void Subscribe_Update(GraphicsManager graphicsManager)
-    {
-        Subscribe(graphicsManager);
-        graphicsManager.UpdateEvent += UpdateCall; // attach the listener
-        Console.WriteLine($"[Logger] Now listening to 'graphicsManager.DrawEvent'.");
-    }
+    
 
-    public void Unsubscribe_Update(GraphicsManager graphicsManager)
-    {
-        Unsubscribe(graphicsManager);
-        graphicsManager.UpdateEvent -= UpdateCall; // detach cleanly
-    }
-
-    // This function runs when the event fires
-    private void UpdateCall(object sender, UpdateEventArgs e)
-    {
-        Console.WriteLine("[Logger] Event received! clicked at {e._ClickedAt:HH:mm:ss}");
-        Update(e.GameTime);
-
-    }
 }

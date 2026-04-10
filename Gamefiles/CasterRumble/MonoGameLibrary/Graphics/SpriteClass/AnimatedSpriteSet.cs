@@ -14,7 +14,7 @@ namespace MonoGameLibrary.Graphics.SpriteClass
         /// <summary>
         /// current Frame of the current animation playing
         /// </summary>
-        public TextureRegion ActiveFrame { get; set; }
+        //public TextureRegion ActiveFrame { get; set; }
 
         /// <summary>
         /// current animation playing
@@ -60,7 +60,7 @@ namespace MonoGameLibrary.Graphics.SpriteClass
 
         public override void ChangeActive(string Newsprite)
         {
-            if (AvailableAnimations.TryGetValue(Newsprite, out Animation? value))
+            if (AvailableAnimations.TryGetValue(Newsprite, out Animation value))
             {
                 ActiveAnimation = value;
             }

@@ -10,7 +10,7 @@
         "dependencies": {
           "Aether.Physics2D.Diagnostics.MG": "2.2.0",
           "Aether.Physics2D.MG": "2.2.0",
-          "LiteNetLib": "2.0.2",
+          "LiteNetLib": "2.1.2",
           "MonoGame.Framework.DesktopGL": "3.8.4.1"
         },
         "runtime": {
@@ -36,11 +36,11 @@
           }
         }
       },
-      "LiteNetLib/2.0.2": {
+      "LiteNetLib/2.1.2": {
         "runtime": {
           "lib/net8.0/LiteNetLib.dll": {
-            "assemblyVersion": "2.0.2.0",
-            "fileVersion": "2.0.2.0"
+            "assemblyVersion": "2.1.2.0",
+            "fileVersion": "2.1.2.0"
           }
         }
       },
@@ -165,12 +165,12 @@
       "path": "aether.physics2d.mg/2.2.0",
       "hashPath": "aether.physics2d.mg.2.2.0.nupkg.sha512"
     },
-    "LiteNetLib/2.0.2": {
+    "LiteNetLib/2.1.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TOxT3aT1rnzICpdiPaFHqLf03aEaj79ouJwu6YLqsPGNuPKEfHC8PmfX4G9wsSvXXE+Hp66ijD9EKs6W/Cc8FA==",
-      "path": "litenetlib/2.0.2",
-      "hashPath": "litenetlib.2.0.2.nupkg.sha512"
+      "sha512": "sha512-+bmu7Vj+ik3xGX+qubsFuGSR8Pdri4Og7D9YAer83vHotkSHNLYL5bkZNgpvsK8GrcdNOUabZhqbYtmHu8as7A==",
+      "path": "litenetlib/2.1.2",
+      "hashPath": "litenetlib.2.1.2.nupkg.sha512"
     },
     "MonoGame.Framework.DesktopGL/3.8.4.1": {
       "type": "package",

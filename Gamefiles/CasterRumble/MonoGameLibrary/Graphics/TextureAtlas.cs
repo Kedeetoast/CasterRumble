@@ -217,9 +217,31 @@ public class TextureAtlas
         return new Sprite(x);
     }
 
-    public Sprite CreateSprite_spriteset(string regionName)
+    public Sprite CreateSprite_spriteset()
     {
         var x = new SpriteSet(_regions);
+        return new Sprite(x);
+    }
+
+    public Sprite CreateSprite_spriteset(List<String> Regions)
+    {
+        var filteredRegions = new Dictionary<string, TextureRegion>();
+
+        foreach (string i in Regions)
+        {
+            if (_regions.TryGetValue(i, out TextureRegion value))
+            {
+                filteredRegions.Add(i, value);
+            }
+            else
+            {
+                // Handle the case where the animation name is not found in the atlas.
+                // For example, you could log a warning or throw an exception.
+                System.Diagnostics.Debug.WriteLine($"Warning: Animation '{i}' not found in the texture atlas.");
+            }
+        }
+
+        var x = new SpriteSet(filteredRegions);
         return new Sprite(x);
     }
 
@@ -274,9 +296,32 @@ public class TextureAtlas
 
 
 
-    public Sprite CreateAnimatedSprite_spriteset(string animationName)
+    public Sprite CreateAnimatedSprite_spriteset()
     {
         var x = new AnimatedSpriteSet(_animations);
+        return new AnimatedSprite(x);
+    }
+
+
+    public Sprite CreateAnimatedSprite_spriteset(List<string> animations)
+    {
+        var filteredAnimations = new Dictionary<string, Animation>();
+
+        foreach (string i in animations)
+        {
+            if (_animations.TryGetValue(i, out Animation value))
+            {
+                filteredAnimations.Add(i, value);
+            }
+            else
+            {
+                // Handle the case where the animation name is not found in the atlas.
+                // For example, you could log a warning or throw an exception.
+                System.Diagnostics.Debug.WriteLine($"Warning: Animation '{i}' not found in the texture atlas.");
+            }
+        }
+
+        var x = new AnimatedSpriteSet(filteredAnimations);
         return new AnimatedSprite(x);
     }
 }

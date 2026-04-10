@@ -1,7 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGameLibrary.General;
 using MonoGameLibrary.General.Managers;
+using MonoGameLibrary.General.Utility; 
 using MonoGameLibrary.Graphics;
 using MonoGameLibrary.Graphics.SpriteClass;
 using nkast.Aether.Physics2D.Collision.Shapes;
@@ -9,21 +11,24 @@ using nkast.Aether.Physics2D.Common;
 using nkast.Aether.Physics2D.Dynamics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.IO;
 using System.Xml;
 using System.Xml.Linq;
 
 namespace MonoGameLibrary.nodes
 {
-    public class Entity
+    public class Entity : Node2D
 
     {
         public string ID { get; set; }
-        public Vector2 Position => body.Position;
+        public override Vector2 Position => body.Position;
 
 
 
-        public float Rotation => body.Rotation;
+        public override float Rotation => body.Rotation;
+
+        
 
 
 
@@ -31,8 +36,11 @@ namespace MonoGameLibrary.nodes
 
 
 
-        public Vector2 Velocity => body.LinearVelocity;
-
+        public Vector2 Velocity
+        {
+            get => body.LinearVelocity;
+            protected set => body.LinearVelocity = value;
+        }
 
 
         public Body body;
@@ -47,11 +55,11 @@ namespace MonoGameLibrary.nodes
 
 
 
-        public Entity(ref World _world, EntityList entityList, string _ID, Vector2 _position, float _rotation = 0, SpriteType _spriteType = SpriteType.Static)
+        public Entity(ref World _world, string _ID, Vector2 _position, float _rotation = 0, SpriteType _spriteType = SpriteType.Static) : base()
         {
             ID = _ID;
 
-            Attributes = entityList.entityList[ID];
+            Attributes = GameManager.Instance.EntityList.entityList[ID];
 
             var X = BodyType.Static;
 
@@ -113,23 +121,40 @@ namespace MonoGameLibrary.nodes
         private void LoadSprite(SpriteType _spriteType = SpriteType.Static)
         {
             
-            TextureAtlas atlas = TextureAtlas.FromFile(GameManager.Instance.Content, GameManager.Instance.EntityList.entityList[ID].SpriteAtlasPath);
+            TextureAtlas atlas = TextureAtlas.FromFile(GameManager.Instance.Scene_Content, GameManager.Instance.EntityList.entityList[ID].SpriteAtlasPath);
             switch (_spriteType)
             {
                 case SpriteType.Animated:
-                    sprite = atlas.CreateAnimatedSprite(GameManager.Instance.EntityList.entityList[ID].SpriteAtlasPath);
+                    sprite = atlas.CreateAnimatedSprite(GameManager.Instance.EntityList.entityList[ID].Sprite);
                     break;
                 case SpriteType.Static:
-                    sprite = atlas.CreateSprite(GameManager.Instance.EntityList.entityList[ID].SpriteAtlasPath);
+                    sprite = atlas.CreateSprite(GameManager.Instance.EntityList.entityList[ID].Sprite);
                     break;
                 case SpriteType.Animated_SpriteSet:
-                    sprite = atlas.CreateAnimatedSprite_spriteset(GameManager.Instance.EntityList.entityList[ID].SpriteAtlasPath);
+                    sprite = atlas.CreateAnimatedSprite_spriteset(GameManager.Instance.EntityList.entityList[ID].SpriteList);
                     break;
                 case SpriteType.Static_SpriteSet:
-                    sprite = atlas.CreateSprite_spriteset(GameManager.Instance.EntityList.entityList[ID].SpriteAtlasPath);
+                    sprite = atlas.CreateSprite_spriteset(GameManager.Instance.EntityList.entityList[ID].SpriteList);
                     break;
+                case SpriteType.Animated_FullSpriteSet:
+                    sprite = atlas.CreateAnimatedSprite_spriteset();
+                    break;
+                case SpriteType.Static_FullSpriteSet:
+                    sprite = atlas.CreateSprite_spriteset();
+                    break;  
             }
 
         }
+
+        protected override void Dispose(bool disposing)
+        {
+                base.Dispose(disposing);
+                if (disposing)
+                {
+                   world?.Remove(body);
+                   sprite?.Dispose();
+                }
+        }
+
     }
 }

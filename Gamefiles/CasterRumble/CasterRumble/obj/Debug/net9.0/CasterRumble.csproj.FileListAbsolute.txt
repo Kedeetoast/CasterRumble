@@ -43,3 +43,11 @@ C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\spritesheet\atlas_definition\defSpr_player
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\spritesheet\Spritesheets\Spr_atlas.xnb
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\images\spritesheet\Spritesheets\Spr_player.xnb
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\Images\Spritesheet\Atlas_definition\defSpr_player(old)
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\Images\Spritesheet\Spritesheets\Spr_player(old).xnb
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\Fonts\04B_30.xnb
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\Fonts\04B_30_5x.xnb
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\Audio\bounce.xnb
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\Audio\collect.xnb
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\Audio\theme.ogg
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\Audio\theme.xnb
