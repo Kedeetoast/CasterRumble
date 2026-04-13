@@ -91,6 +91,18 @@ namespace MonoGameLibrary.General.Managers
 
 
 
+        public void Remove_Action(string _Name)
+        {
+            if (ActionList.ContainsKey(_Name))
+            {
+                ActionList.Remove(_Name);
+            }
+            else
+            {
+                Console.WriteLine($"Error: No Action exist with name \"{_Name}\"");
+            }
+        }
+
 
         public void Add_Action(string _Name)
         {
@@ -101,6 +113,18 @@ namespace MonoGameLibrary.General.Managers
             }
 
             ActionList.Add(_Name, new Actions(_Name));
+        }
+
+        public void Action_AltName(string _Name, string _AltName)
+        {
+            if (ActionList.TryGetValue(_Name, out Actions value))
+            {
+                ActionList.Add(_AltName, value);
+            }
+            else
+            {
+                Console.WriteLine($"Error: No Action exist with name \"{_Name}\"");
+            }
         }
 
         public void Add_input(string _Name, Keys key)
@@ -119,6 +143,7 @@ namespace MonoGameLibrary.General.Managers
         {
             if (ActionList.TryGetValue(_Name, out Actions value))
             {
+
                 value.Add_button(button);
             }
             else
@@ -139,6 +164,17 @@ namespace MonoGameLibrary.General.Managers
             }
         }
 
+        public void Remove_input(string _Name, Keys key)
+        {
+            if (ActionList.TryGetValue(_Name, out Actions value))
+            {
+                value.Remove_button(key);
+            }
+            else
+            {
+                Console.WriteLine($"Error: No Action exist with name \"{_Name}\"");
+            }
+        }
         public bool Check_Action_pressed(string _Name)
         {
             if (ActionList.TryGetValue(_Name, out Actions value))

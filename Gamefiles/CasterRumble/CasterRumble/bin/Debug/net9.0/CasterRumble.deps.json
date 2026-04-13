@@ -10,6 +10,7 @@
         "dependencies": {
           "Aether.Physics2D.Diagnostics.MG": "2.2.0",
           "Aether.Physics2D.MG": "2.2.0",
+          "Gum.MonoGame": "2026.4.5.1",
           "LiteNetLib": "2.1.2",
           "MonoGame.Framework.DesktopGL": "3.8.4.1",
           "MonoGameLibrary": "1.0.0"
@@ -37,11 +38,59 @@
           }
         }
       },
+      "CsvHelper/33.1.0": {
+        "runtime": {
+          "lib/net9.0/CsvHelper.dll": {
+            "assemblyVersion": "33.0.0.0",
+            "fileVersion": "33.1.0.26"
+          }
+        }
+      },
+      "FlatRedBall.GumCommon/2026.4.5.1": {
+        "dependencies": {
+          "CsvHelper": "33.1.0",
+          "FlatRedBall.InterpolationCore": "2025.4.22.1"
+        },
+        "runtime": {
+          "lib/net8.0/GumCommon.dll": {
+            "assemblyVersion": "2026.4.5.1",
+            "fileVersion": "2026.4.5.1"
+          }
+        }
+      },
+      "FlatRedBall.InterpolationCore/2025.4.22.1": {
+        "runtime": {
+          "lib/netstandard2.0/FlatRedBall.InterpolationCore.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
+      "Gum.MonoGame/2026.4.5.1": {
+        "dependencies": {
+          "FlatRedBall.GumCommon": "2026.4.5.1",
+          "TextCopy": "6.2.1"
+        },
+        "runtime": {
+          "lib/net8.0/MonoGameGum.dll": {
+            "assemblyVersion": "2026.4.5.1",
+            "fileVersion": "2026.4.5.1"
+          }
+        }
+      },
       "LiteNetLib/2.1.2": {
         "runtime": {
           "lib/net8.0/LiteNetLib.dll": {
             "assemblyVersion": "2.1.2.0",
             "fileVersion": "2.1.2.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/7.0.0": {
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
           }
         }
       },
@@ -144,10 +193,22 @@
           }
         }
       },
+      "TextCopy/6.2.1": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/TextCopy.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "MonoGameLibrary/1.0.0": {
         "dependencies": {
           "Aether.Physics2D.Diagnostics.MG": "2.2.0",
           "Aether.Physics2D.MG": "2.2.0",
+          "Gum.MonoGame": "2026.4.5.1",
           "LiteNetLib": "2.1.2"
         },
         "runtime": {
@@ -179,12 +240,47 @@
       "path": "aether.physics2d.mg/2.2.0",
       "hashPath": "aether.physics2d.mg.2.2.0.nupkg.sha512"
     },
+    "CsvHelper/33.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kqfTOZGrn7NarNeXgjh86JcpTHUoeQDMB8t9NVa/ZtlSYiV1rxfRnQ49WaJsob4AiGrbK0XDzpyKkBwai4F8eg==",
+      "path": "csvhelper/33.1.0",
+      "hashPath": "csvhelper.33.1.0.nupkg.sha512"
+    },
+    "FlatRedBall.GumCommon/2026.4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1ulCK4tvNfT1NrsZDB+AU4pv45BgvgTIdXYdTxZQV/E4itD5CSBIFbqSMvYz5JSVpl1ByFbE9oklqte84OuD9A==",
+      "path": "flatredball.gumcommon/2026.4.5.1",
+      "hashPath": "flatredball.gumcommon.2026.4.5.1.nupkg.sha512"
+    },
+    "FlatRedBall.InterpolationCore/2025.4.22.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-x95teSPBlV88KKbivY+peQ8AjqfXFgmGFnHw4Adds8UaO81zJKZAZZrXeetp5K+5mgd4t2hdtW4ItBFJ7ZwWig==",
+      "path": "flatredball.interpolationcore/2025.4.22.1",
+      "hashPath": "flatredball.interpolationcore.2025.4.22.1.nupkg.sha512"
+    },
+    "Gum.MonoGame/2026.4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-t27p8TPSgLQ2FVkstpRCp0x/zeMYJWd7ie/bi3rlPv63ym9eljUpO/aETpG79rACEbiqIhZ1MgJ1GDeyI2/cKw==",
+      "path": "gum.monogame/2026.4.5.1",
+      "hashPath": "gum.monogame.2026.4.5.1.nupkg.sha512"
+    },
     "LiteNetLib/2.1.2": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-+bmu7Vj+ik3xGX+qubsFuGSR8Pdri4Og7D9YAer83vHotkSHNLYL5bkZNgpvsK8GrcdNOUabZhqbYtmHu8as7A==",
       "path": "litenetlib/2.1.2",
       "hashPath": "litenetlib.2.1.2.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-h3j/QfmFN4S0w4C2A6X7arXij/M/OVw3uQHSOFxnND4DyAzO1F9eMX7Eti7lU/OkSthEE0WzRsfT/Dmx86jzCw==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/7.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
     },
     "MonoGame.Framework.DesktopGL/3.8.4.1": {
       "type": "package",
@@ -213,6 +309,13 @@
       "sha512": "sha512-WYnil3DhQHzjCY0dM9I2B3r1vWip90AOuQd25KE4NrjPQBg0tBJFluRLm5YPnO5ZLDmwrfosY8jCQGQRmWI/Pg==",
       "path": "nvorbis/0.10.4",
       "hashPath": "nvorbis.0.10.4.nupkg.sha512"
+    },
+    "TextCopy/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ryejViUBmHQ2XMie2AiRBn7KVKu2Gh/hqrctGSAUf1BufwfPjr+MWuACNBaiG+40TMbWRDJZgV73Tpl9hggeRw==",
+      "path": "textcopy/6.2.1",
+      "hashPath": "textcopy.6.2.1.nupkg.sha512"
     },
     "MonoGameLibrary/1.0.0": {
       "type": "project",

@@ -58,6 +58,27 @@ namespace MonoGameLibrary.General.Utility
             Input_Mouse.Add(_Mouse);
         }
 
+        public void Clear_buttons()
+        {
+            Input_keys.Clear();
+            Input_Buttons.Clear();
+            Input_Mouse.Clear();
+        }
+
+        public void Remove_button(Keys _Key)
+        {
+            Input_keys.Remove(_Key);
+        }
+
+        public void Remove_button(Buttons _Button)
+        {
+            Input_Buttons.Remove(_Button);
+        }
+
+        public void Remove_button(MouseButtons _Mouse)
+        {
+            Input_Mouse.Remove(_Mouse);
+        }
 
 
         /// <summary>

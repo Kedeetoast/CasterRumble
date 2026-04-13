@@ -10,6 +10,11 @@ using MonoGameLibrary.General.Scenes;
 using nkast.Aether.Physics2D.Dynamics;
 using System;
 using CasterRumble.Scenes;
+using Gum.Forms;
+using Gum.Forms.Controls;
+using MonoGameLibrary;
+using MonoGameGum;
+using Microsoft.Xna.Framework.Media;
 //using System.Drawing;
 
 namespace CasterRumble
@@ -18,86 +23,81 @@ namespace CasterRumble
     public class Game1 : Core
     {
 
-        private BasicEffect _spriteBatchEffect;
 
 
-
-        // Defines the slime animated sprite.
-        private Sprite _slime;
-
-        // Defines the bat animated sprite.
-        private Sprite _bat;
 
         public Game1() : base("Dungeon Slime", 1280, 720, false)
         {
-            
+
         }
 
         protected override void Initialize()
         {
-
-
-            base.Initialize();
+            ImgDirectory = "Images/Graphics/";
+            FntDirectory = "Fonts/";
+            MusDirectory = "Audio/Music/";
+            SfxDirectory = "Audio/Sounds/";
+            GameManager.Instance.port = 8888;
             SetActions();
 
-;
+            base.Initialize();
         }
 
         protected override void LoadContent()
         {
-
+            InitializeGum();
             System.Diagnostics.Debug.WriteLine("[Debug] Loading content for Game1.");
-            ChangeScene(new TestScene());
+            SceneManager.Instance.ChangeScene(new Scene_Tutorial());
 
-            //// Create the texture atlas from the XML configuration file
-            //TextureAtlas atlas = TextureAtlas.FromFile(Content, "Images/Spritesheet/Atlas_definition/defSpr_atlas");
 
-            //// Create the slime animated sprite from the atlas.
-            //_slime = atlas.CreateAnimatedSprite("slime-animation");
-            //_slime.Scale = new Vector2(4.0f, 4.0f);
-
-            //// Create the bat animated sprite from the atlas.
-            //_bat = atlas.CreateAnimatedSprite("bat-animation");
-            //_bat.Position = new Vector2(_slime.Width + 10, 0); // Position the bat 10px to the right of the slime.
-            //_bat.Scale = new Vector2(4.0f, 4.0f);
         }
 
-        //protected override void Update(GameTime gameTime)
-        //{
-        //    if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-        //        Exit();
+        private void InitializeGum()
+        {
+            // Initialize the Gum service. The second parameter specifies
+            // the version of the default visuals to use. V3 is the latest
+            // version.
+            GumService.Default.Initialize(this, DefaultVisualsVersion.V3);
 
+            // Tell the Gum service which content manager to use. We will tell it to
+            // use the global content manager from our Core.
+            GumService.Default.ContentLoader.XnaContentManager = Core.Content;
 
-        //    // TODO: Add your update logic here
-        //    GameManager.Instance.UpdateEventCall(gameTime);
+            // Register keyboard input for UI control.
+            FrameworkElement.KeyboardsForUiControl.Add(GumService.Default.Keyboard);
 
-        //    base.Update(gameTime);
-        //}
+            // Register gamepad input for Ui control.
+            FrameworkElement.GamePadsForUiControl.AddRange(GumService.Default.Gamepads);
 
-        //protected override void Draw(GameTime gameTime)
-        //{
-        //    // Clear the back buffer.
-        //    GraphicsDevice.Clear(Color.CornflowerBlue);
+            // Customize the tab reverse UI navigation to also trigger when the keyboard
+            // Up arrow key is pushed.
+            FrameworkElement.TabReverseKeyCombos.Add(
+               new KeyCombo() { PushedKey = Microsoft.Xna.Framework.Input.Keys.Up });
 
-        //    // Begin the sprite batch to prepare for rendering.
-        //    SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
+            // Customize the tab UI navigation to also trigger when the keyboard
+            // Down arrow key is pushed.
+            FrameworkElement.TabKeyCombos.Add(
+               new KeyCombo() { PushedKey = Microsoft.Xna.Framework.Input.Keys.Down });
 
+            // The assets created for the UI were done so at 1/4th the size to keep the size of the
+            // texture atlas small.  So we will set the default canvas size to be 1/4th the size of
+            // the game's resolution then tell gum to zoom in by a factor of 4.
+            GumService.Default.CanvasWidth = GraphicsDevice.PresentationParameters.BackBufferWidth / 4.0f;
+            GumService.Default.CanvasHeight = GraphicsDevice.PresentationParameters.BackBufferHeight / 4.0f;
+            GumService.Default.Renderer.Camera.Zoom = 4.0f;
+        }
 
-
-        //    base.Draw(gameTime);
-
-        //    // Always end the sprite batch when finished.
-        //    SpriteBatch.End();
-        //}
 
         private void SetActions()
         {
-
+            System.Diagnostics.Debug.WriteLine("actions");
             InputManager.Instance.Add_Action("Move_Left");
             InputManager.Instance.Add_Action("Move_Right");
             InputManager.Instance.Add_Action("Jump");
             InputManager.Instance.Add_Action("Menu");
-            InputManager.Instance.Add_Action("Atk_Light");
+            InputManager.Instance.Add_Action("Use_Item");
+            InputManager.Instance.Action_AltName("Use_Item", "PickUp");
+            InputManager.Instance.Action_AltName("Use_Item", "Atk_Light");
             InputManager.Instance.Add_Action("Atk_Heavy");
             InputManager.Instance.Add_Action("Atk_Block");
             InputManager.Instance.Add_Action("Skill_1");
@@ -105,7 +105,7 @@ namespace CasterRumble
             InputManager.Instance.Add_Action("Skill_3");
             InputManager.Instance.Add_Action("Skill_4");
             InputManager.Instance.Add_Action("Discard_Skill");
-            InputManager.Instance.Add_Action("Discard_Weapon");
+            InputManager.Instance.Add_Action("Discard_Item");
 
             InputManager.Instance.Add_input("Move_Left", Keys.A);
             InputManager.Instance.Add_input("Move_Left", Buttons.LeftThumbstickLeft);
@@ -115,8 +115,8 @@ namespace CasterRumble
             InputManager.Instance.Add_input("Jump", Buttons.A);
             InputManager.Instance.Add_input("Menu", Keys.Escape);
             InputManager.Instance.Add_input("Menu", Buttons.Start);
-            InputManager.Instance.Add_input("Atk_Light", MouseButtons.Left);
-            InputManager.Instance.Add_input("Atk_Light", Buttons.X);
+            InputManager.Instance.Add_input("Use_Item", MouseButtons.Left);
+            InputManager.Instance.Add_input("Use_Item", Buttons.X);
             InputManager.Instance.Add_input("Atk_Heavy", MouseButtons.Middle);
             InputManager.Instance.Add_input("Atk_Heavy", Buttons.Y);
             InputManager.Instance.Add_input("Atk_Block", MouseButtons.Right);
@@ -131,8 +131,8 @@ namespace CasterRumble
             InputManager.Instance.Add_input("Skill_4", Buttons.DPadDown);
             InputManager.Instance.Add_input("Discard_Skill", Keys.LeftControl);
             InputManager.Instance.Add_input("Discard_Skill", Buttons.RightShoulder);
-            InputManager.Instance.Add_input("Discard_Weapon", Keys.R);
-            InputManager.Instance.Add_input("Discard_Weapon", Buttons.LeftShoulder);
+            InputManager.Instance.Add_input("Discard_Item", Keys.X);
+            InputManager.Instance.Add_input("Discard_Item", Buttons.LeftShoulder);
 
         }
     }

@@ -63,6 +63,10 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Gum.MonoGame": {
+              "target": "Package",
+              "version": "[2026.4.5.1, )"
+            },
             "LiteNetLib": {
               "target": "Package",
               "version": "[2.1.2, )"
@@ -150,6 +154,10 @@
             "Aether.Physics2D.MG": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Gum.MonoGame": {
+              "target": "Package",
+              "version": "[2026.4.5.1, )"
             },
             "LiteNetLib": {
               "target": "Package",

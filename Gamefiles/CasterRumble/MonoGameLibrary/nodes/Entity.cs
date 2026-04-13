@@ -22,8 +22,14 @@ namespace MonoGameLibrary.nodes
 
     {
         public string ID { get; set; }
-        public override Vector2 Position => body.Position;
-
+        public override Vector2 Position
+        {
+            get => body.Position;
+            set
+            {
+                body.Position = value;
+            }
+        }
 
 
         public override float Rotation => body.Rotation;
@@ -99,17 +105,17 @@ namespace MonoGameLibrary.nodes
             if (shape == "Rectangle")
             {
                 Console.WriteLine("Rectangle");
-                return body.CreateRectangle(Attributes.Hitbox["x"], Attributes.Hitbox["y"], 1, new Vector2(Attributes.Hitbox["xOffset"], Attributes.Hitbox["yOffset"]));
+                return body.CreateRectangle(Attributes.Hitbox["x"] * Scale.X, Attributes.Hitbox["y"] * Scale.Y, 1, new Vector2(Attributes.Hitbox["xOffset"], Attributes.Hitbox["yOffset"]));
             }
             else if (shape == "Circle")
             {
                 Console.WriteLine("Circle");
-                return body.CreateCircle(Attributes.Hitbox["Radius"], 1, new Vector2(Attributes.Hitbox["xOffset"], Attributes.Hitbox["yOffset"]));
+                return body.CreateCircle(Attributes.Hitbox["Radius"] * Scale.X, 1, new Vector2(Attributes.Hitbox["xOffset"], Attributes.Hitbox["yOffset"]));
             }
-            else if (shape == "Circle")
+            else if (shape == "Ellipse")
             {
                 Console.WriteLine("CreateEllipse");
-                return body.CreateEllipse(Attributes.Hitbox["x"], Attributes.Hitbox["y"], 20, 1);
+                return body.CreateEllipse(Attributes.Hitbox["x"] * Scale.X, Attributes.Hitbox["y"] * Scale.Y, 20, 1);
             }
             else
             {
@@ -143,7 +149,7 @@ namespace MonoGameLibrary.nodes
                     sprite = atlas.CreateSprite_spriteset();
                     break;  
             }
-
+            sprite.Parent = this;
         }
 
         protected override void Dispose(bool disposing)
@@ -151,7 +157,9 @@ namespace MonoGameLibrary.nodes
                 base.Dispose(disposing);
                 if (disposing)
                 {
-                   world?.Remove(body);
+                   try { world?.Remove(body); }
+                   catch (ArgumentException) { /* already removed — ignore or log */ }
+
                    sprite?.Dispose();
                 }
         }

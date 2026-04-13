@@ -2,40 +2,103 @@
 <TextureAtlas>
 	<Texture>Images/Spritesheet/Spritesheets/Spr_player</Texture>
 	<Regions>
-		<Region name="playerIdle-0" x="0" y="0" width="64" height="64" />
-		<Region name="playerIdle-1" x="64" y="0" width="64" height="64" />
-		<Region name="playerIdle-2" x="128" y="0" width="64" height="64" />
-		<Region name="playerIdle-3" x="192" y="0" width="64" height="64" />
-		<Region name="playerIdle-4" x="256" y="0" width="64" height="64" />
-		<Region name="playerIdle-5" x="320" y="0" width="64" height="64" />
-		<Region name="playerRunning-0" x="0" y="64" width="64" height="64" />
-		<Region name="playerRunning-1" x="64" y="64" width="64" height="64" />
-		<Region name="playerRunning-2" x="128" y="64" width="64" height="64" />
-		<Region name="playerRunning-3" x="192" y="64" width="64" height="64" />
-		<Region name="playerFall" x="256" y="64" width="64" height="64" />
-		<Region name="playerJump" x="320" y="64" width="64" height="64" />
+		<Region name="playerIdle-0" x="0" y="0" width="32" height="32" />
+		<Region name="playerIdle-1" x="32" y="0" width="32" height="32" />
+		<Region name="playerIdle-2" x="64" y="0" width="32" height="32" />
+		<Region name="playerIdle-3" x="96" y="0" width="32" height="32" />
+		<Region name="playerIdle-4" x="128" y="0" width="32" height="32" />
+		<Region name="playerIdle-5" x="160" y="0" width="32" height="32" />
+		<Region name="playerIdle-6" x="192" y="0" width="32" height="32" />
+		<Region name="playerIdle-7" x="224" y="0" width="32" height="32" />
+		<Region name="playerIdle-8" x="256" y="0" width="32" height="32" />
+		
+		<Region name="playerRunning-0" x="0" y="32" width="32" height="32" />
+		<Region name="playerRunning-1" x="32" y="32" width="32" height="32" />
+		<Region name="playerRunning-2" x="64" y="32" width="32" height="32" />
+		<Region name="playerRunning-3" x="96" y="32" width="32" height="32" />
+		<Region name="playerRunning-4" x="128" y="32" width="32" height="32" />
+		<Region name="playerRunning-5" x="160" y="32" width="32" height="32" />
+		<Region name="playerRunning-6" x="192" y="32" width="32" height="32" />
+
+		<Region name="playerFall" x="224" y="32" width="32" height="32" />
+		<Region name="playerJump" x="256" y="32" width="32" height="32" />
+
+		<Region name="playerIdle_Arms-0" x="0" y="64" width="32" height="32" />
+		<Region name="playerIdle_Arms-1" x="32" y="64" width="32" height="32" />
+		<Region name="playerIdle_Arms-2" x="64" y="64" width="32" height="32" />
+		<Region name="playerIdle_Arms-3" x="96" y="64" width="32" height="32" />
+		<Region name="playerIdle_Arms-4" x="128" y="64" width="32" height="32" />
+		<Region name="playerIdle_Arms-5" x="160" y="64" width="32" height="32" />
+		<Region name="playerIdle_Arms-6" x="192" y="64" width="32" height="32" />
+		<Region name="playerIdle_Arms-7" x="224" y="64" width="32" height="32" />
+		<Region name="playerIdle_Arms-8" x="256" y="64" width="32" height="32" />
+
+		<Region name="playerRunning_Arms-0" x="0" y="96" width="32" height="32" />
+		<Region name="playerRunning_Arms-1" x="32" y="96" width="32" height="32" />
+		<Region name="playerRunning_Arms-2" x="64" y="96" width="32" height="32" />
+		<Region name="playerRunning_Arms-3" x="96" y="96" width="32" height="32" />
+		<Region name="playerRunning_Arms-4" x="128" y="96" width="32" height="32" />
+		<Region name="playerRunning_Arms-5" x="160" y="96" width="32" height="32" />
+		<Region name="playerRunning_Arms-6" x="192" y="96" width="32" height="32" />
+
+		<Region name="playerFall_Arms" x="224" y="96" width="32" height="32" />
+		<Region name="playerJump_Arms" x="256" y="96" width="32" height="32" />
+		
+		
 	</Regions>
 	<Animations>
-		<Animation name="playerIdle-animation" delay="200">
+		<Animation name="playerIdle-animation" delay="100">
 			<Frame region="playerIdle-0" />
 			<Frame region="playerIdle-1" />
 			<Frame region="playerIdle-2" />
-			<Frame region="playerIdle-3" />
-			<Frame region="playerIdle-1" />
-			<Frame region="playerIdle-0" />
+			<Frame region="playerIdle-4" />
+			<Frame region="playerIdle-5" />
+			<Frame region="playerIdle-6" />
+			<Frame region="playerIdle-7" />
+			<Frame region="playerIdle-8" />
 		</Animation>
-		<Animation name="playerRunning-animation" delay="100">
+		<Animation name="playerRunning-animation" delay="75">
 			<Frame region="playerRunning-0" />
 			<Frame region="playerRunning-1" />
 			<Frame region="playerRunning-2" />
 			<Frame region="playerRunning-3" />
+			<Frame region="playerRunning-4" />
+			<Frame region="playerRunning-5" />
+			<Frame region="playerRunning-6" />
 		</Animation>
 		<Animation name="playerFall-animation" delay="200">
 			<Frame region="playerFall" />
 		</Animation>
 		<Animation name="playerJump-animation" delay="200">
 			<Frame region="playerJump" />
+		
 		</Animation>
+		<Animation name="playerIdle_Arms-animation" delay="100">
+			<Frame region="playerIdle_Arms-0" />
+			<Frame region="playerIdle_Arms-1" />
+			<Frame region="playerIdle_Arms-2" />
+			<Frame region="playerIdle_Arms-4" />
+			<Frame region="playerIdle_Arms-5" />
+			<Frame region="playerIdle_Arms-6" />
+			<Frame region="playerIdle_Arms-7" />
+			<Frame region="playerIdle_Arms-8" />
+		</Animation>
+		<Animation name="playerRunning_Arms-animation" delay="75">
+			<Frame region="playerRunning_Arms-0" />
+			<Frame region="playerRunning_Arms-1" />
+			<Frame region="playerRunning_Arms-2" />
+			<Frame region="playerRunning_Arms-3" />
+			<Frame region="playerRunning_Arms-4" />
+			<Frame region="playerRunning_Arms-5" />
+			<Frame region="playerRunning_Arms-6" />
+		</Animation>
+		<Animation name="playerFall_Arms-animation" delay="200">
+			<Frame region="playerFall_Arms" />
+		</Animation>
+		<Animation name="playerJump_Arms-animation" delay="200">
+			<Frame region="playerJump_Arms" />
+		</Animation>
+	
 	</Animations>
 </TextureAtlas>
 

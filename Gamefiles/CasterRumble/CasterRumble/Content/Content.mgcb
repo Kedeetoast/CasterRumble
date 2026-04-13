@@ -13,42 +13,48 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin Audio/bounce.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:Audio/bounce.wav
-
-#begin Audio/collect.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:Audio/collect.wav
-
-#begin Audio/theme.ogg
+#begin Audio/Music/Mus_theme.ogg
 /importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:Audio/theme.ogg
+/build:Audio/Music/Mus_theme.ogg;Audio/Music/Mus_theme
+
+#begin Audio/SFX/Sfx_bounce.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/SFX/Sfx_bounce.wav;Audio/SFX/Sfx_bounce
+
+#begin Audio/SFX/Sfx_collect.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/SFX/Sfx_collect.wav;Audio/SFX/Sfx_collect
+
+#begin Audio/SFX/Sfx_ui_select.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/SFX/Sfx_ui_select.wav;Audio/SFX/Sfx_ui_select
 
 #begin Entity_List/EntityList.json
 /copy:Entity_List/EntityList.json
 
-#begin Fonts/04B_30_5x.spritefont
+#begin Fonts/Fnt_04B_30_5x.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
-/build:Fonts/04B_30_5x.spritefont
+/build:Fonts/Fnt_04B_30_5x.spritefont
 
-#begin Fonts/04B_30.spritefont
+#begin Fonts/Fnt_04B_30.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
-/build:Fonts/04B_30.spritefont
+/build:Fonts/Fnt_04B_30.spritefont
 
-#begin Images/Graphics/imj_Monologo.png
+#begin Images/Graphics/Imj_background-pattern.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -58,16 +64,34 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/Graphics/imj_Monologo.png;Images/Graphics/imj_Monologo
+/build:Images/Graphics/Imj_background-pattern.png
+
+#begin Images/Graphics/Imj_Monologo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/Graphics/Imj_Monologo.png
 
 #begin Images/Spritesheet/Atlas_definition/defSpr_atlas.xml
 /copy:Images/Spritesheet/Atlas_definition/defSpr_atlas.xml;Images/Spritesheet/Atlas_definition/defSpr_atlas
+
+#begin Images/Spritesheet/Atlas_definition/defSpr_block.xml
+/copy:Images/Spritesheet/Atlas_definition/defSpr_block.xml;Images/Spritesheet/Atlas_definition/defSpr_block
 
 #begin Images/Spritesheet/Atlas_definition/defSpr_player.xml
 /copy:Images/Spritesheet/Atlas_definition/defSpr_player.xml;Images/Spritesheet/Atlas_definition/defSpr_player
 
 #begin Images/Spritesheet/Atlas_definition/defSpr_player(old).xml
 /copy:Images/Spritesheet/Atlas_definition/defSpr_player(old).xml;Images/Spritesheet/Atlas_definition/defSpr_player(old)
+
+#begin Images/Spritesheet/Atlas_definition/defSpr_WeaponSheet.xml
+/copy:Images/Spritesheet/Atlas_definition/defSpr_WeaponSheet.xml;Images/Spritesheet/Atlas_definition/defSpr_WeaponSheet
 
 #begin Images/Spritesheet/Spritesheets/Spr_atlas.png
 /importer:TextureImporter
@@ -80,6 +104,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Images/Spritesheet/Spritesheets/Spr_atlas.png;Images/Spritesheet/Spritesheets/Spr_atlas
+
+#begin Images/Spritesheet/Spritesheets/Spr_block.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/Spritesheet/Spritesheets/Spr_block.png;Images/Spritesheet/Spritesheets/Spr_block
 
 #begin Images/Spritesheet/Spritesheets/Spr_player.png
 /importer:TextureImporter
@@ -104,4 +140,16 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Images/Spritesheet/Spritesheets/Spr_player(old).png;Images/Spritesheet/Spritesheets/Spr_player(old)
+
+#begin Images/Spritesheet/Spritesheets/Spr_WeaponSheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/Spritesheet/Spritesheets/Spr_WeaponSheet.png;Images/Spritesheet/Spritesheets/Spr_WeaponSheet
 

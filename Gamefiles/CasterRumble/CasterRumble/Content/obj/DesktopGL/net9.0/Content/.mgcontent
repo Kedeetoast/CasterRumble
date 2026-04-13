@@ -4,25 +4,33 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Audio/bounce.wav</File>
-    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Audio/collect.wav</File>
-    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Audio/theme.ogg</File>
-    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Fonts/04B_30_5x.spritefont</File>
-    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Fonts/04B_30.spritefont</File>
-    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Graphics/imj_Monologo.png</File>
+    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Audio/Music/Mus_theme.ogg</File>
+    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Audio/SFX/Sfx_bounce.wav</File>
+    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Audio/SFX/Sfx_collect.wav</File>
+    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Audio/SFX/Sfx_ui_select.wav</File>
+    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Fonts/Fnt_04B_30_5x.spritefont</File>
+    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Fonts/Fnt_04B_30.spritefont</File>
+    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Graphics/Imj_background-pattern.png</File>
+    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Graphics/Imj_Monologo.png</File>
     <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Spritesheet/Spritesheets/Spr_atlas.png</File>
+    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Spritesheet/Spritesheets/Spr_block.png</File>
     <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Spritesheet/Spritesheets/Spr_player.png</File>
     <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Spritesheet/Spritesheets/Spr_player(old).png</File>
+    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Spritesheet/Spritesheets/Spr_WeaponSheet.png</File>
   </SourceFiles>
   <DestFiles>
+    <File>Audio/Music/Mus_theme</File>
+    <File>Audio/SFX/Sfx_bounce</File>
+    <File>Audio/SFX/Sfx_collect</File>
+    <File>Audio/SFX/Sfx_ui_select</File>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File>Images/Graphics/imj_Monologo</File>
     <File>Images/Spritesheet/Spritesheets/Spr_atlas</File>
+    <File>Images/Spritesheet/Spritesheets/Spr_block</File>
     <File>Images/Spritesheet/Spritesheets/Spr_player</File>
     <File>Images/Spritesheet/Spritesheets/Spr_player(old)</File>
+    <File>Images/Spritesheet/Spritesheets/Spr_WeaponSheet</File>
   </DestFiles>
 </SourceFileCollection>

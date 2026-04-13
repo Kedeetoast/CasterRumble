@@ -22,7 +22,7 @@ namespace MonoGameLibrary.General.Scenes
         /// </remarks>
         public ContentManager Content { get; protected set; }
 
-        public GameComponentCollection GameComponents { get;  set; } 
+        public GameComponentCollection GameComponents { get; set; } = new GameComponentCollection();
 
         /// <summary>
         /// Gets a value that indicates if the scene has been disposed of.
@@ -35,15 +35,16 @@ namespace MonoGameLibrary.General.Scenes
 
         protected Dictionary<string, SoundEffect> SceneSoundEffects = new Dictionary<string, SoundEffect>();
 
+        protected static SceneManager SceneManager => SceneManager.Instance;
 
+        protected Color BackgroundColor { get; set; } = Color.CornflowerBlue;
 
-    
 
 
         /// <summary>
         /// Creates a new scene instance.
         /// </summary>
-        public Scene() : base()
+        public Scene() : base(null)
         {
             // Create a content manager for the scene
             Content = new ContentManager(Core.Content.ServiceProvider);
@@ -51,6 +52,10 @@ namespace MonoGameLibrary.General.Scenes
             // Set the root directory for content to the same as the root directory
             // for the game's content.
             Content.RootDirectory = Core.Content.RootDirectory;
+
+            // Register this Scene as its own scene (safe with the setter fix)
+            this.Scene = this;
+
         }
 
         // Finalizer, called when object is cleaned up by garbage collector.
@@ -65,6 +70,8 @@ namespace MonoGameLibrary.General.Scenes
         /// </remarks>
         public override void Initialize()
         {
+
+            GameManager.Instance.ChangeBackGroundColor(BackgroundColor);
             LoadContent();
         }
 
@@ -118,15 +125,29 @@ namespace MonoGameLibrary.General.Scenes
 
             if (disposing)
             {
+
+                Enabled = false;
+                Visible = false;
                 UnloadContent();
                 Content.Dispose();
             }
             IsDisposed = true;
+
+            foreach (var asset in GameComponents)
+            {
+                if (asset is DrawableGameComponent disposableAsset)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Disposing asset: {asset}");
+                    disposableAsset.Dispose();
+                }
+            }   
         }
 
-        public void PlaySFX(string key)
+        public void PlaySFX(string File)
         {
-            if (SceneSoundEffects.TryGetValue(key, out SoundEffect soundEffect))
+            if (IsDisposed) return;
+
+            if (SceneSoundEffects.TryGetValue(File, out SoundEffect soundEffect))
             {
                 AudioManager.Instance.PlaySoundEffect(soundEffect, 0.0f, 0.0f, false);
             }
@@ -134,12 +155,35 @@ namespace MonoGameLibrary.General.Scenes
             {
                 try
                 {
-                    SceneSoundEffects.Add("key", Content.Load<SoundEffect>(key));
-                    AudioManager.Instance.PlaySoundEffect(SceneSoundEffects[key], 0.0f, 0.0f, false);
+                    SceneSoundEffects.Add(File, Content.Load<SoundEffect>(GameManager.SfxDirectory + File));
+                    AudioManager.Instance.PlaySoundEffect(SceneSoundEffects[File], 0.0f, 0.0f, false);
                 }
                 catch (ContentLoadException)
                 {
-                    System.Diagnostics.Debug.WriteLine($"Error: Sound effect with key '{key}' not found in content.");
+                    System.Diagnostics.Debug.WriteLine($"Error: Sound effect with key '{File}' not found in content.");
+                }
+            }
+        }
+
+        public void PlayMusic(string File)
+        {
+            if (IsDisposed) return;
+
+
+            if (SceneSongs.TryGetValue(File, out Song song))
+            {
+                AudioManager.Instance.PlaySong(song, true);
+            }
+            else
+            {
+                try
+                {
+                    SceneSongs.Add(File, Content.Load<Song>(GameManager.MusDirectory + File));
+                    AudioManager.Instance.PlaySong(SceneSongs[File], true);
+                }
+                catch (ContentLoadException)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Error: Song with key '{File}' not found in content.");
                 }
 
             }

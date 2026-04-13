@@ -61,13 +61,25 @@ namespace MonoGameLibrary.nodes.Items
             Timer.Enabled = false;
         }
 
-        public void PickUp(Entity _holder)
+        public virtual void PickUp(Entity _holder)
         {
+            Parent = _holder;
             Holder = _holder;
             Held = true;
             Timer.Enabled = false;
         }
+        
+        public virtual void Drop()
+        {
+            Holder = null;
+            Held = false;
+            Timer.Enabled = true;
+        }
 
+        public virtual void Use()
+        {
+            // Implement item usage logic here
+        }
 
     }
 }

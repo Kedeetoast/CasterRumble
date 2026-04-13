@@ -4,6 +4,7 @@ using MonoGameLibrary.General.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -124,10 +125,51 @@ namespace MonoGameLibrary.General.Managers
             return;
         }
 
+        public void PlaySoundEffect(string soundEffectName, float pitch, float pan, bool isLooped)
+        {
+            
 
+
+            SoundEffect soundEffect = GameManager.Instance.Content.Load<SoundEffect>(GameManager.SfxDirectory + soundEffectName);
+            // Create an instance from the sound effect given.
+            SoundEffectInstance soundEffectInstance = soundEffect.CreateInstance();
+
+            // Apply the volume, pitch, pan, and loop values specified.
+            soundEffectInstance.Volume = Volume_SFX;
+            soundEffectInstance.Pitch = pitch;
+            soundEffectInstance.Pan = pan;
+            soundEffectInstance.IsLooped = isLooped;
+
+            // Tell the instance to play
+            soundEffectInstance.Play();
+
+            // Add it to the active instances for tracking
+            _activeSoundEffectInstances.Add(soundEffectInstance);
+
+            return;
+        }
 
         public void PlaySong(Song song, bool isRepeating = true)
         {
+
+
+            // Check if the media player is already playing, if so, stop it.
+            // If we do not stop it, this could cause issues on some platforms
+            if (MediaPlayer.State == MediaState.Playing)
+            {
+                MediaPlayer.Stop();
+            }
+
+            MediaPlayer.Play(song);
+            MediaPlayer.IsRepeating = isRepeating;
+
+
+        }
+
+        public void PlaySong(string songName, bool isRepeating = true)
+        {
+             Song song = GameManager.Instance.Content.Load<Song>(GameManager.MusDirectory + songName);
+
             // Check if the media player is already playing, if so, stop it.
             // If we do not stop it, this could cause issues on some platforms
             if (MediaPlayer.State == MediaState.Playing)

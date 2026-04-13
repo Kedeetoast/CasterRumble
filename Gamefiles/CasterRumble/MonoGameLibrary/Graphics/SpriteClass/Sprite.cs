@@ -95,7 +95,7 @@ public class Sprite : Canvas
     /// <param name="position">The xy-coordinate position to render this sprite at.</param>
     public override void Draw(GameTime gameTime)
     {
-        Region.Draw(spriteBatch, GlobalPosition, Color, GlobalRotation, Origin, GlobalScale, Effects, LayerDepth);
+        Region.Draw(_SpriteBatch, GlobalPosition, Color, GlobalRotation, Origin, GlobalScale, Effects, LayerDepth);
     }
 
 

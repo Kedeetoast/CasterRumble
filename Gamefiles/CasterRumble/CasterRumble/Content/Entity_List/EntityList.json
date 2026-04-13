@@ -2,7 +2,7 @@
   "Entities": [
     {
       "_Id": "Player",
-      "_SpriteAtlasPath": "Images/Spritesheet/Spritesheets/PlayerSprite-definition.xml",
+      "_SpriteAtlasPath": "Images/Spritesheet/Atlas_definition/defSpr_player",
       "_Sprite": "player",
       "_BodyType": "Kinematic",
       "_Scale": 1,
@@ -19,21 +19,53 @@
     },
     {
       "_Id": "Block",
-      "_SpriteAtlasPath": "Images/Spritesheet/Spritesheets/PlayerSprite-definition.xml",
-      "_Sprite": "player",
+      "_SpriteAtlasPath": "Images/Spritesheet/Atlas_definition/defSpr_block",
+      "_Sprite": "block",
       "_BodyType": "Static",
       "_Scale": 1,
       "_HitboxShape": "rectangle",
       "_Hitbox": {
         "xOffset": 32,
         "yOffset": 40,
-        "x": 32,
-        "y": 48,
+        "x": 128,
+        "y": 32,
         "radius": 0
       },
       "_SpriteList": []
 
 
+    },
+    {
+      "_Id": "Weapon_Melee_Axe",
+      "_SpriteAtlasPath": "Images/Spritesheet/Atlas_definition/defSpr_spike",
+      "_Sprite": "Axe",
+      "_BodyType": "Kinematic",
+      "_Scale": 1,
+      "_HitboxShape": "rectangle",
+      "_Hitbox": {
+        "xOffset": 32,
+        "yOffset": 40,
+        "x": 128,
+        "y": 32,
+        "radius": 0
+      },
+      "_SpriteList": []
+    },
+    {
+      "_Id": "Weapon_Melee_Flail.cs",
+      "_SpriteAtlasPath": "Images/Spritesheet/Atlas_definition/defSpr_spike",
+      "_Sprite": "FlailHandle",
+      "_BodyType": "Kinematic",
+      "_Scale": 1,
+      "_HitboxShape": "rectangle",
+      "_Hitbox": {
+        "xOffset": 32,
+        "yOffset": 40,
+        "x": 128,
+        "y": 32,
+        "radius": 0
+      },
+      "_SpriteList": []
     }
   ]
 }

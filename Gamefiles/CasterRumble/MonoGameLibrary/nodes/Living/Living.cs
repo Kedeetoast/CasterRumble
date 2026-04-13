@@ -51,5 +51,11 @@ namespace MonoGameLibrary.nodes.Living
 
         }
 
+        protected virtual void Equip(Item item)
+        {
+            item.PickUp(this);
+            Equiped = item;
+        }
+
     }
 }

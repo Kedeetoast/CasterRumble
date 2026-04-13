@@ -25,7 +25,14 @@ namespace MonoGameLibrary.General.Managers
 
         public ContentManager Scene_Content => Core.S_activeScene.Content;
 
+        public static string ImgDirectory => Core.Instance.ImgDirectory;
+        public static string FntDirectory => Core.Instance.FntDirectory;
+        public static string MusDirectory => Core.Instance.MusDirectory;
+        public static string SfxDirectory => Core.Instance.SfxDirectory;
 
+        public int port { get; set; } = 9050; // Default port for network communication
+
+        public Vector2 Gravity { get; set; } = new Vector2(0, 9.8f); // Default gravity pointing downwards
 
         //public event EventHandler<UpdateEventArgs> UpdateEvent;
 
@@ -35,6 +42,8 @@ namespace MonoGameLibrary.General.Managers
 
         public Game game => Core.Instance;
 
+        
+
 
         public GameManager() 
         {
@@ -42,25 +51,11 @@ namespace MonoGameLibrary.General.Managers
         }
 
 
-        ///// <summary>
-        ///// Runs on an Update event. notifies listeners that an update occured, passing along the GameTime information.
-        ///// </summary>
-        ///// <param name="_gameTime"></param>
-        //public void UpdateEventCall(GameTime _gameTime)
-        //{
-        //    //Console.WriteLine($"UpdateEvent Occured.");
-
-        //    // Fire the event — notify all listeners
-        //    OnUpdate(new UpdateEventArgs
-        //    {
-        //        GameTime = _gameTime,
-        //    });
-        //}
-
-        //protected virtual void OnUpdate(UpdateEventArgs args)
-        //{
-        //    UpdateEvent?.Invoke(this, args); // '?.' safely handles zero listeners
-        //}
+        
+        public void ChangeBackGroundColor(Color color)
+        {
+            Core.Instance.BackgroundColor = color;
+        }
 
     }
 

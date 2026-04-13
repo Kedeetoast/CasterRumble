@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas>
+	<Texture>Images/Spritesheet/Spritesheets/Spr_WeaponsSheet</Texture>
+	<Regions>
+		<Region name="ThrowingKnife" x="0" y="0" width="32" height="16" />
+		<Region name="Boomerang" x="0" y="16" width="32" height="16" />
+		<Region name="Scissors" x="0" y="32" width="36" height="16" />
+		<Region name="Slingshot" x="0" y="48" width="32" height="16" />
+		<Region name="Nunchucks" x="0" y="64" width="32" height="16" />
+		
+		<Region name="Hammer" x="48" y="0" width="48" height="16" />
+		<Region name="Sword" x="48" y="16" width="48" height="16" />
+		<Region name="Axe" x="48" y="32" width="48" height="16" />
+		<Region name="Spear" x="48" y="48" width="64" height="16" />
+		
+		<Region name="LaserCannon" x="48" y="0" width="48" height="16" />
+		<Region name="Minigun" x="48" y="16" width="48" height="16" />
+		<Region name="Shotgun" x="48" y="32" width="48" height="16" />
+		<Region name="Crossbow" x="48" y="48" width="32" height="16" />
+		
+		<Region name="FlailHandle" x="192" y="0" width="16" height="16" />
+		<Region name="FlailBall" x="192" y="16" width="48" height="48" />
+		<Region name="Scythe" x="192" y="52" width="48" height="24" />
+		<Region name="Shuriken" x="224" y="16" width="16" height="16" />
+
+		<Region name="LargeChain" x="224" y="0" width="10" height="4" />
+		<Region name="SmallChain" x="224" y="32" width="6" height="2" />
+
+
+	</Regions>
+	<Animations>
+	</Animations>
+</TextureAtlas>
+
+

@@ -4,6 +4,7 @@ using nkast.Aether.Physics2D.Dynamics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,25 +12,40 @@ namespace MonoGameLibrary.nodes.Items;
 
 public abstract class Weapon : Item
 {
+    private float Damage;
+
+    private string LightCooldown;
+
+    private string HeavyCooldown;
+
+    private string Knockback;
+
     protected Weapon(ref World _world, string _ID, Vector2 _position, float _rotation = 0, float _despawntime = 0) : base(ref _world, _ID, _position, _rotation, _despawntime)
     {
+
+        
     }
-}
 
-
-public class Melee : Weapon
-{
-    public Melee(ref World _world, string _ID, Vector2 _position, float _rotation = 0, float _despawntime = 0) : base(ref _world, _ID, _position, _rotation, _despawntime)
+    public virtual void LightAttack()
     {
+        // Implement light attack logic here
     }
-}
 
-public class Ranged : Weapon
-{
-    public Ranged(ref World _world, string _ID, Vector2 _position, float _rotation = 0, float _despawntime = 0) : base(ref _world, _ID, _position, _rotation, _despawntime)
+    public virtual void HeavyAttack()
     {
+        // Implement heavy attack logic here
     }
+
 }
 
 
+
+
+public enum  Meleetype
+{
+    Pierce,
+    swing,
+    heavy,
+    blunt
+}
 

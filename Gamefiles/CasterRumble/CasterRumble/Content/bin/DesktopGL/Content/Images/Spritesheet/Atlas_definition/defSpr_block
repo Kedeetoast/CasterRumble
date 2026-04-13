@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList>
+	<Texture>Images/Spritesheet/Spritesheets/Spr_block</Texture>
+    <Regions>
+        <Region name="block" x="0" y="0" width="128" height="64" />
+    </Regions>
+    <Animations>
+    </Animations>
+</EntityList>
+

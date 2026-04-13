@@ -20,9 +20,6 @@ public class Core : Game
     // The scene that is currently active.
     public static Scene S_activeScene {private set; get; }
 
-    // The next scene to switch to, if there is one.
-    private static Scene S_nextScene;
-
     /// <summary>
     /// Gets the graphics device manager to control the presentation of graphics.
     /// </summary>
@@ -38,12 +35,34 @@ public class Core : Game
     /// </summary>
     public static SpriteBatch SpriteBatch { get; private set; }
 
-    private BasicEffect _spriteBatchEffect;
+    private BasicEffect SpriteBatchEffect;
 
     /// <summary>
     /// Gets the content manager used to load global assets.
     /// </summary>
     public static new ContentManager Content { get; private set; }
+
+    public virtual string ImgDirectory { get; protected set; }
+    public virtual string FntDirectory { get; protected set; }
+    public virtual string MusDirectory { get; protected set; }
+    public virtual string SfxDirectory { get; protected set; }
+
+    private Color _backgroundColor = Color.CornflowerBlue;
+
+    public Color BackgroundColor 
+    { 
+        get
+        {
+            return _backgroundColor;
+        }
+        set
+        {
+            if (value != null)
+            {
+                _backgroundColor = value;
+            }
+        }
+    }
 
     /// <summary>
     /// Creates a new Core instance.
@@ -90,14 +109,15 @@ public class Core : Game
 
     protected override void Initialize()
     {
-        base.Initialize();
-
         // Set the core's graphics device to a reference of the base Game's
         // graphics device.
         GraphicsDevice = base.GraphicsDevice;
 
         // Create the sprite batch instance.
         SpriteBatch = new SpriteBatch(GraphicsDevice);
+
+        base.Initialize();
+
     }
 
 
@@ -108,6 +128,7 @@ public class Core : Game
             Exit();
 
         base.Update(gameTime);
+
 
         //if (S_nextScene != null)
         //{
@@ -122,7 +143,7 @@ public class Core : Game
     protected override void Draw(GameTime gameTime)
     {
         // Clear the back buffer.
-        GraphicsDevice.Clear(Color.CornflowerBlue);
+        GraphicsDevice.Clear(BackgroundColor);
 
         // Begin the sprite batch to prepare for rendering.
         SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
@@ -135,40 +156,14 @@ public class Core : Game
         SpriteBatch.End();
     }
 
-    public static void ChangeScene(Scene next)
+
+    public static void TransitionScene(Scene newScene)
     {
-        // Only set the next scene value if it is not the same
-        // instance as the currently active scene.
-        if (S_activeScene != next)
-        {
-            S_nextScene = next;
-            TransitionScene();
-        }
-    }
-
-    private static void TransitionScene()
-    {
-        // If there is an active scene, dispose of it.
-        if (S_activeScene != null)
-        {
-            S_activeScene.Dispose();
-        }
-
-        // Force the garbage collector to collect to ensure memory is cleared.
-        GC.Collect();
-
         // Change the currently active scene to the new scene.
-        S_activeScene = S_nextScene;
+        S_activeScene = newScene;
 
-        // Null out the next scene value so it does not trigger a change over and over.
-        S_nextScene = null;
+        S_activeScene.Initialize();
 
-        // If the active scene now is not null, initialize it.
-        // Remember, just like with Game, the Initialize call also calls the
-        // Scene.LoadContent
-        if (S_activeScene != null)
-        {
-            S_activeScene.Initialize();
-        }
+
     }
 }

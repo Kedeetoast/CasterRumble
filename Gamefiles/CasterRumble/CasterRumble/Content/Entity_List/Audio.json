@@ -1,0 +1,23 @@
+{
+  "SFX": [
+    {
+      "Name": "SFX_1",
+      "Path": "Content/SFX/SFX_1.wav"
+    },
+    {
+      "Name": "SFX_2",
+      "Path": "Content/SFX/SFX_2.wav"
+    }
+    ],
+  "Music": [
+    {
+      "Name": "Music_1",
+      "Path": "Content/Music/Music_1.mp3"
+    },
+    {
+      "Name": "Music_2",
+      "Path": "Content/Music/Music_2.mp3"
+    }
+  ]
+
+}

@@ -13,7 +13,7 @@ namespace MonoGameLibrary.Graphics
     public abstract class Canvas :  Node2D
 
     {
-        protected SpriteBatch spriteBatch => GraphicsManager.Instance.SpriteBatch;
+        protected SpriteBatch _SpriteBatch => GraphicsManager.Instance.SpriteBatch;
 
         /// <summary>
         /// Gets or Sets the color mask to apply when rendering this sprite.
@@ -21,7 +21,43 @@ namespace MonoGameLibrary.Graphics
         /// <remarks>
         /// Default value is Color.White
         /// </remarks>
-        public Color Color { get; set; } = Color.White;
+        /// 
+
+        private Color _color = Color.White;
+
+        public Color Color 
+        { 
+            get
+            {
+                return _color* Visibility;
+            }
+
+            set
+            {
+                _color = value;
+            }
+            
+        }
+
+        private float _Visibility = 1.0f;
+
+        public float Visibility
+        {
+            get
+            {
+                if (!IsVisible)
+                {
+                    return 0.0f;
+                }
+                else
+                {
+                    return _Visibility;
+                }
+            }
+            set{ _Visibility = Math.Clamp(value, 0.0f, 1.0f); }
+        }
+
+        public bool IsVisible { get; set; } = true;
 
         /// <summary>
         /// Gets or Sets the sprite effects to apply when rendering this sprite.

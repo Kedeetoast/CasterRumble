@@ -41,6 +41,13 @@
 		<Region name="playerRunning_Arms-5" x="160" y="96" width="32" height="32" />
 		<Region name="playerRunning_Arms-6" x="192" y="96" width="32" height="32" />
 
+		<Region name="playerThrow_Arms-0" x="0" y="128" width="32" height="32" />
+		<Region name="playerThrow_Arms-1" x="32" y="128" width="32" height="32" />
+		<Region name="playerThrow_Arms-2" x="64" y="128" width="32" height="32" />
+		<Region name="playerThrow_Arms-3" x="96" y="128" width="32" height="32" />
+		<Region name="playerThrow_Arms-4" x="128" y="128" width="32" height="32" />
+
+
 		<Region name="playerFall_Arms" x="224" y="96" width="32" height="32" />
 		<Region name="playerJump_Arms" x="256" y="96" width="32" height="32" />
 		
@@ -91,6 +98,13 @@
 			<Frame region="playerRunning_Arms-4" />
 			<Frame region="playerRunning_Arms-5" />
 			<Frame region="playerRunning_Arms-6" />
+		</Animation>
+		<Animation name="playerThrow_Arms-animation" delay="75">
+			<Frame region="playerThrow_Arms-0" />
+			<Frame region="playerThrow_Arms-1" />
+			<Frame region="playerThrow_Arms-2" />
+			<Frame region="playerThrow_Arms-3" />
+			<Frame region="playerThrow_Arms-4" />>
 		</Animation>
 		<Animation name="playerFall_Arms-animation" delay="200">
 			<Frame region="playerFall_Arms" />
