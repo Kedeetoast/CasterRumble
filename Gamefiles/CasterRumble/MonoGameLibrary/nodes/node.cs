@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using MonoGameLibrary.General;
 using MonoGameLibrary.General.Managers;
 using MonoGameLibrary.General.Scenes;
 using System.Collections.Generic;
@@ -9,14 +10,14 @@ namespace MonoGameLibrary.nodes
     public abstract class Node : DrawableGameComponent //inherits from drawableGameComponent so that Updat(GameTime gameTime) and Draw(GameTime gameTime) can be overridden in the node class and is called on the game instance update and draw calls automaticaly
     {
 
-        public Node() : base(GameManager.Instance.game)
+        public Node() : base(Core.Instance)
         {
             GameManager.Instance.game.Components.Add(this);
             Scene = GameManager.Instance.ActiveScene;
 
         }
 
-        public Node(Scene _scene) : base(GameManager.Instance.game)
+        public Node(Scene _scene) : base(Core.Instance)
         {
             GameManager.Instance.game.Components.Add(this);
             Scene = _scene;
@@ -111,6 +112,13 @@ namespace MonoGameLibrary.nodes
 
             Enabled = false;
             Visible = false;
+
+            foreach (Node Child in Children ) 
+            {
+                Child.Dispose(disposing);
+            }
+
+
 
         }
     }

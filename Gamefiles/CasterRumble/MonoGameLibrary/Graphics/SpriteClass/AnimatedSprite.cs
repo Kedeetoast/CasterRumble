@@ -48,11 +48,22 @@ public class AnimatedSprite : Sprite
     {
         SpriteSet = _animatedSpriteSet;
         Animation = _animatedSpriteSet.ActiveAnimation;
+        CenterOrigin();
         //Duel_Subscribe(GraphicsManager.Instance, GameManager.Instance);
     }
 
 
     // VVV Methods VVV
+
+    public override void ChangeActive(string newSprite)
+    {
+        _currentFrame = 0;
+        _elapsed = TimeSpan.Zero; // also reset elapsed so the new animation starts cleanly
+        SpriteSet.ChangeActive(newSprite);
+
+        // Sync _animation with the newly active animation
+        Animation = ((AnimatedSpriteSet)SpriteSet).ActiveAnimation;
+    }
 
     /// <summary>
     /// Updates this animated sprite.
@@ -74,6 +85,7 @@ public class AnimatedSprite : Sprite
 
             SpriteSet.ActiveRegion = _animation.Frames[_currentFrame];
         }
+        CenterOrigin();
     }
 
     

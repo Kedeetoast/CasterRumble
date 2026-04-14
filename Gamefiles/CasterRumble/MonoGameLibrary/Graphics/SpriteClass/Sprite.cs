@@ -13,6 +13,7 @@ public class Sprite : Canvas
 {
     // VVV atributes VVV
 
+    
     /// <summary>
     /// Gets or Sets the active source texture region represented by this sprite.
     /// </summary>
@@ -42,26 +43,10 @@ public class Sprite : Canvas
     /// </summary>
     public Sprite() 
     {
-        //Subscribe_Draw(GraphicsManager.Instance); 
+
     }
 
-    /// <summary>
-    /// Creates a new sprite using the specified source texture region and no dictionary of avaiable regions.
-    /// </summary>
-    /// <param name="region">The texture region to use as the source texture region for this sprite.</param>
-    //public Sprite(TextureRegion region)
-    //{
-    //    Region = region;
-    //    AvaiableRegions.Add("default", Region );
-    //    Subscribe(GraphicsManager.Instance);
-    //}
 
-    //public Sprite(TextureRegion region, Entity _entity)
-    //{
-    //    Region = region;
-    //    AvaiableRegions.Add("default", Region);
-    //    Subscribe(GraphicsManager.Instance);
-    //}
 
 
     /// <summary>
@@ -71,9 +56,8 @@ public class Sprite : Canvas
     public Sprite(SpriteSet _SpriteSet)
     {
         SpriteSet = _SpriteSet;
+        CenterOrigin();
 
-
-        //Subscribe_Draw(GraphicsManager.Instance);
     }
 
 
@@ -98,7 +82,11 @@ public class Sprite : Canvas
         Region.Draw(_SpriteBatch, GlobalPosition, Color, GlobalRotation, Origin, GlobalScale, Effects, LayerDepth);
     }
 
-
+    public virtual void ChangeActive(String newSprite)
+    {
+        SpriteSet.ChangeActive(newSprite);
+        CenterOrigin();
+    }
     
 }
 

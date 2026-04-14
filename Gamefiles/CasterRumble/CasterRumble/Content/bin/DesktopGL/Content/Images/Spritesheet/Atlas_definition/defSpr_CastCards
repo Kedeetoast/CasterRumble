@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList>
+	<Texture>Images/Spritesheet/Spritesheets/Spr_CastCards</Texture>
+    <Regions>
+        <Region name="FlameBlast" x="0" y="0" width="8" height="8" />
+        <Region name="IceBeam" x="8" y="0" width="8" height="8" />
+        <Region name="Dash" x="16" y="0" width="8" height="8" />
+        <Region name="BoomBoom" x="24" y="0" width="8" height="8" />
+        <Region name="Portal" x="32" y="0" width="8" height="8" />
+		<Region name="Vacuum" x="40" y="0" width="8" height="8" />
+		<Region name="Taser" x="48" y="0" width="8" height="8" />
+		<Region name="BounceTrap" x="56" y="0" width="8" height="8" />
+		<Region name="Ghosting" x="64" y="0" width="8" height="8" />
+		<Region name="Timestop" x="72" y="0" width="8" height="8" />
+		<Region name="AcidShot" x="80" y="0" width="8" height="8" />
+		<Region name="BlackHole" x="88" y="0" width="8" height="8" />
+		<Region name="NinjaArmy" x="96" y="0" width="8" height="8" />
+		<Region name="FlowerPower" x="104" y="0" width="8" height="8" />
+		<Region name="HomingShards" x="112" y="0" width="8" height="8" />
+		<Region name="FlamingBullets" x="120" y="0" width="8" height="8" />
+		<Region name="SecondLife" x="128" y="0" width="8" height="8" />
+		<Region name="Regenerate" x="136" y="0" width="8" height="8" />
+		<Region name="SpeedUp" x="144" y="0" width="8" height="8" />
+		<Region name="Kamikaze" x="152" y="0" width="8" height="8" />
+		<Region name="DoubleJump" x="160" y="0" width="8" height="8" />
+		<Region name="Growth" x="168" y="0" width="8" height="8" />
+		<Region name="Shrink" x="176" y="0" width="8" height="8" />
+		<Region name="TunnelingEffect" x="184" y="0" width="8" height="8" />
+		<Region name="Critical" x="192" y="0" width="8" height="8" />
+		<Region name="Spammer" x="200" y="0" width="8" height="8" />
+		<Region name="StrongArms" x="208" y="0" width="8" height="8" />
+		<Region name="Thorns" x="216" y="0" width="8" height="8" />
+		<Region name="Slowing halo" x="224" y="0" width="8" height="8" />
+		<Region name="Endurence" x="232" y="0" width="8" height="8" />
+
+		<Region name="LegendaryCard" x="0" y="8" width="16" height="22" />
+		<Region name="MythicCard" x="16" y="8" width="16" height="22" />
+		<Region name="RareCard" x="32" y="8" width="16" height="22" />
+		<Region name="UncommonCard" x="48" y="8" width="16" height="22" />
+		<Region name="commonCard" x="64" y="8" width="16" height="22" />
+    </Regions>
+    <Animations>
+    </Animations>
+</EntityList>
+

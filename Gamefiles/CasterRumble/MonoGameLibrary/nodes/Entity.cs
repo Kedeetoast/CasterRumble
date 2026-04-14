@@ -38,7 +38,19 @@ namespace MonoGameLibrary.nodes
 
 
 
-        public float Mass { get; set; }
+        public float Mass 
+        { 
+            get
+            {
+                return body.Mass;
+            }
+            
+            set
+            {
+                body.Mass = value;
+            }
+           
+        }
 
 
 
@@ -57,6 +69,26 @@ namespace MonoGameLibrary.nodes
         public Sprite sprite;
 
         public EntityData Attributes;
+
+        public Vector2 Gravity
+        {
+            get
+            {
+                if (IsOnGround())
+                    return Vector2.Zero;
+
+                if (Velocity.Y <= 0)
+                {
+                    // Rising — apply reduced gravity for floatier jump arc
+                    return new Vector2(0, GameManager.Instance.Gravity.Y * 0.6f);
+                }
+                else
+                {
+                    // Falling — apply stronger gravity for snappy landing
+                    return new Vector2(0, GameManager.Instance.Gravity.Y * 2.5f);
+                }
+            }
+        }
 
 
 
@@ -85,6 +117,7 @@ namespace MonoGameLibrary.nodes
             world = _world;
 
             body = _world.CreateBody(_position, _rotation, X);
+            body.Tag = this;
             LoadSprite(_spriteType);
 
 
@@ -96,31 +129,31 @@ namespace MonoGameLibrary.nodes
 
 
 
-            Fixture fixture = HitboxShape(body, Attributes, shape);
+            Fixture fixture = HitboxShape(ref body, Attributes, shape);
+        }
+
+        public override void Update(GameTime gametime)
+        {
+            body.ApplyLinearImpulse(Gravity * Mass);
         }
 
 
-        private Fixture HitboxShape(Body body, EntityData Attributes, string shape)
+        private Fixture HitboxShape(ref Body body, EntityData Attributes, string shape)
         {
-            if (shape == "Rectangle")
+            switch (shape.ToLowerInvariant())
             {
-                Console.WriteLine("Rectangle");
-                return body.CreateRectangle(Attributes.Hitbox["x"] * Scale.X, Attributes.Hitbox["y"] * Scale.Y, 1, new Vector2(Attributes.Hitbox["xOffset"], Attributes.Hitbox["yOffset"]));
-            }
-            else if (shape == "Circle")
-            {
-                Console.WriteLine("Circle");
-                return body.CreateCircle(Attributes.Hitbox["Radius"] * Scale.X, 1, new Vector2(Attributes.Hitbox["xOffset"], Attributes.Hitbox["yOffset"]));
-            }
-            else if (shape == "Ellipse")
-            {
-                Console.WriteLine("CreateEllipse");
-                return body.CreateEllipse(Attributes.Hitbox["x"] * Scale.X, Attributes.Hitbox["y"] * Scale.Y, 20, 1);
-            }
-            else
-            {
-                Console.WriteLine("Default");
-                return body.CreateRectangle(1, 1, 1, new Vector2(0, 0));
+                case "rectangle":
+                    System.Diagnostics.Debug.WriteLine("Rectangle");
+                    return body.CreateRectangle(Attributes.Hitbox["x"] * Scale.X, Attributes.Hitbox["y"] * Scale.Y, 1, new Vector2(Attributes.Hitbox["xOffset"], Attributes.Hitbox["yOffset"]));
+                case "circle":
+                    System.Diagnostics.Debug.WriteLine("Circle");
+                    return body.CreateCircle(Attributes.Hitbox["Radius"] * Scale.X, 1, new Vector2(Attributes.Hitbox["xOffset"], Attributes.Hitbox["yOffset"]));
+                case "ellipse":
+                    System.Diagnostics.Debug.WriteLine("Ellipse");
+                    return body.CreateEllipse(Attributes.Hitbox["x"] * Scale.X, Attributes.Hitbox["y"] * Scale.Y, 20, 1);
+                default:
+                    System.Diagnostics.Debug.WriteLine($"Warning: Unknown hitbox shape \"{shape}\", defaulting to 1x1 rectangle.");
+                    return body.CreateRectangle(1, 1, 1, Vector2.Zero);
             }
         }
 
@@ -150,6 +183,14 @@ namespace MonoGameLibrary.nodes
                     break;  
             }
             sprite.Parent = this;
+            LoadSubSprites();
+        }
+
+        protected virtual void LoadSubSprites()
+        {
+
+
+
         }
 
         protected override void Dispose(bool disposing)
@@ -162,6 +203,36 @@ namespace MonoGameLibrary.nodes
 
                    sprite?.Dispose();
                 }
+        }
+
+        public bool IsOnGround(float slopeThreshold = 0.7f)
+        {
+            var contactEdge = body.ContactList;
+
+            while (contactEdge != null)
+            {
+                var contact = contactEdge.Contact;
+
+                if (contact.IsTouching)
+                {
+                    contact.GetWorldManifold(out Vector2 normal, out FixedArray2<Vector2> _);
+
+                    // The contact normal points from fixture A toward fixture B.
+                    // If we are fixture B, the normal points toward us — flip it so it
+                    // always points away from us (i.e. away from the ground, upward).
+                    if (contact.FixtureB.Body == body)
+                        normal = -normal;
+
+                    // With Y+ up, a normal with a strong positive Y means the
+                    // contact surface is below us — we're on the ground.
+                    if (normal.Y >= slopeThreshold)
+                        return true;
+                }
+
+                contactEdge = contactEdge.Next;
+            }
+
+            return false;
         }
 
     }

@@ -9,7 +9,7 @@ using MonoGameLibrary.General.Utility;
 using MonoGameLibrary.General.Scenes;
 using nkast.Aether.Physics2D.Dynamics;
 using System;
-using CasterRumble.Scenes;
+using CasterRumble.GameAssets.Scenes;
 using Gum.Forms;
 using Gum.Forms.Controls;
 using MonoGameLibrary;
@@ -38,9 +38,9 @@ namespace CasterRumble
             MusDirectory = "Audio/Music/";
             SfxDirectory = "Audio/Sounds/";
             GameManager.Instance.port = 8888;
-            SetActions();
 
             base.Initialize();
+            SetActions();
         }
 
         protected override void LoadContent()
@@ -100,10 +100,10 @@ namespace CasterRumble
             InputManager.Instance.Action_AltName("Use_Item", "Atk_Light");
             InputManager.Instance.Add_Action("Atk_Heavy");
             InputManager.Instance.Add_Action("Atk_Block");
+            InputManager.Instance.Add_Action("Skill_0");
             InputManager.Instance.Add_Action("Skill_1");
             InputManager.Instance.Add_Action("Skill_2");
             InputManager.Instance.Add_Action("Skill_3");
-            InputManager.Instance.Add_Action("Skill_4");
             InputManager.Instance.Add_Action("Discard_Skill");
             InputManager.Instance.Add_Action("Discard_Item");
 
@@ -121,14 +121,14 @@ namespace CasterRumble
             InputManager.Instance.Add_input("Atk_Heavy", Buttons.Y);
             InputManager.Instance.Add_input("Atk_Block", MouseButtons.Right);
             InputManager.Instance.Add_input("Atk_Block", Buttons.RightStick);
-            InputManager.Instance.Add_input("Skill_1", Keys.D1);
-            InputManager.Instance.Add_input("Skill_1", Buttons.DPadUp);
-            InputManager.Instance.Add_input("Skill_2", Keys.D2);
-            InputManager.Instance.Add_input("Skill_2", Buttons.DPadLeft);
-            InputManager.Instance.Add_input("Skill_3", Keys.D3);
-            InputManager.Instance.Add_input("Skill_3", Buttons.DPadRight);
-            InputManager.Instance.Add_input("Skill_4", Keys.D4);
-            InputManager.Instance.Add_input("Skill_4", Buttons.DPadDown);
+            InputManager.Instance.Add_input("Skill_0", Keys.D1);
+            InputManager.Instance.Add_input("Skill_0", Buttons.DPadUp);
+            InputManager.Instance.Add_input("Skill_1", Keys.D2);
+            InputManager.Instance.Add_input("Skill_1", Buttons.DPadLeft);
+            InputManager.Instance.Add_input("Skill_2", Keys.D3);
+            InputManager.Instance.Add_input("Skill_2", Buttons.DPadRight);
+            InputManager.Instance.Add_input("Skill_3", Keys.D4);
+            InputManager.Instance.Add_input("Skill_3", Buttons.DPadDown);
             InputManager.Instance.Add_input("Discard_Skill", Keys.LeftControl);
             InputManager.Instance.Add_input("Discard_Skill", Buttons.RightShoulder);
             InputManager.Instance.Add_input("Discard_Item", Keys.X);

@@ -11,7 +11,7 @@ namespace MonoGameLibrary.General.Utility
     {
         protected Singleton() : base(Core.Instance)
         {
-
+            Core.Instance.Components.Add(this);
         }
 
         private static readonly Lazy<T> _instance = new Lazy<T>(() => new T());

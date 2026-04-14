@@ -4,14 +4,14 @@
       "_Id": "Player",
       "_SpriteAtlasPath": "Images/Spritesheet/Atlas_definition/defSpr_player",
       "_Sprite": "player",
-      "_BodyType": "Kinematic",
+      "_BodyType": "Dynamic",
       "_Scale": 1,
-      "_HitboxShape": "rectangle",
+      "_HitboxShape": "Rectangle",
       "_Hitbox": {
-        "xOffset": 32,
-        "yOffset": 40,
-        "x": 32,
-        "y": 48,
+        "xOffset": 0,
+        "yOffset": 0,
+        "x": 16,
+        "y": 32,
         "radius": 0
       },
       "_SpriteList": [ "playerIdle-animation", "playerRunning-animation", "playerFall-animation", "playerJump-animation" ]
@@ -23,12 +23,12 @@
       "_Sprite": "block",
       "_BodyType": "Static",
       "_Scale": 1,
-      "_HitboxShape": "rectangle",
+      "_HitboxShape": "Rectangle",
       "_Hitbox": {
-        "xOffset": 32,
-        "yOffset": 40,
+        "xOffset": 0,
+        "yOffset": 0,
         "x": 128,
-        "y": 32,
+        "y": 64,
         "radius": 0
       },
       "_SpriteList": []

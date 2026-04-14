@@ -12,7 +12,7 @@ namespace MonoGameLibrary.nodes.Items
     internal class SkillCard : Item
     {
 
-        public SkillCard(ref World _world, EntityList _entityList, string _ID, Vector2 _position, float _rotation = 0, float _despawntime = 0) : base(ref _world, _ID, _position, _rotation, _despawntime)
+        public SkillCard(ref World _world, string _ID, Vector2 _position, float _rotation = 0, float _despawntime = 0) : base(ref _world, _ID, _position, _rotation, _despawntime)
         {
         }
     }

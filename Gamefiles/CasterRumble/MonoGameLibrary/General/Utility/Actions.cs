@@ -15,12 +15,11 @@ namespace MonoGameLibrary.General.Utility
     {
         public string Name { get; set; }
 
-        public List<Keys> Input_keys { get; private set; }
+        private List<Keys> Input_keys { get; set; }
 
-        public List<Buttons> Input_Buttons { get; private set; }
+        private List<Buttons> Input_Buttons { get; set; }
 
-        public List<MouseButtons> Input_Mouse { get; private set; }
-
+        private List<MouseButtons> Input_Mouse { get; set; }
 
 
         public Actions(string _Name)
@@ -150,7 +149,7 @@ namespace MonoGameLibrary.General.Utility
                 }
                 else if ((button == Buttons.LeftThumbstickUp || button == Buttons.LeftThumbstickDown || button == Buttons.LeftThumbstickLeft || button == Buttons.LeftThumbstickRight) || (button == Buttons.RightThumbstickUp || button == Buttons.RightThumbstickDown || button == Buttons.RightThumbstickLeft || button == Buttons.RightThumbstickRight))
                 {
-                    Get_Thumbstick_Signal(_GamePadState, button);
+                    return Get_Thumbstick_Signal(_GamePadState, button);
                 }
                 else { 
                     if (_GamePadState.IsButtonDown(button))
@@ -187,11 +186,11 @@ namespace MonoGameLibrary.General.Utility
         {
             if (_Button == Buttons.LeftThumbstickUp)
             {
-                return Math.Max(0, -_GamePadState.ThumbSticks.Left.Y);
+                return Math.Max(0, _GamePadState.ThumbSticks.Left.Y);
             }
             else if (_Button == Buttons.LeftThumbstickDown)
             {
-                return Math.Max(0, _GamePadState.ThumbSticks.Left.Y);
+                return Math.Max(0, -_GamePadState.ThumbSticks.Left.Y);
             }
             else if (_Button == Buttons.LeftThumbstickLeft)
             {
@@ -203,11 +202,11 @@ namespace MonoGameLibrary.General.Utility
             }
             else if (_Button == Buttons.RightThumbstickUp)
             {
-                return Math.Max(0, -_GamePadState.ThumbSticks.Right.Y);
+                return Math.Max(0, _GamePadState.ThumbSticks.Right.Y);
             }
             else if (_Button == Buttons.RightThumbstickDown)
             {
-                return Math.Max(0, _GamePadState.ThumbSticks.Right.Y);
+                return Math.Max(0, -_GamePadState.ThumbSticks.Right.Y);
             }
             else if (_Button == Buttons.RightThumbstickLeft)
             {

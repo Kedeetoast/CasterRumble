@@ -9,6 +9,7 @@ namespace MonoGameLibrary.Graphics.SpriteClass
 {
     public class SpriteSet
     {
+        public string Playing { get; protected set; }
         public TextureRegion ActiveRegion { get; set; }
 
         public Dictionary<string,TextureRegion> AvailableRegions;
@@ -19,6 +20,7 @@ namespace MonoGameLibrary.Graphics.SpriteClass
         {
             AvailableRegions = Sprites;
 
+            Playing = AvailableRegions.ElementAt(0).Key;
             Default = AvailableRegions.ElementAt(0).Value;
             ActiveRegion = Default;
         }
@@ -29,6 +31,7 @@ namespace MonoGameLibrary.Graphics.SpriteClass
 
             Default = AvailableRegions.ElementAt(0).Value;
             ActiveRegion = Default;
+
             ChangeActive(Active);
         }
 
@@ -37,6 +40,7 @@ namespace MonoGameLibrary.Graphics.SpriteClass
             AvailableRegions = new Dictionary<string, TextureRegion>();
             AvailableRegions.Add("default", Reigon);
 
+            Playing = "default";
             Default = AvailableRegions.ElementAt(0).Value;
             ActiveRegion = Default;
         }
@@ -48,6 +52,7 @@ namespace MonoGameLibrary.Graphics.SpriteClass
         {
             if (AvailableRegions.TryGetValue(Newsprite, out TextureRegion value))
             {
+                Playing = Newsprite;
                 ActiveRegion = value;
             }
             else

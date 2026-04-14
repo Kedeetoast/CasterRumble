@@ -84,6 +84,9 @@
 #begin Images/Spritesheet/Atlas_definition/defSpr_block.xml
 /copy:Images/Spritesheet/Atlas_definition/defSpr_block.xml;Images/Spritesheet/Atlas_definition/defSpr_block
 
+#begin Images/Spritesheet/Atlas_definition/defSpr_CastCards.xml
+/copy:Images/Spritesheet/Atlas_definition/defSpr_CastCards.xml;Images/Spritesheet/Atlas_definition/defSpr_CastCards
+
 #begin Images/Spritesheet/Atlas_definition/defSpr_player.xml
 /copy:Images/Spritesheet/Atlas_definition/defSpr_player.xml;Images/Spritesheet/Atlas_definition/defSpr_player
 
@@ -116,6 +119,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Images/Spritesheet/Spritesheets/Spr_block.png;Images/Spritesheet/Spritesheets/Spr_block
+
+#begin Images/Spritesheet/Spritesheets/Spr_CastCards.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/Spritesheet/Spritesheets/Spr_CastCards.png;Images/Spritesheet/Spritesheets/Spr_CastCards
 
 #begin Images/Spritesheet/Spritesheets/Spr_player.png
 /importer:TextureImporter

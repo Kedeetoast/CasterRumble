@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using MonoGameLibrary.General.Managers;
 using MonoGameLibrary.nodes;
+using nkast.Aether.Physics2D;
 
 namespace MonoGameLibrary.General.Scenes
 {

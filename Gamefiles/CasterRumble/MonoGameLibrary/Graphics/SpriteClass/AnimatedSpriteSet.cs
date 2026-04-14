@@ -36,6 +36,7 @@ namespace MonoGameLibrary.Graphics.SpriteClass
         {
             AvailableAnimations = Sprites;
 
+            Playing = AvailableAnimations.ElementAt(0).Key;
             DefaultAnimation = AvailableAnimations.ElementAt(0).Value;
             ActiveAnimation = DefaultAnimation;
         }
@@ -54,6 +55,7 @@ namespace MonoGameLibrary.Graphics.SpriteClass
             AvailableAnimations = new Dictionary<string, Animation>();
             AvailableAnimations.Add("DefaultAnimation", animation);
 
+            Playing = "DefaultAnimation";
             DefaultAnimation = AvailableAnimations.ElementAt(0).Value;
             ActiveAnimation = DefaultAnimation;
         }
@@ -62,6 +64,7 @@ namespace MonoGameLibrary.Graphics.SpriteClass
         {
             if (AvailableAnimations.TryGetValue(Newsprite, out Animation value))
             {
+                Playing = Newsprite;
                 ActiveAnimation = value;
             }
             else

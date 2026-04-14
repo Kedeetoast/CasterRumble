@@ -14,6 +14,7 @@
     <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Graphics/Imj_Monologo.png</File>
     <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Spritesheet/Spritesheets/Spr_atlas.png</File>
     <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Spritesheet/Spritesheets/Spr_block.png</File>
+    <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Spritesheet/Spritesheets/Spr_CastCards.png</File>
     <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Spritesheet/Spritesheets/Spr_player.png</File>
     <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Spritesheet/Spritesheets/Spr_player(old).png</File>
     <File>C:/Users/oscar/Documents/GitHub/CasterRumble/Gamefiles/CasterRumble/CasterRumble/Content/Images/Spritesheet/Spritesheets/Spr_WeaponSheet.png</File>
@@ -29,6 +30,7 @@
     <File xsi:nil="true" />
     <File>Images/Spritesheet/Spritesheets/Spr_atlas</File>
     <File>Images/Spritesheet/Spritesheets/Spr_block</File>
+    <File>Images/Spritesheet/Spritesheets/Spr_CastCards</File>
     <File>Images/Spritesheet/Spritesheets/Spr_player</File>
     <File>Images/Spritesheet/Spritesheets/Spr_player(old)</File>
     <File>Images/Spritesheet/Spritesheets/Spr_WeaponSheet</File>

@@ -34,7 +34,8 @@
     <ProjectReference Include="..\MonoGameLibrary\MonoGameLibrary.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entities\Npc\" />
+    <Folder Include="GameAssets\Casts\" />
+    <Folder Include="GameAssets\Entities\Npc\" />
   </ItemGroup>
   <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 </Project>

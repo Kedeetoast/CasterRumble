@@ -32,7 +32,7 @@ namespace MonoGameLibrary.General.Managers
 
         public int port { get; set; } = 9050; // Default port for network communication
 
-        public Vector2 Gravity { get; set; } = new Vector2(0, 9.8f); // Default gravity pointing downwards
+        public Vector2 Gravity { get; set; } = new Vector2(0, 500f); // Default gravity pointing downwards
 
         //public event EventHandler<UpdateEventArgs> UpdateEvent;
 
