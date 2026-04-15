@@ -37,8 +37,6 @@ namespace MonoGameLibrary.General.Scenes
         {
             base.LoadContent();
             World = new World(GameManager.Instance.Gravity);
-
-            //Entity = new Entity(ref World, "Block", new Vector2(100, 100));
         }
     }
 }

@@ -30,11 +30,16 @@ namespace MonoGameLibrary.General.Managers
         public static string MusDirectory => Core.Instance.MusDirectory;
         public static string SfxDirectory => Core.Instance.SfxDirectory;
 
-        public int port { get; set; } = 9050; // Default port for network communication
+        public int port { get; set; } = 8888; // Default port for network communication
 
-        public Vector2 Gravity { get; set; } = new Vector2(0, 500f); // Default gravity pointing downwards
+        public string username { get; set; } = "user";
 
-        //public event EventHandler<UpdateEventArgs> UpdateEvent;
+        public Color PlayerColor { get; set; } = Color.White;
+        public int Face { get; set; } = 1;
+
+
+        public Vector2 Gravity { get; set; } = new Vector2(0, 9.8f); // Default gravity pointing downwards
+
 
         public string EntityListFilePath = "Entity_List/EntityList.json";
 
@@ -59,8 +64,5 @@ namespace MonoGameLibrary.General.Managers
 
     }
 
-    //public class UpdateEventArgs : EventArgs
-    //{
-    //    public GameTime GameTime { get; set; }
-    //}
+
 }

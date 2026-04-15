@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityList>
+	<Texture>Images/Spritesheet/Spritesheets/Spr_Faces</Texture>
+	<Regions>
+		<Region name="Face-1" x="0" y="0" width="16" height="16" />
+		<Region name="Face-2" x="16" y="0" width="16" height="16" />
+		<Region name="Face-3" x="32" y="0" width="16" height="16" />
+		<Region name="Face-4" x="48" y="0" width="16" height="16" />
+		<Region name="Face-5" x="64" y="0" width="16" height="16" />
+		<Region name="Face-6" x="80" y="0" width="16" height="16" />
+		<Region name="Face-7" x="96" y="0" width="16" height="16" />
+		<Region name="Face-8" x="112" y="0" width="16" height="16" />
+	</Regions>
+	<Animations>
+	</Animations>
+</EntityList>

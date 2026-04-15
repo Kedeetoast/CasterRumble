@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using MonoGameLibrary.General.Scenes;
 using MonoGameLibrary.Graphics;
 using MonoGameLibrary.Graphics.SpriteClass;
@@ -43,7 +38,7 @@ namespace CasterRumble.GameAssets.Scenes
 
             Sprite_BAT = Atlas.CreateAnimatedSprite("bat-animation");
             Sprite_BAT.Scale = new Vector2(4.0f, 4.0f);
-            Sprite_BAT.Position = new Vector2(300, 100);
+            Sprite_BAT.Position = new Vector2(200, 100);
         }
     }
 }

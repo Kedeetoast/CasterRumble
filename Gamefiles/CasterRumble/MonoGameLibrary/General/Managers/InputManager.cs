@@ -1,14 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using MonoGameLibrary.General.Utility;
-using MonoGameLibrary.Graphics;
-using System;
-//using System;
 using System.Collections.Generic;
-using System.Linq;
-//using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MonoGameLibrary.General.Managers
 {
@@ -28,6 +21,7 @@ namespace MonoGameLibrary.General.Managers
         public InputState State { get; private set; } = InputState.Keyboard;
 
         public Vector2 MousePosition => new Vector2(mousestate.X, mousestate.Y);
+        public Vector2 MouseWorldPos => MouseWorldPosition();
 
         public InputManager()
         {
@@ -60,7 +54,7 @@ namespace MonoGameLibrary.General.Managers
             Add_input("Sys_Menu", Keys.Escape);
             Add_input("Sys_Menu", Buttons.Start);
 
- 
+
             keyboardstate = Keyboard.GetState();
             gamepadstate = GamePad.GetState(0, GamePadDeadZone.Circular);
             mousestate = Mouse.GetState();
@@ -71,7 +65,7 @@ namespace MonoGameLibrary.General.Managers
 
         public override void Update(GameTime gametime)
         {
-
+            //System.Diagnostics.Debug.WriteLine($"{State}");
             Previous_keyboardstate = keyboardstate;
             Previous_gamepadstate = gamepadstate;
             Previous_mousestate = mousestate;
@@ -88,18 +82,25 @@ namespace MonoGameLibrary.General.Managers
 
         private void UpdateInputState()
         {
-            if (keyboardstate.GetPressedKeyCount() > 0)
+            if (keyboardstate.GetPressedKeyCount() > 0 ||
+                mousestate.LeftButton == ButtonState.Pressed ||
+                mousestate.RightButton == ButtonState.Pressed ||
+                mousestate.MiddleButton == ButtonState.Pressed)
             {
                 State = InputState.Keyboard;
             }
-            else if (gamepadstate.Buttons != new GamePadButtons(Buttons.None))
+            else if (gamepadstate.Buttons != new GamePadButtons(Buttons.None) ||
+                     gamepadstate.Triggers.Left > 0f ||
+                     gamepadstate.Triggers.Right > 0f ||
+                     gamepadstate.ThumbSticks.Left != Vector2.Zero ||
+                     gamepadstate.ThumbSticks.Right != Vector2.Zero)
             {
                 State = InputState.Gamepad;
             }
         }
 
 
-                public void Remove_Action(string _Name)
+        public void Remove_Action(string _Name)
         {
             if (ActionList.ContainsKey(_Name))
                 ActionList.Remove(_Name);
@@ -226,15 +227,44 @@ namespace MonoGameLibrary.General.Managers
             return 0f;
         }
 
+        public Vector2 GetThumbstickDirection(ThumbStick stick)
+        {
+            Vector2 raw = stick == ThumbStick.Left
+                ? gamepadstate.ThumbSticks.Left
+                : gamepadstate.ThumbSticks.Right;
 
+            // MonoGame's Y axis is inverted relative to screen space — positive Y is up on a stick.
+            raw.Y = -raw.Y;
+
+            if (raw == Vector2.Zero) return Vector2.Zero;
+            return Vector2.Normalize(raw);
+        }
+
+        private Vector2 MouseWorldPosition()
+        {
+            Vector2 screenPos = MousePosition;
+
+            if (!CameraManager.HasCamera)
+                return screenPos;
+
+            // Invert the camera transform to unproject from screen space to world space.
+            Matrix inverseTransform = Matrix.Invert(CameraManager.ActiveCamera.Transform);
+            return Vector2.Transform(screenPos, inverseTransform);
+        }
 
 
     }
 
     public enum InputState
     {
-        Keyboard,
-        Gamepad
+        Keyboard = 0,
+        Gamepad = 1
+    }
+
+    public enum ThumbStick
+    {
+        Left,
+        Right
     }
 }
 

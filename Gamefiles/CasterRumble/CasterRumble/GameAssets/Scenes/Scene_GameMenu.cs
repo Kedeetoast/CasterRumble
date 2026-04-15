@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using MonoGameGum;
 using MonoGameLibrary.General.Managers;
 using MonoGameLibrary.General.Scenes;
+using MonoGameLibrary.General.Utility;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -24,6 +25,7 @@ namespace CasterRumble.GameAssets.Scenes
 
         private string IPAddress;
         private string IPPort;
+        private string IPKey;
 
         public override void Initialize()
         {
@@ -162,14 +164,24 @@ namespace CasterRumble.GameAssets.Scenes
             JoinServerPanel.AddChild(Textbox_IP);
 
             var Textbox_Port = new TextBox();
-            Textbox_Port.Anchor(Gum.Wireframe.Anchor.BottomRight);
+            Textbox_Port.Anchor(Gum.Wireframe.Anchor.Right);
             Textbox_Port.X = -25f;
-            Textbox_Port.Y = -40f;
+            Textbox_Port.Y = 0f;
             Textbox_Port.Width = 120;
             Textbox_Port.Height = 20;
             Textbox_Port.Placeholder = "Enter Port...";
             Textbox_Port.TextChanged += Textbox_PortChanged;
             JoinServerPanel.AddChild(Textbox_Port);
+
+            var Textbox_Key = new TextBox();
+            Textbox_Key.Anchor(Gum.Wireframe.Anchor.BottomRight);
+            Textbox_Key.X = -25f;
+            Textbox_Key.Y = -40f;
+            Textbox_Key.Width = 120;
+            Textbox_Key.Height = 20;
+            Textbox_Key.Placeholder = "Enter Key...";
+            Textbox_Key.TextChanged += Textbox_KeyChanged;
+            JoinServerPanel.AddChild(Textbox_Key);
 
             var JoinButtonBack = new Button();
             JoinButtonBack = new Button();
@@ -186,13 +198,19 @@ namespace CasterRumble.GameAssets.Scenes
         private void Textbox_IPChanged(object sender, EventArgs e)
         {
             var textbox = (TextBox)sender;
-            IPPort = textbox.Text;
+            IPAddress = textbox.Text;
+        }
+
+        private void Textbox_KeyChanged(object sender, EventArgs e)
+        {
+            var textbox = (TextBox)sender;
+            IPKey = textbox.Text;
         }
 
         private void Textbox_PortChanged(object sender, EventArgs e)
         {
             var textbox = (TextBox)sender;
-            textbox.Text = KeepOnlyNumbers(textbox.Text);
+            textbox.Text = Utility.KeepOnlyNumbers(textbox.Text);
             if (textbox.Text.Length > 5)
             {
                 textbox.Text = textbox.Text.Substring(0, 5);
@@ -203,10 +221,14 @@ namespace CasterRumble.GameAssets.Scenes
             IPPort = textbox.Text;
         }
 
-        public static string KeepOnlyNumbers(string input)
+
+        private void HandleJoinServer(object sender, EventArgs e)
         {
-            return new string(input.Where(char.IsDigit).ToArray());
+            int x = Int32.Parse(IPPort);
+            NetworkManager.Instance.CreateClient(IPAddress, x, IPKey);
         }
+
+
 
         private void HandleJoinServerClicked(object sender, EventArgs e)
         {

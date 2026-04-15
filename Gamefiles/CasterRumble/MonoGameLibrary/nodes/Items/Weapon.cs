@@ -41,11 +41,5 @@ public abstract class Weapon : Item
 
 
 
-public enum  Meleetype
-{
-    Pierce,
-    swing,
-    heavy,
-    blunt
-}
+
 

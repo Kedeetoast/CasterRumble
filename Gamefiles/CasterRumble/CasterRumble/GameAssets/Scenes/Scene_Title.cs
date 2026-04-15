@@ -210,6 +210,14 @@ namespace CasterRumble.GameAssets.Scenes
             //_optionsBackButton.IsFocused = true;
         }
 
+        private void HandleCustomizeButton(object sender, EventArgs e)
+        {
+            // A UI interaction occurred, play the sound effect
+            PlaySFX(_uiSoundEffect);
+
+            // Change to the game scene to start the game.
+            SceneManager.ChangeScene(new Scene_Customise());
+        }
 
         private void CreateOptionsPanel()
         {
@@ -291,6 +299,16 @@ namespace CasterRumble.GameAssets.Scenes
             _optionsBackButton.Y = -10f;
             _optionsBackButton.Click += HandleOptionsButtonBack;
             _optionsPanel.AddChild(_optionsBackButton);
+
+            var CustomizeButton = new Button();
+            CustomizeButton.Text = "Customize";
+            CustomizeButton.Width = 70;
+            CustomizeButton.Height = -10;
+            CustomizeButton.Anchor(Gum.Wireframe.Anchor.BottomRight);
+            CustomizeButton.X = -18f;
+            CustomizeButton.Y = -10f;
+            CustomizeButton.Click += HandleCustomizeButton;
+            _optionsPanel.AddChild(CustomizeButton);
 
             var textbox = new TextBox();
             textbox.Anchor(Gum.Wireframe.Anchor.Bottom);

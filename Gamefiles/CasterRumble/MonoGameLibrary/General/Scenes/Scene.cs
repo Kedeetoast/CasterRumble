@@ -20,7 +20,7 @@ namespace MonoGameLibrary.General.Scenes
         /// <remarks>
         /// Assets loaded through this ContentManager will be automatically unloaded when this scene ends.
         /// </remarks>
-        public ContentManager Content { get; protected set; }
+        public ContentManager Content { get; protected set; } 
 
         public GameComponentCollection GameComponents { get; set; } = new GameComponentCollection();
 
@@ -29,11 +29,11 @@ namespace MonoGameLibrary.General.Scenes
         /// </summary>
         public bool IsDisposed { get; private set; }
 
-        protected Dictionary<string, Node> SceneAssets = new Dictionary<string, Node>();
+        //protected Dictionary<string, Node> SceneAssets = new Dictionary<string, Node>();
 
         protected Dictionary<string, Song> SceneSongs = new Dictionary<string, Song>();
 
-        protected Dictionary<string, SoundEffect> SceneSoundEffects = new Dictionary<string, SoundEffect>();
+        protected Dictionary<string, SoundEffect> SceneSFX = new Dictionary<string, SoundEffect>();
 
         protected static SceneManager SceneManager => SceneManager.Instance;
 
@@ -47,14 +47,14 @@ namespace MonoGameLibrary.General.Scenes
         public Scene() : base(null)
         {
             // Create a content manager for the scene
-            Content = new ContentManager(Core.Content.ServiceProvider);
+            //Content = new ContentManager(Core.Content.ServiceProvider);
 
             // Set the root directory for content to the same as the root directory
             // for the game's content.
-            Content.RootDirectory = Core.Content.RootDirectory;
+            //Content.RootDirectory = Core.Content.RootDirectory;
 
             // Register this Scene as its own scene (safe with the setter fix)
-            this.Scene = this;
+            //this.Scene = this;
 
         }
 
@@ -70,7 +70,8 @@ namespace MonoGameLibrary.General.Scenes
         /// </remarks>
         public override void Initialize()
         {
-
+            Content = new ContentManager(Core.Content.ServiceProvider);
+            Content.RootDirectory = Core.Content.RootDirectory;
             GameManager.Instance.ChangeBackGroundColor(BackgroundColor);
             LoadContent();
         }
@@ -126,13 +127,14 @@ namespace MonoGameLibrary.General.Scenes
             if (disposing)
             {
 
-                Enabled = false;
-                Visible = false;
+
                 UnloadContent();
                 Content.Dispose();
             }
             IsDisposed = true;
 
+            Enabled = false;
+            Visible = false;
             foreach (var asset in GameComponents)
             {
                 if (asset is DrawableGameComponent disposableAsset)
@@ -147,7 +149,7 @@ namespace MonoGameLibrary.General.Scenes
         {
             if (IsDisposed) return;
 
-            if (SceneSoundEffects.TryGetValue(File, out SoundEffect soundEffect))
+            if (SceneSFX.TryGetValue(File, out SoundEffect soundEffect))
             {
                 AudioManager.Instance.PlaySoundEffect(soundEffect, 0.0f, 0.0f, false);
             }
@@ -155,8 +157,8 @@ namespace MonoGameLibrary.General.Scenes
             {
                 try
                 {
-                    SceneSoundEffects.Add(File, Content.Load<SoundEffect>(GameManager.SfxDirectory + File));
-                    AudioManager.Instance.PlaySoundEffect(SceneSoundEffects[File], 0.0f, 0.0f, false);
+                    SceneSFX.Add(File, Content.Load<SoundEffect>(GameManager.SfxDirectory + File));
+                    AudioManager.Instance.PlaySoundEffect(SceneSFX[File], 0.0f, 0.0f, false);
                 }
                 catch (ContentLoadException)
                 {

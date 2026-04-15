@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MonoGameLibrary.nodes.Bullet
 {
-    public class BulletAtributes
+    public class BulletAttributes
     {
         public bool Piercing { get; set; }
 

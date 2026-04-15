@@ -8,9 +8,9 @@
       "_Scale": 1,
       "_HitboxShape": "Rectangle",
       "_Hitbox": {
-        "xOffset": -48,
-        "yOffset": -16,
-        "x": 32,
+        "xOffset": 0,
+        "yOffset": 0,
+        "x": 16,
         "y": 32,
         "radius": 0
       },

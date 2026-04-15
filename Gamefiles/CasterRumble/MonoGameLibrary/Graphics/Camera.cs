@@ -1,14 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using MonoGameLibrary.General;
-using MonoGameLibrary.General.Utility;
 using MonoGameLibrary.nodes;
+using MonoGameLibrary.General.Managers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MonoGameLibrary.Graphics
 {
@@ -19,14 +14,20 @@ namespace MonoGameLibrary.Graphics
         public Rectangle VisibleArea { get; protected set; }
         public Matrix Transform { get; protected set; }
 
-        private float currentMouseWheelValue, previousMouseWheelValue, zoom, previousZoom;
-
         public Camera()
         {
             Zoom = 1f;
             Position = Vector2.Zero;
+
+            // Self-register with the manager. Throws if a camera already exists.
+            CameraManager.Register(this);
         }
 
+        // Call this (or let GC/scene cleanup call it) to deregister safely.
+        protected override void Dispose(Boolean dispose)
+        {
+            CameraManager.Unregister(this);
+        }
 
         private void UpdateVisibleArea()
         {
@@ -43,40 +44,31 @@ namespace MonoGameLibrary.Graphics
             var max = new Vector2(
                 MathHelper.Max(tl.X, MathHelper.Max(tr.X, MathHelper.Max(bl.X, br.X))),
                 MathHelper.Max(tl.Y, MathHelper.Max(tr.Y, MathHelper.Max(bl.Y, br.Y))));
+
             VisibleArea = new Rectangle((int)min.X, (int)min.Y, (int)(max.X - min.X), (int)(max.Y - min.Y));
         }
 
         private void UpdateMatrix()
         {
-            Transform = Matrix.CreateTranslation(new Vector3(-Position.X, -Position.Y, 0)) *
-                    Matrix.CreateScale(Zoom) *
-                    Matrix.CreateTranslation(new Vector3(Bounds.Width * 0.5f, Bounds.Height * 0.5f, 0));
+            Transform = Matrix.CreateTranslation(new Vector3(-GlobalPosition.X, -GlobalPosition.Y, 0)) *
+                        Matrix.CreateScale(Zoom) *
+                        Matrix.CreateTranslation(new Vector3(Bounds.Width * 0.5f, Bounds.Height * 0.5f, 0));
             UpdateVisibleArea();
         }
 
         public void MoveCamera(Vector2 movePosition)
         {
-            Vector2 newPosition = Position + movePosition;
-            Position = newPosition;
+            Position += movePosition;
         }
 
         public void AdjustZoom(float zoomAmount)
         {
-            Zoom += zoomAmount;
-            if (Zoom < .35f)
-            {
-                Zoom = .35f;
-            }
-            if (Zoom > 2f)
-            {
-                Zoom = 2f;
-            }
+            Zoom = MathHelper.Clamp(Zoom + zoomAmount, 0.35f, 2f);
         }
 
         public override void Update(GameTime gameTime)
         {
             UpdateMatrix();
-
         }
     }
 }

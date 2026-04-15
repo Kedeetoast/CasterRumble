@@ -47,8 +47,8 @@ namespace CasterRumble
         {
             InitializeGum();
             System.Diagnostics.Debug.WriteLine("[Debug] Loading content for Game1.");
-            SceneManager.Instance.ChangeScene(new Scene_Tutorial());
-
+            //SceneManager.Instance.ChangeScene(new Scene_Tutorial());
+            SceneManager.Instance.ChangeScene(new Scene_Title());
 
         }
 

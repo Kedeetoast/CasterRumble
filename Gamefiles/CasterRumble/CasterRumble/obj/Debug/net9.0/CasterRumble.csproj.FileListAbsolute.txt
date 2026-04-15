@@ -65,3 +65,5 @@ C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\Images\Spritesheet\Spritesheets\Spr_WeaponSheet.xnb
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\Images\Spritesheet\Atlas_definition\defSpr_CastCards
 C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\Images\Spritesheet\Spritesheets\Spr_CastCards.xnb
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\Images\Spritesheet\Atlas_definition\defSpr_Faces
+C:\Users\oscar\Documents\GitHub\CasterRumble\Gamefiles\CasterRumble\CasterRumble\bin\Debug\net9.0\Content\Images\Spritesheet\Spritesheets\Spr_Faces.xnb

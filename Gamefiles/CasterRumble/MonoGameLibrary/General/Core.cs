@@ -145,8 +145,13 @@ public class Core : Game
         // Clear the back buffer.
         GraphicsDevice.Clear(BackgroundColor);
 
+        // Apply the camera transform when a camera exists; render normally otherwise.
+        Matrix? cameraTransform = CameraManager.HasCamera
+            ? CameraManager.ActiveCamera.Transform
+            : (Matrix?)null;
+
         // Begin the sprite batch to prepare for rendering.
-        SpriteBatch.Begin(samplerState: SamplerState.PointClamp);
+        SpriteBatch.Begin(sortMode: SpriteSortMode.FrontToBack, samplerState: SamplerState.PointClamp, transformMatrix: cameraTransform);
 
 
 

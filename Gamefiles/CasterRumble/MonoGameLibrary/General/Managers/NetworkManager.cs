@@ -1,8 +1,8 @@
 ﻿using LiteNetLib;
+using Microsoft.Xna.Framework;
 using MonoGameLibrary.General.Utility;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -17,7 +17,9 @@ namespace MonoGameLibrary.General.Managers
         private EventBasedNetListener Listener { get; set; }
         private NetManager Netmanager { get; set; }
 
-        public int Key { get; private set; } = -1;
+        public string Key { get; private set; } = string.Empty;
+
+        private int MaxPlayers { get; set; }
 
         public NetworkManager()
         {
@@ -29,49 +31,55 @@ namespace MonoGameLibrary.General.Managers
         public void CreateServer(int _Port, int _MaxPlayers)
         {
             Authority = Authority.Server;
+            MaxPlayers = _MaxPlayers;
+            Key = GenerateKey();
+
             Netmanager.Start(_Port);
-            var _key = GenerateKey().ToString();
+
             Listener.ConnectionRequestEvent += request =>
             {
-                if (Netmanager.ConnectedPeersCount < (_MaxPlayers-1) /* max connections */)
-                    request.AcceptIfKey(_key);
+                if (Netmanager.ConnectedPeersCount < MaxPlayers)
+                    request.AcceptIfKey(Key);
                 else
                     request.Reject();
+            };
 
-                while (!Console.KeyAvailable)
-                {
-                    Netmanager.PollEvents();   // process incoming/outgoing packets
-                    Thread.Sleep(15);      // ~66 polls/sec, avoids CPU spinning
-                }
+            Listener.PeerConnectedEvent += peer =>
+            {
+                System.Diagnostics.Debug.WriteLine($"Player connected: {peer.Address}");
             };
         }
 
-        public void CreateClient(string _IP, int _Port,string _Key)
+        public void CreateClient(string _IP, int _Port, string _Key)
         {
             Authority = Authority.Client;
             Netmanager.Start();
             Netmanager.Connect(_IP, _Port, _Key);
+
             Listener.NetworkReceiveEvent += (fromPeer, dataReader, deliveryMethod, channel) =>
             {
-                Console.WriteLine("We got: {0}", dataReader.GetString(100 /* max length of string */));
                 dataReader.Recycle();
             };
-
         }
 
-        public void stop()
+        public override void Update(GameTime gametime)
+        {
+            if (Authority == Authority.None) return;
+            Netmanager.PollEvents();
+        }
+
+        public void Stop()
         {
             Netmanager.Stop();
             Authority = Authority.None;
-        }   
-
-        private int GenerateKey()
-        {
-            Random random = new Random();
-            Key = random.Next(100000, 999999);
-            return Key;
+            Key = string.Empty;
         }
 
+        private string GenerateKey()
+        {
+            Random random = new Random();
+            return random.Next(100000, 999999).ToString();
+        }
     }
 
     public enum Authority

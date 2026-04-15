@@ -21,4 +21,12 @@ namespace MonoGameLibrary.nodes.Items
 
         }
     }
+
+    public enum Meleetype
+    {
+        Pierce,
+        swing,
+        heavy,
+        blunt
+    }
 }

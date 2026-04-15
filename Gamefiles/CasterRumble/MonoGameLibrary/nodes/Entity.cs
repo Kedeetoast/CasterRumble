@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using MonoGameLibrary.General;
@@ -24,17 +25,20 @@ namespace MonoGameLibrary.nodes
         public string ID { get; set; }
         public override Vector2 Position
         {
-            get => body.Position;
-            set
-            {
-                body.Position = value;
-            }
+            get => UnitConverter.ToPixels(body.Position);
+            set => body.Position = UnitConverter.ToMeters(value);
         }
 
 
-        public override float Rotation => body.Rotation;
+        public override float Rotation
+        {
+            get => body.Rotation;
+            set
+            {
+                body.Rotation = value;
+            }
+        }
 
-        
 
 
 
@@ -70,25 +74,8 @@ namespace MonoGameLibrary.nodes
 
         public EntityData Attributes;
 
-        public Vector2 Gravity
-        {
-            get
-            {
-                if (IsOnGround())
-                    return Vector2.Zero;
+        public virtual Vector2 Gravity => GameManager.Instance.Gravity;
 
-                if (Velocity.Y <= 0)
-                {
-                    // Rising — apply reduced gravity for floatier jump arc
-                    return new Vector2(0, GameManager.Instance.Gravity.Y * 0.6f);
-                }
-                else
-                {
-                    // Falling — apply stronger gravity for snappy landing
-                    return new Vector2(0, GameManager.Instance.Gravity.Y * 2.5f);
-                }
-            }
-        }
 
 
 
@@ -116,44 +103,61 @@ namespace MonoGameLibrary.nodes
 
             world = _world;
 
-            body = _world.CreateBody(_position, _rotation, X);
+            body = _world.CreateBody(UnitConverter.ToMeters(_position), _rotation, X);
             body.Tag = this;
             LoadSprite(_spriteType);
 
 
             string shape = Attributes.HitboxShape;
 
-            //TextureAtlas atlas = TextureAtlas.FromFile(base.Content, "images/atlas_definition/atlas-definition.xml")
-
-            //sprite = TextureAtlas.CreateSprite(entityList.entityList[ID].Sprite);
-
-
-
             Fixture fixture = HitboxShape(ref body, Attributes, shape);
         }
 
         public override void Update(GameTime gametime)
         {
-            body.ApplyLinearImpulse(Gravity * Mass);
+            //System.Diagnostics.Debug.WriteLine($"{ID}: X:{Velocity.X} Y:{Velocity.Y}");
         }
 
 
         private Fixture HitboxShape(ref Body body, EntityData Attributes, string shape)
         {
-            switch (shape.ToLowerInvariant())
+            var X = 0f;
+            var Y = 0f;
+            var rad = 0f;
+            var Offset = Vector2.Zero;
+
+            var TempShape = shape.ToLowerInvariant();
+
+            if (TempShape == "rectangle" || TempShape == "ellipse")
             {
+                X = UnitConverter.ToMeters(Attributes.Hitbox["x"] * Scale.X);
+                Y = UnitConverter.ToMeters(Attributes.Hitbox["y"] * Scale.Y);
+                Offset = UnitConverter.ToMeters(new Vector2(Attributes.Hitbox["xOffset"], Attributes.Hitbox["yOffset"]));
+            }
+            else if (TempShape == "circle")
+            {
+                rad = UnitConverter.ToMeters(Attributes.Hitbox["Radius"] * Scale.X);
+                Offset = UnitConverter.ToMeters(new Vector2(Attributes.Hitbox["xOffset"], Attributes.Hitbox["yOffset"]));
+            }
+
+
+            switch (TempShape)
+            {
+                
+
+
                 case "rectangle":
                     System.Diagnostics.Debug.WriteLine("Rectangle");
-                    return body.CreateRectangle(Attributes.Hitbox["x"] * Scale.X, Attributes.Hitbox["y"] * Scale.Y, 1, new Vector2(Attributes.Hitbox["xOffset"], Attributes.Hitbox["yOffset"]));
+                    return body.CreateRectangle(X, Y, 1, Offset);
                 case "circle":
                     System.Diagnostics.Debug.WriteLine("Circle");
-                    return body.CreateCircle(Attributes.Hitbox["Radius"] * Scale.X, 1, new Vector2(Attributes.Hitbox["xOffset"], Attributes.Hitbox["yOffset"]));
+                    return body.CreateCircle(rad, 1, Offset);
                 case "ellipse":
                     System.Diagnostics.Debug.WriteLine("Ellipse");
-                    return body.CreateEllipse(Attributes.Hitbox["x"] * Scale.X, Attributes.Hitbox["y"] * Scale.Y, 20, 1);
+                    return body.CreateEllipse(X, Y, 20, 1);
                 default:
                     System.Diagnostics.Debug.WriteLine($"Warning: Unknown hitbox shape \"{shape}\", defaulting to 1x1 rectangle.");
-                    return body.CreateRectangle(1, 1, 1, Vector2.Zero);
+                    return body.CreateRectangle(UnitConverter.ToMeters(1), UnitConverter.ToMeters(1), 1, Vector2.Zero);
             }
         }
 
