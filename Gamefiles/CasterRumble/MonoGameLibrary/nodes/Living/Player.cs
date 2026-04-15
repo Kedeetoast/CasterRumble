@@ -149,7 +149,7 @@ namespace MonoGameLibrary.nodes.Living
 
             if (Input.Check_Action_Just_Pressed("Jump") &&( IsOnGround() || CyoteActive))
             {
-                System.Diagnostics.Debug.WriteLine("Jump");
+                //System.Diagnostics.Debug.WriteLine("Jump");
                 CyoteActive = false;
                 Velocity = new Vector2(Velocity.X, -Jumpforce); ;
             }

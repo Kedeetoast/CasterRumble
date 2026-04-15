@@ -150,7 +150,7 @@ namespace CasterRumble.GameAssets.Scenes
             _JoinServer.Width = 100;
             _JoinServer.Height = -2;
             _JoinServer.Text = "Join Server";
-            _JoinServer.Click += HandleJoinServerClicked;
+            _JoinServer.Click += HandleJoinServer;
             JoinServerPanel.AddChild(_JoinServer);
 
             var Textbox_IP = new TextBox();
@@ -224,8 +224,15 @@ namespace CasterRumble.GameAssets.Scenes
 
         private void HandleJoinServer(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(IPAddress) || string.IsNullOrEmpty(IPPort) || string.IsNullOrEmpty(IPKey))
+            {
+                System.Diagnostics.Debug.WriteLine("Missing connection details.");
+                return;
+            }
+
             int x = Int32.Parse(IPPort);
             NetworkManager.Instance.CreateClient(IPAddress, x, IPKey);
+            SceneManager.Instance.ChangeScene(new Scene_Lobby());
         }
 
 

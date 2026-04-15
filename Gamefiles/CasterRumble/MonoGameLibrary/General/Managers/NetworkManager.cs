@@ -33,7 +33,7 @@ namespace MonoGameLibrary.General.Managers
             Authority = Authority.Server;
             MaxPlayers = _MaxPlayers;
             Key = GenerateKey();
-
+            System.Diagnostics.Debug.WriteLine(Key);
             Netmanager.Start(_Port);
 
             Listener.ConnectionRequestEvent += request =>

@@ -35,7 +35,7 @@ namespace MonoGameLibrary.Graphics
 
         public override void Draw(GameTime gameTime)
         {
-            System.Diagnostics.Debug.WriteLine($"{Color.R}, {Color.G}, {Color.B}, {Color.A}");
+            //System.Diagnostics.Debug.WriteLine($"{Color.R}, {Color.G}, {Color.B}, {Color.A}");
             _SpriteBatch.DrawString(Font, Text, Position, Color, Rotation, Origin, Scale, Effects, LayerDepth);  
         }
 

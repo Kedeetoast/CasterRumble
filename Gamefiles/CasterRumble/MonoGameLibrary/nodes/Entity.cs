@@ -147,13 +147,10 @@ namespace MonoGameLibrary.nodes
 
 
                 case "rectangle":
-                    System.Diagnostics.Debug.WriteLine("Rectangle");
                     return body.CreateRectangle(X, Y, 1, Offset);
                 case "circle":
-                    System.Diagnostics.Debug.WriteLine("Circle");
                     return body.CreateCircle(rad, 1, Offset);
                 case "ellipse":
-                    System.Diagnostics.Debug.WriteLine("Ellipse");
                     return body.CreateEllipse(X, Y, 20, 1);
                 default:
                     System.Diagnostics.Debug.WriteLine($"Warning: Unknown hitbox shape \"{shape}\", defaulting to 1x1 rectangle.");
