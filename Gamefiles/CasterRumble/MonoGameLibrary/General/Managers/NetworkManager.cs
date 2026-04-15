@@ -17,6 +17,11 @@ namespace MonoGameLibrary.General.Managers
         private EventBasedNetListener Listener { get; set; }
         private NetManager Netmanager { get; set; }
 
+        public Action<string> OnConnectionFailed { get; set; }
+
+        public List<string> ConnectedPlayers { get; private set; } = new List<string>();
+
+
         public string Key { get; private set; } = string.Empty;
 
         private int MaxPlayers { get; set; }
@@ -46,7 +51,14 @@ namespace MonoGameLibrary.General.Managers
 
             Listener.PeerConnectedEvent += peer =>
             {
+                string playerAddress = peer.Address.ToString();
+                ConnectedPlayers.Add(playerAddress);
                 System.Diagnostics.Debug.WriteLine($"Player connected: {peer.Address}");
+            };
+
+            Listener.PeerDisconnectedEvent += (peer, info) =>
+            {
+                ConnectedPlayers.Remove(peer.Address.ToString());
             };
         }
 
@@ -55,6 +67,17 @@ namespace MonoGameLibrary.General.Managers
             Authority = Authority.Client;
             Netmanager.Start();
             Netmanager.Connect(_IP, _Port, _Key);
+
+            Listener.NetworkErrorEvent += (endPoint, error) =>
+            {
+                OnConnectionFailed?.Invoke($"Network error: {error}");
+            };
+
+            Listener.PeerDisconnectedEvent += (peer, info) =>
+            {
+                if (Authority == Authority.Client)
+                    OnConnectionFailed?.Invoke($"Disconnected: {info.Reason}");
+            };
 
             Listener.NetworkReceiveEvent += (fromPeer, dataReader, deliveryMethod, channel) =>
             {

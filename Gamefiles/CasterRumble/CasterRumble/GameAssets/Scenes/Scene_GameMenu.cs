@@ -22,10 +22,12 @@ namespace CasterRumble.GameAssets.Scenes
         private Panel MenuPanel;
         private Button JoinServerButton;
         private Panel JoinServerPanel;
+        private Label ErrorLabel; 
 
         private string IPAddress;
         private string IPPort;
         private string IPKey;
+        private string _pendingError = null;
 
         public override void Initialize()
         {
@@ -38,8 +40,19 @@ namespace CasterRumble.GameAssets.Scenes
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-
             GumService.Default.Update(gameTime);
+
+            if (_pendingError != null)
+            {
+                ErrorLabel.Text = _pendingError;
+                _pendingError = null;
+                
+                if (SceneManager.Instance.ActiveScene is Scene_Lobby)
+                {
+                    SceneManager.Instance.ChangeScene(this);
+                    _menuState = MenuState.JoinMenu;
+                }
+            }
         }
 
         public override void Draw(GameTime gameTime)
@@ -193,6 +206,13 @@ namespace CasterRumble.GameAssets.Scenes
             JoinButtonBack.Y = -10f;
             JoinButtonBack.Click += JoinButtonBackPressed;
             JoinServerPanel.AddChild(JoinButtonBack );
+
+            ErrorLabel = new Label();
+            ErrorLabel.Anchor(Gum.Wireframe.Anchor.Left);
+            ErrorLabel.X = 15;
+            ErrorLabel.Y = 12;
+            ErrorLabel.Text = "";
+            JoinServerPanel.AddChild(ErrorLabel);
         }
 
         private void Textbox_IPChanged(object sender, EventArgs e)
@@ -226,12 +246,26 @@ namespace CasterRumble.GameAssets.Scenes
         {
             if (string.IsNullOrEmpty(IPAddress) || string.IsNullOrEmpty(IPPort) || string.IsNullOrEmpty(IPKey))
             {
-                System.Diagnostics.Debug.WriteLine("Missing connection details.");
+                ErrorLabel.Text = "Please fill in all fields.";
                 return;
             }
 
-            int x = Int32.Parse(IPPort);
-            NetworkManager.Instance.CreateClient(IPAddress, x, IPKey);
+            if (!int.TryParse(IPPort, out int port))
+            {
+                ErrorLabel.Text = "Invalid port number.";
+                return;
+            }
+
+            ErrorLabel.Text = "Connecting...";
+
+            NetworkManager.Instance.OnConnectionFailed = reason =>
+            {
+                // LiteNetLib events fire on the network thread,
+                // so just store the message and display it on next Update
+                _pendingError = reason;
+            };
+
+            NetworkManager.Instance.CreateClient(IPAddress, port, IPKey);
             SceneManager.Instance.ChangeScene(new Scene_Lobby());
         }
 
