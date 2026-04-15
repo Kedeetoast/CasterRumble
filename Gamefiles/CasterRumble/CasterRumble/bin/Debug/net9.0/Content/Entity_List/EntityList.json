@@ -37,32 +37,32 @@
     },
     {
       "_Id": "Weapon_Melee_Axe",
-      "_SpriteAtlasPath": "Images/Spritesheet/Atlas_definition/defSpr_spike",
+      "_SpriteAtlasPath": "Images/Spritesheet/Atlas_definition/defSpr_WeaponSheet",
       "_Sprite": "Axe",
-      "_BodyType": "Kinematic",
+      "_BodyType": "Dynamic",
       "_Scale": 1,
       "_HitboxShape": "rectangle",
       "_Hitbox": {
-        "xOffset": 32,
-        "yOffset": 40,
-        "x": 128,
-        "y": 32,
+        "xOffset": 0,
+        "yOffset": 0,
+        "x": 48,
+        "y": 16,
         "radius": 0
       },
       "_SpriteList": []
     },
     {
-      "_Id": "Weapon_Melee_Flail.cs",
-      "_SpriteAtlasPath": "Images/Spritesheet/Atlas_definition/defSpr_spike",
-      "_Sprite": "FlailHandle",
-      "_BodyType": "Kinematic",
+      "_Id": "Weapon_Melee_Hammer",
+      "_SpriteAtlasPath": "Images/Spritesheet/Atlas_definition/defSpr_WeaponSheet",
+      "_Sprite": "Hammer",
+      "_BodyType": "Dynamic",
       "_Scale": 1,
       "_HitboxShape": "rectangle",
       "_Hitbox": {
-        "xOffset": 32,
-        "yOffset": 40,
-        "x": 128,
-        "y": 32,
+        "xOffset": 0,
+        "yOffset": 0,
+        "x": 48,
+        "y": 16,
         "radius": 0
       },
       "_SpriteList": []

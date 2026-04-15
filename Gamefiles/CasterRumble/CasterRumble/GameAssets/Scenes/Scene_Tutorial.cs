@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using CasterRumble.GameAssets.Entities.Items.Weapon;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoGameLibrary.General.Managers;
 using MonoGameLibrary.General.Scenes;
@@ -22,6 +23,7 @@ namespace CasterRumble.GameAssets.Scenes
             base.LoadContent();
 
             var player = new Player(ref World, 100, new Vector2(100, 100));
+            var hammer = new Weapon_Melee_Hammer(ref World, new Vector2(228, 100));
             var entity = new Entity(ref World, "Block", new Vector2(100, 200));
             var entity2 = new Entity(ref World, "Block", new Vector2(228, 200));
             var entity3 = new Entity(ref World, "Block", new Vector2(356, 200));

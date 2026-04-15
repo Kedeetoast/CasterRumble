@@ -15,7 +15,7 @@ namespace MonoGameLibrary.nodes.Items
 
         public float DashRange { get; set; } = 0;
 
-        public Melee(ref World _world, string _ID, Vector2 _position, float _rotation = 0, float _despawntime = 0) : base(ref _world, _ID, _position, _rotation, _despawntime)
+        public Melee(ref World _world, string _ID, Vector2 _position, float _rotation = 0, float _despawntime = 60) : base(ref _world, _ID, _position, _rotation, _despawntime)
         {
 
 

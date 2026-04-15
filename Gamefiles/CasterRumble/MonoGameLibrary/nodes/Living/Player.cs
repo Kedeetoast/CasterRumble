@@ -64,6 +64,18 @@ namespace MonoGameLibrary.nodes.Living
             }
         }
 
+        protected override Vector2 GrabPosition
+        {
+            get 
+            {
+                Vector2 direction = new Vector2(
+                (float)Math.Cos(Aiming),
+                (float)Math.Sin(Aiming)
+                );
+                return direction* GrabRange; 
+            }
+        }
+
         public InputManager Input => InputManager.Instance;
 
         private float MovementDirection => Input.Check_Action_signal("Move_Right") - Input.Check_Action_signal("Move_Left");
@@ -115,6 +127,10 @@ namespace MonoGameLibrary.nodes.Living
 
             }
 
+            if (Equiped != null)
+            {
+                Equiped.Rotation = Aiming;
+            }
 
         }
 

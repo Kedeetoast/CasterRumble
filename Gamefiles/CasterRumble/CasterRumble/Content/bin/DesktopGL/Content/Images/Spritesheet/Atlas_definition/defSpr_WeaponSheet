@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas>
-	<Texture>Images/Spritesheet/Spritesheets/Spr_WeaponsSheet</Texture>
+	<Texture>Images/Spritesheet/Spritesheets/Spr_WeaponSheet</Texture>
 	<Regions>
 		<Region name="ThrowingKnife" x="0" y="0" width="32" height="16" />
 		<Region name="Boomerang" x="0" y="16" width="32" height="16" />

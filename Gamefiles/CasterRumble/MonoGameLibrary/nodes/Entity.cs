@@ -67,6 +67,8 @@ namespace MonoGameLibrary.nodes
 
         public Body body;
 
+        public Fixture fixture;
+
         public World world;
 
 
@@ -110,7 +112,7 @@ namespace MonoGameLibrary.nodes
 
             string shape = Attributes.HitboxShape;
 
-            Fixture fixture = HitboxShape(ref body, Attributes, shape);
+            fixture = HitboxShape(ref body, Attributes, shape);
         }
 
         public override void Update(GameTime gametime)

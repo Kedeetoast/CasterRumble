@@ -20,7 +20,7 @@ public abstract class Weapon : Item
 
     private string Knockback;
 
-    protected Weapon(ref World _world, string _ID, Vector2 _position, float _rotation = 0, float _despawntime = 0) : base(ref _world, _ID, _position, _rotation, _despawntime)
+    protected Weapon(ref World _world, string _ID, Vector2 _position, float _rotation = 0, float _despawntime = 60) : base(ref _world, _ID, _position, _rotation, _despawntime)
     {
 
         
